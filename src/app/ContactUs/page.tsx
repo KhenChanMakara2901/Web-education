@@ -12,7 +12,7 @@ export default function page() {
         </div>
         <div className="mt-16 lg:mt-20">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="rounded-lg overflow-hidden">
+            <div className="rounded-xl border border-white overflow-hidden">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d73824.51612940856!2d104.8416573804732!3d11.539825730124445!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x310951006513b911%3A0xfb4a1347dd91260e!2sKhmer%20Code%20Academy!5e0!3m2!1sen!2skh!4v1723657662983!5m2!1sen!2skh"
                 width="100%"

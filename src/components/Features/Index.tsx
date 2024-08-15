@@ -8,7 +8,7 @@ const Index = () => {
   return (
     <div className="py-24 bg-sky-900">
       <div className="max-w-7xl mx-auto px-5 sm:px-10 md:px-12 lg:px-5 flex flex-col md:flex-row gap-16">
-        <div className="flex md:flex-1">
+        <div className="flex md:flex-1 border border-white rounded-xl">
           <Image
             src={IMage1}
             alt="creative agency "

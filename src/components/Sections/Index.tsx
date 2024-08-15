@@ -20,7 +20,7 @@ export default function Index() {
           </p>
         </div>
         <div className="grid gap-5 sm:grid-cols-2 md:grid-cols-3 md:gap-4 lg:gap-6">
-          <div className="grid gap-6 rounded-md  p-8 md:p-10">
+          <div className="grid gap-6 rounded-md  p-8 md:p-10 border border-white shadow-sm shadow-gray-500">
             <Image
               src={Code}
               alt="Image"
@@ -34,7 +34,7 @@ export default function Index() {
               យេីងផ្ដេាតទៅលេីការសសេរកូដអនុវត្តទៅលេីគម្រោងជាក់ស្ដែង។
             </p>
           </div>
-          <div className="grid gap-6 rounded-md  p-8 md:p-10">
+          <div className="grid gap-6 rounded-md  p-8 md:p-10 border border-white shadow-sm shadow-gray-500">
             <Image
               src={Course}
               alt="Image"
@@ -46,7 +46,7 @@ export default function Index() {
               ពួកយេីងបានបង្កេីតជាវគ្គសិក្សាដែលសិស្សអាចជ្រេីសរេីស។
             </p>
           </div>
-          <div className="grid gap-6 rounded-md  p-8 md:p-10">
+          <div className="grid gap-6 rounded-md  p-8 md:p-10 border border-white shadow-sm shadow-gray-500">
             <Image
               src={Student}
               alt="Image"
@@ -61,7 +61,7 @@ export default function Index() {
               បុគ្គលិកមកពីស្ថាប័នឯកជន និងរដ្ឋជាដើម។
             </p>
           </div>
-          <div className="grid gap-6 rounded-md  p-8 md:p-10">
+          <div className="grid gap-6 rounded-md  p-8 md:p-10 border border-white shadow-sm shadow-gray-500">
             <Image
               src={Video}
               alt="Image"
@@ -77,7 +77,7 @@ export default function Index() {
               អាចជាវបានជាមួយនឹងគុណភាព និងតម្លៃសមរម្យ។
             </p>
           </div>
-          <div className="grid gap-6 rounded-md  p-8 md:p-10">
+          <div className="grid gap-6 rounded-md  p-8 md:p-10 border border-white shadow-sm shadow-gray-500">
             <Image
               src={Service}
               alt="Image"
@@ -90,7 +90,7 @@ export default function Index() {
               សម្អាត និងវិភាគទិន្នន័យទៅលើផ្នែកដែលពាក់ព័ន្ធ។
             </p>
           </div>
-          <div className="grid gap-6 rounded-md  p-8 md:p-10">
+          <div className="grid gap-6 rounded-md  p-8 md:p-10 border border-white shadow-sm shadow-gray-500">
             <Image
               src={Education}
               alt="Image"
