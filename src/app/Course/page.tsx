@@ -51,7 +51,7 @@ export default function page() {
               <p className="text-slate-200 text-xl line-clamp-2">•Other</p>
               <div className="w-max">
                 <Link
-                  href="#"
+                  href="#https://t.me/Kongsun"
                   className="px-8 h-12 rounded-full flex items-center gap-x-3 bg-emerald-700 text-white hover:bg-opacity-80"
                 >
                   ចុះឈ្មោះឥឡូវនេះ
@@ -79,7 +79,7 @@ export default function page() {
               <p className="text-slate-200 text-xl line-clamp-2">•Other</p>
               <div className="w-max">
                 <Link
-                  href="#"
+                  href="https://t.me/Kongsun"
                   className="px-8 h-12 rounded-full flex items-center gap-x-3 bg-emerald-700 text-white hover:bg-opacity-80"
                 >
                   ចុះឈ្មោះឥឡូវនេះ
@@ -107,7 +107,7 @@ export default function page() {
               <p className="text-slate-200 text-xl line-clamp-2">•Other</p>
               <div className="w-max">
                 <Link
-                  href="#"
+                  href="https://t.me/Kongsun"
                   className="px-8 h-12 rounded-full flex items-center gap-x-3 bg-emerald-700 text-white hover:bg-opacity-80"
                 >
                   ចុះឈ្មោះឥឡូវនេះ
@@ -137,7 +137,7 @@ export default function page() {
               <p className="text-slate-200 text-xl line-clamp-2">•Other</p>
               <div className="w-max">
                 <Link
-                  href="#"
+                  href="https://t.me/Kongsun"
                   className="px-8 h-12 rounded-full flex items-center gap-x-3 bg-emerald-700 text-white hover:bg-opacity-80"
                 >
                   ចុះឈ្មោះឥឡូវនេះ
@@ -167,7 +167,7 @@ export default function page() {
               <p className="text-slate-200 text-xl line-clamp-2">•Other</p>
               <div className="w-max">
                 <Link
-                  href="#"
+                  href="https://t.me/Kongsun"
                   className="px-8 h-12 rounded-full flex items-center gap-x-3 bg-emerald-700 text-white hover:bg-opacity-80"
                 >
                   ចុះឈ្មោះឥឡូវនេះ
@@ -198,7 +198,7 @@ export default function page() {
               </p>
               <div className="w-max">
                 <Link
-                  href="#"
+                  href="https://t.me/Kongsun"
                   className="px-8 h-12 rounded-full flex items-center gap-x-3 bg-emerald-700 text-white hover:bg-opacity-80"
                 >
                   ចុះឈ្មោះឥឡូវនេះ

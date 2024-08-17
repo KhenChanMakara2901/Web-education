@@ -3,6 +3,10 @@ import Link from "next/link";
 import { useState } from "react";
 import Image from "next/image";
 import Rupp from "@/public/Image/Logo/Rupp.png";
+import { IoHome } from "react-icons/io5";
+import { FaUserGraduate, FaBookBookmark } from "react-icons/fa6";
+import { FaMapMarkedAlt } from "react-icons/fa";
+import { BiSolidContact } from "react-icons/bi";
 
 const Index = () => {
   const [openNavbar, setOpenNavbar] = useState(false);
@@ -37,7 +41,8 @@ const Index = () => {
           `}
           >
             <ul className="flex text-xl flex-col gap-y-5 text-gray-700 dark:text-gray-300 lg:items-center lg:flex-row lg:gap-x-5 lg:h-full lg:justify-center lg:flex-1">
-              <li>
+              <li className="text-xl py-4 flex">
+                <IoHome size={25} className="mr-1" />
                 <Link
                   href="/"
                   className="transition ease-linear hover:underline"
@@ -45,7 +50,8 @@ const Index = () => {
                   ទំព័រដើម
                 </Link>
               </li>
-              <li>
+              <li className="text-xl py-4 flex">
+                <FaUserGraduate size={25} className="mr-1" />
                 <Link
                   href="/AboutUs"
                   className="transition ease-linear hover:underline"
@@ -53,7 +59,8 @@ const Index = () => {
                   អំពីពួកយើង
                 </Link>
               </li>
-              <li>
+              <li className="text-xl py-4 flex">
+                <FaBookBookmark size={25} className="mr-1" />
                 <Link
                   href="/Course"
                   className="transition ease-linear hover:underline"
@@ -61,7 +68,8 @@ const Index = () => {
                   វគ្គសិក្សា
                 </Link>
               </li>
-              <li>
+              <li className="text-xl py-4 flex">
+                <FaMapMarkedAlt size={25} className="mr-1" />
                 <Link
                   href="/ContactUs"
                   className="transition ease-linear hover:underline"
@@ -71,6 +79,7 @@ const Index = () => {
               </li>
             </ul>
             <div className="w-full flex sm:w-max lg:min-w-max lg:items-center">
+              <BiSolidContact size={25} className="mr-1 text-white" />
               <Link
                 target="-blank"
                 href="https://t.me/Kongsun"
