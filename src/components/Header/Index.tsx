@@ -7,8 +7,10 @@ import { IoHome } from "react-icons/io5";
 import { FaUserGraduate, FaBookBookmark } from "react-icons/fa6";
 import { FaMapMarkedAlt } from "react-icons/fa";
 import { BiSolidContact } from "react-icons/bi";
+import { usePathname } from "next/navigation";
 
 const Index = () => {
+  const pathname = usePathname();
   const [openNavbar, setOpenNavbar] = useState(false);
   const toggleNavbar = () => {
     setOpenNavbar((openNavbar) => !openNavbar);
@@ -44,47 +46,63 @@ const Index = () => {
               <li className="text-xl py-4 flex">
                 <IoHome size={25} className="mr-1" />
                 <Link
+                  className={`link ${
+                    pathname === "/"
+                      ? "active underline decoration-4 decoration-white text-gray-400"
+                      : ""
+                  }`}
                   href="/"
-                  className="transition ease-linear hover:underline"
                 >
                   ទំព័រដើម
                 </Link>
               </li>
-              <li className="text-xl py-4 flex">
+              <li className="text-xl py-4 flex hover:underline">
                 <FaUserGraduate size={25} className="mr-1" />
                 <Link
+                  className={`link ${
+                    pathname === "/AboutUs"
+                      ? "active underline decoration-4 decoration-white text-gray-400"
+                      : ""
+                  }`}
                   href="/AboutUs"
-                  className="transition ease-linear hover:underline"
                 >
                   អំពីពួកយើង
                 </Link>
               </li>
-              <li className="text-xl py-4 flex">
+              <li className="text-xl py-4 flex hover:underline">
                 <FaBookBookmark size={25} className="mr-1" />
                 <Link
+                  className={`link ${
+                    pathname === "/Course"
+                      ? "active underline decoration-4 decoration-white text-gray-400"
+                      : ""
+                  }`}
                   href="/Course"
-                  className="transition ease-linear hover:underline"
                 >
                   វគ្គសិក្សា
                 </Link>
               </li>
-              <li className="text-xl py-4 flex">
+              <li className="text-xl py-4 flex hover:underline">
                 <FaMapMarkedAlt size={25} className="mr-1" />
                 <Link
+                  className={`link ${
+                    pathname === "/ContactUs"
+                      ? "active underline decoration-4 decoration-white text-gray-400"
+                      : ""
+                  }`}
                   href="/ContactUs"
-                  className="transition ease-linear hover:underline"
                 >
                   ទីតាំងរបស់យេីង
                 </Link>
               </li>
             </ul>
-            <div className="w-full flex sm:w-max lg:min-w-max lg:items-center">
+            <div className="w-full flex sm:w-max lg:min-w-max lg:items-center hover:underline hover:decoration-4 rounded-2xl">
               <BiSolidContact size={25} className="mr-1 text-white" />
               <Link
                 target="-blank"
                 href="https://t.me/Kongsun"
                 className="flex text-xl justify-center gap-x-3 items-center text-gray-700 dark:text-gray-300 hover:text-gray-400
-                    border-b bg-gray-700 dark:border-blue-300 hover:border-gray-800 dark:hover:border-b-white bg-transparent"
+                 bg-transparent"
               >
                 ទំនាក់ទំនង
                 <span>

@@ -22,8 +22,8 @@ export default function page() {
               ></iframe>
             </div>
             <div>
-              <div className="max-w-full mx-auto rounded-lg overflow-hidden">
-                <div className="px-6 py-4 animate-fadeIn">
+              <div className="max-w-full mx-auto rounded-lg overflow-hidden animate-scaleUp">
+                <div className="px-6 py-4">
                   <h3 className="text-2xl underline font-medium text-white">
                     ⟟ អាស័យដ្ឋានរបស់យើង:
                   </h3>
@@ -32,7 +32,7 @@ export default function page() {
                     រាជធានីភ្នំពេញ។
                   </p>
                 </div>
-                <div className="border-t border-gray-200 px-6 py-4 animate-fadeIn">
+                <div className="border-t border-gray-200 px-6 py-4">
                   <h3 className="text-2xl underline font-medium text-white">
                     🧭 ម៉ោងធ្វើការ:
                   </h3>
@@ -44,7 +44,7 @@ export default function page() {
                   </p>
                   <p className="mt-5 text-xl text-white">ថ្ងៃអាទិត្យ៖ បិទ</p>
                 </div>
-                <div className="border-t border-gray-200 px-6 py-4 animate-fadeIn">
+                <div className="border-t border-gray-200 px-6 py-4">
                   <h3 className="text-2xl underline font-medium text-white">
                     @ ប្រព័ន្ធទំនាក់ទំនង:
                   </h3>

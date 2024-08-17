@@ -6,7 +6,7 @@ import { FaCode } from "react-icons/fa";
 export default function page() {
   return (
     <section className="bg-sky-900 py-20">
-      <div className="mx-auto flex w-full max-w-7xl px-5 py-5 md:px-10 md:py-20">
+      <div className="mx-auto flex w-full max-w-7xl px-5 py-5 md:px-10 md:py-20 animate-fadeIn">
         <FaCode size={50} className="mr-1 text-white" />
         <h2 className="mb-3 underline text-white text-3xl font-bold md:text-5xl lg:mb-14">
           ខ្មែរកូដអាខាដឺមី
@@ -14,13 +14,13 @@ export default function page() {
         <FaCode size={50} className="mr-1 text-white" />
       </div>
       <div className="mx-auto w-full max-w-7xl px-5 py-16 md:px-10 md:py-20">
-        <div className="grid gap-10 lg:grid-cols-2 lg:gap-12">
+        <div className="grid gap-10 lg:grid-cols-2 lg:gap-12 animate-slideIn">
           <Image
             src={KCA2}
             alt="Image"
             className="inline-block border border-white h-full w-full rounded-2xl object-cover"
           />
-          <div className="flex flex-col gap-5 rounded-2xl border border-solid border-white p-10 sm:p-20">
+          <div className="flex flex-col gap-5 rounded-2xl border border-solid border-white p-10 sm:p-20 animate-scaleUp">
             <h2 className="text-3xl underline text-white font-bold md:text-5xl mt-5">
               បេសកកម្មរបស់យើង:
             </h2>

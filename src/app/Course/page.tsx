@@ -20,7 +20,7 @@ export default function page() {
             ដែលនិស្សិតអាចជ្រេីសរេីស៖
           </p>
         </div>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-10 animate-slideIn">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-10 animate-scaleUp">
           <div className="relative p-5 sm:p-6 md:p-8 rounded-lg bg-sky-950 border border-white space-y-6">
             <Image
               src={Course3}
