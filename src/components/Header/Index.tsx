@@ -55,7 +55,7 @@ const Index = () => {
               </li>
               <li>
                 <Link
-                  href="#"
+                  href="/Course"
                   className="transition ease-linear hover:underline"
                 >
                   វគ្គសិក្សា
