@@ -23,10 +23,10 @@ const Index = () => {
             <div className="flex items-center gap-x-4 text-2xl font-semibold text-gray-700 dark:text-gray-300">
               <div className="flex items-center -space-x-3 font-semibold">
                 <Image
-                  className="rounded-2xl"
+                  className="rounded-xl border border-white"
                   src={Rupp}
                   alt="Logo"
-                  width={70}
+                  width={80}
                 />
               </div>
             </div>
@@ -43,7 +43,7 @@ const Index = () => {
           `}
           >
             <ul className="flex text-xl flex-col gap-y-5 text-gray-700 dark:text-gray-300 lg:items-center lg:flex-row lg:gap-x-5 lg:h-full lg:justify-center lg:flex-1">
-              <li className="text-xl py-4 flex">
+              <li className="text-xl py-4 flex hover:underline underline-offset-4">
                 <IoHome size={25} className="mr-1" />
                 <Link
                   className={`link ${
@@ -56,7 +56,7 @@ const Index = () => {
                   ទំព័រដើម
                 </Link>
               </li>
-              <li className="text-xl py-4 flex hover:underline">
+              <li className="text-xl py-4 flex hover:underline underline-offset-4">
                 <FaUserGraduate size={25} className="mr-1" />
                 <Link
                   className={`link ${
@@ -69,7 +69,7 @@ const Index = () => {
                   អំពីពួកយើង
                 </Link>
               </li>
-              <li className="text-xl py-4 flex hover:underline">
+              <li className="text-xl py-4 flex hover:underline underline-offset-4">
                 <FaBookBookmark size={25} className="mr-1" />
                 <Link
                   className={`link ${
@@ -82,7 +82,7 @@ const Index = () => {
                   វគ្គសិក្សា
                 </Link>
               </li>
-              <li className="text-xl py-4 flex hover:underline">
+              <li className="text-xl py-4 flex hover:underline underline-offset-4">
                 <FaMapMarkedAlt size={25} className="mr-1" />
                 <Link
                   className={`link ${
@@ -101,7 +101,7 @@ const Index = () => {
               <Link
                 target="-blank"
                 href="https://t.me/Kongsun"
-                className="flex text-xl justify-center gap-x-3 items-center text-gray-700 dark:text-gray-300 hover:text-gray-400
+                className="flex text-xl justify-center gap-x-3 items-center text-gray-300 hover:text-gray-400
                  bg-transparent"
               >
                 ទំនាក់ទំនង
