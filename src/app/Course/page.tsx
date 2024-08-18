@@ -7,10 +7,14 @@ import Course2 from "@/public/Course/Course2.png";
 import Course3 from "@/public/Course/Course3.png";
 import Course4 from "@/public/Course/Course4.png";
 import Course5 from "@/public/Course/Course5.png";
+import Head from "next/head";
 
 export default function page() {
   return (
-    <section className="py-20 mt-20 bg-sky-900">
+    <div className="py-20 mt-20 bg-sky-900">
+      <head>
+        <title>Course/KCA.com</title>
+      </head>
       <div className="max-w-7xl mx-auto px-5 sm:px-10 md:px-12 lg:px-5 space-y-16">
         <div className="max-w-2xl space-y-3 animate-fadeIn">
           <h1 className="text-4xl/tight sm:text-4xl/tight underline underline-offset-4 font-bold text-white">
@@ -208,6 +212,6 @@ export default function page() {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 }

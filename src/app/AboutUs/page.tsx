@@ -2,10 +2,14 @@ import React from "react";
 import Image from "next/image";
 import KCA2 from "@/public/Image/Logo/KCA2.png";
 import { FaCode } from "react-icons/fa";
+import Head from "next/head";
 
 export default function page() {
   return (
-    <section className="bg-sky-900 py-20">
+    <div className="bg-sky-900 py-20">
+      <head>
+        <title>AboutUs/KCA.com</title>
+      </head>
       <div className="mx-auto flex w-full max-w-7xl px-5 py-5 md:px-10 md:py-20 animate-fadeIn">
         <FaCode size={50} className="mr-1 text-white" />
         <h2 className="mb-3 underline text-white text-3xl font-bold md:text-5xl lg:mb-14">
@@ -38,6 +42,6 @@ export default function page() {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 }

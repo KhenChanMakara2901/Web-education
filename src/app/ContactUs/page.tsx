@@ -1,9 +1,13 @@
 import React from "react";
 import { FaMapMarkerAlt } from "react-icons/fa";
+import Head from "next/head";
 
 export default function page() {
   return (
-    <section className="bg-sky-900 py-20">
+    <div className="bg-sky-900 py-20">
+      <head>
+        <title>ContactUs/KCA.com</title>
+      </head>
       <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:py-20 lg:px-8">
         <div className="max-w-2xl flex lg:max-w-4xl mx-auto animate-slideIn">
           <FaMapMarkerAlt size={50} className="text-white mr-1" />
@@ -60,6 +64,6 @@ export default function page() {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 }
