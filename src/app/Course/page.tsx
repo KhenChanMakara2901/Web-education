@@ -11,7 +11,7 @@ import Head from "next/head";
 
 export default function page() {
   return (
-    <div className="py-20 mt-20 bg-sky-900">
+    <div className=" py-10 bg-sky-900">
       <head>
         <title>Course/KCA.com</title>
       </head>

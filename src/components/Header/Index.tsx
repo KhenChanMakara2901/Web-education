@@ -16,7 +16,7 @@ const Index = () => {
     setOpenNavbar((openNavbar) => !openNavbar);
   };
   return (
-    <header className="bg-sky-900 absolute top-0 inset-x-0 z-50 h-24 flex items-center">
+    <header className="bg-sky-900 sticky top-0 inset-x-0 z-50 h-24 flex items-center">
       <div className="mx-auto lg:max-w-7xl w-full px-5 sm:px-10 md:px-12 lg:px-5 h-full items-center">
         <nav className="flex justify-between items-center h-full">
           <div className="flex min-w-max items-center">
