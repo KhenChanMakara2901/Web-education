@@ -13,7 +13,7 @@ export default function page() {
   return (
     <div className=" py-10 bg-sky-900">
       <head>
-        <title>Course/KCA.com</title>
+        <title>Course|KhmerCodeAcademy</title>
       </head>
       <div className="max-w-7xl mx-auto px-5 sm:px-10 md:px-12 lg:px-5 space-y-16">
         <div className="max-w-2xl space-y-3 animate-fadeIn">

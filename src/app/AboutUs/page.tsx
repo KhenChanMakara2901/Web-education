@@ -8,7 +8,7 @@ export default function page() {
   return (
     <div className="bg-sky-900">
       <head>
-        <title>AboutUs/KCA.com</title>
+        <title>About Us|KhmerCodeAcademy</title>
       </head>
       <div className="mx-auto flex w-full max-w-7xl px-5 py-5 md:px-10 md:py-20 animate-fadeIn">
         <FaCode size={50} className="mr-1 text-white" />
