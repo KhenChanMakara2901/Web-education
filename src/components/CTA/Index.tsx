@@ -18,7 +18,7 @@ export default function Index() {
               រៀនដោយទំនុកចិត្ត និងរៀនដោយភាពច្បាសល់លាស់។
             </p>
             <div className="mx-auto max-w-md sm:max-w-xl flex justify-center">
-              <Link target="-blank" href="https://t.me/Kongsun">
+              <Link href="https://t.me/Kongsun">
                 <button className="outline-none h-12 px-5 rounded-xl bg-green-700 text-white flex items-center hover:bg-gray-400">
                   ទំនាក់ទំនងមកកាន់យេីងឥឡូវនេះ
                 </button>

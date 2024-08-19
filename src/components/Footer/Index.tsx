@@ -20,7 +20,7 @@ export default function Footer() {
             <ul className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 xl:justify-end">
               <li>
                 <Link
-                  href="#HomePage"
+                  href="/"
                   className="text-sm text-white transition-all duration-200 hover:underline"
                 >
                   ទំព័រដើម
@@ -44,7 +44,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/Contact"
+                  href="#Testimonail"
                   className="text-sm text-white transition-all duration-200 hover:underline"
                 >
                   មតិរបស់សិស្ស
@@ -55,10 +55,7 @@ export default function Footer() {
             <ul className="flex items-center justify-center space-x-8 xl:justify-end">
               <p className="text-lg text-white font-medium">ភ្ជាប់ជាមួយយើង:</p>
               <li className="group">
-                <Link
-                  target="-blank"
-                  href="https://www.facebook.com/khmercodeacademy?mibextid=LQQJ4d"
-                >
+                <Link href="https://www.facebook.com/khmercodeacademy?mibextid=LQQJ4d">
                   <Image
                     className="ease-linear duration-300 grayscale group-hover:!grayscale-0 group-hover:scale-110"
                     src={facebook}
@@ -68,7 +65,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li className="group">
-                <Link target="-blank" href="https://t.me/khmercodeacademy">
+                <Link href="https://t.me/khmercodeacademy">
                   <Image
                     className="ease-linear duration-300 grayscale group-hover:!grayscale-0 group-hover:scale-110"
                     src={telegram}
@@ -78,10 +75,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li className="group">
-                <Link
-                  target="-blank"
-                  href="https://www.tiktok.com/@khmer_code_academy?_t=8oQBNiqWkga&_r=1"
-                >
+                <Link href="https://www.tiktok.com/@khmer_code_academy?_t=8oQBNiqWkga&_r=1">
                   <Image
                     className="ease-linear duration-300 grayscale group-hover:!grayscale-0 group-hover:scale-110"
                     src={tiktok}
@@ -91,10 +85,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li className="group">
-                <Link
-                  target="-blank"
-                  href="http://www.youtube.com/@khmercodeacademy"
-                >
+                <Link href="http://www.youtube.com/@khmercodeacademy">
                   <Image
                     className="ease-linear duration-300 grayscale group-hover:!grayscale-0 group-hover:scale-110"
                     src={youtube}

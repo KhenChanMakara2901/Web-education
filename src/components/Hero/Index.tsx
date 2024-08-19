@@ -43,7 +43,6 @@ export default function Index() {
           </p>
           <div className="flex justify-center animate-scaleUp">
             <Link
-              target="-blank"
               href="https://t.me/Kongsun"
               className="px-8 h-12 rounded-full flex items-center gap-x-3 bg-emerald-700 text-white hover:bg-opacity-80"
             >

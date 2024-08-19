@@ -99,7 +99,6 @@ const Index = () => {
             <div className="w-full flex sm:w-max lg:min-w-max lg:items-center hover:underline hover:decoration-4 rounded-2xl">
               <BiSolidContact size={25} className="mr-1 text-white" />
               <Link
-                target="-blank"
                 href="https://t.me/Kongsun"
                 className="flex text-xl justify-center gap-x-3 items-center text-gray-300 hover:text-gray-400
                  bg-transparent"
