@@ -6,7 +6,7 @@ import Head from "next/head";
 
 export default function page() {
   return (
-    <div className="bg-sky-900 py-20">
+    <div className="bg-sky-900">
       <head>
         <title>AboutUs/KCA.com</title>
       </head>
