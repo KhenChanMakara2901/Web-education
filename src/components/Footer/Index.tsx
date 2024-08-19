@@ -44,7 +44,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="#Testimonail"
+                  href="#Testimonial"
                   className="text-sm text-white transition-all duration-200 hover:underline"
                 >
                   មតិរបស់សិស្ស
