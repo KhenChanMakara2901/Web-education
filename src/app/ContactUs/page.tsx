@@ -16,7 +16,7 @@ export default function page() {
           </h2>
         </div>
         <div className="mt-20 lg:mt-20 animate-slideIn">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2  w-full gap-8">
             <div className="rounded-xl border border-white overflow-hidden">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d73824.51612940856!2d104.8416573804732!3d11.539825730124445!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x310951006513b911%3A0xfb4a1347dd91260e!2sKhmer%20Code%20Academy!5e0!3m2!1sen!2skh!4v1723657662983!5m2!1sen!2skh"

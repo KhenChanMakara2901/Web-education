@@ -5,7 +5,7 @@ export default function Index() {
   return (
     <section className="py-24 bg-sky-900">
       <div className="max-w-7xl mx-auto px-5 sm:px-10 md:px-12 lg:px-5">
-        <div className="w-full relative py-8 md:py-10 px-6 md:px-8 rounded-2xl bg-gradient-to-tr from-gray-100 to-gray-200 dark:from-gray-900">
+        <div className="w-full border border-white relative py-8 md:py-10 px-6 md:px-8 rounded-2xl bg-gradient-to-tr from-gray-100 to-gray-200 dark:from-gray-900">
           <div className="mx-auto text-center max-w-xl md:max-w-2xl relative space-y-8">
             <h1 className="text-3xl/tight sm:text-4xl/tight md:text-5xl/tight font-bold text-blue-950 dark:text-white">
               តេីនៅចាំដល់ពេលណាទៀត
@@ -19,7 +19,7 @@ export default function Index() {
             </p>
             <div className="mx-auto max-w-md sm:max-w-xl flex justify-center">
               <Link href="https://t.me/Kongsun">
-                <button className="outline-none h-12 px-5 rounded-xl bg-green-700 text-white flex items-center hover:bg-gray-400">
+                <button className="outline-none border border-white h-12 px-5 rounded-xl bg-green-700 text-white flex items-center hover:bg-gray-400">
                   ទំនាក់ទំនងមកកាន់យេីងឥឡូវនេះ
                 </button>
               </Link>

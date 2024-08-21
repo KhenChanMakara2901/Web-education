@@ -5,6 +5,7 @@ import Avarta from "@/public/Testimonial/Avarta.png";
 export default function Index() {
   return (
     <div id="Testimonial" className="py-20 bg-sky-900">
+      <div className="min-h-px w-full border-t border-white pt-8"></div>
       <div className="max-w-7xl mx-auto px-5 sm:px-10 md:px-12 lg:px-5 space-y-16">
         <div className="max-w-2xl">
           <h1 className="font-bold text-gray-800 dark:text-white text-3xl">

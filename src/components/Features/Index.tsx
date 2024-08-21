@@ -65,7 +65,7 @@ const Index = () => {
           <div className="flex">
             <Link
               href="https://t.me/Kongsun"
-              className="px-5 hover:bg-gray-500 h-11 flex items-center bg-gray-900 dark:bg-green-700 rounded-lg text-gray-900 dark:text-white"
+              className="px-5 border border-white hover:bg-gray-500 h-11 flex items-center bg-gray-900 dark:bg-green-700 rounded-lg text-gray-900 dark:text-white"
             >
               សាងល្បងឥឡូវនេះ
             </Link>
