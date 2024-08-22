@@ -12,9 +12,9 @@ import Head from "next/head";
 export default function page() {
   return (
     <div className="py-10 bg-blue-950">
-      <head>
+      <Head>
         <title>Course|KhmerCodeAcademy</title>
-      </head>
+      </Head>
       <div className="max-w-7xl mx-auto px-5 sm:px-10 md:px-12 lg:px-5 space-y-16">
         <div className="max-w-2xl space-y-3 animate-fadeIn">
           <h1 className="text-4xl/tight sm:text-4xl/tight underline underline-offset-4 font-bold text-white">

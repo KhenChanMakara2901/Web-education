@@ -6,9 +6,9 @@ import CTA from "@/src/components/CTA/Index";
 export default function page() {
   return (
     <div className="bg-blue-950">
-      <head>
+      <Head>
         <title>Contact Us|KhmerCodeAcademy</title>
-      </head>
+      </Head>
       <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:py-20 lg:px-8">
         <div className="max-w-2xl flex lg:max-w-4xl mx-auto animate-slideIn">
           <FaMapMarkerAlt size={50} className="text-white mr-1" />
