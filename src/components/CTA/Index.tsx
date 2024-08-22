@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Index() {
   return (
-    <section className="py-24 bg-sky-900">
+    <section className="bg-blue-950 py-24">
       <div className="max-w-7xl mx-auto px-5 sm:px-10 md:px-12 lg:px-5">
         <div className="w-full border border-white relative py-8 md:py-10 px-6 md:px-8 rounded-2xl bg-gradient-to-tr from-gray-100 to-gray-200 dark:from-gray-900">
           <div className="mx-auto text-center max-w-xl md:max-w-2xl relative space-y-8">

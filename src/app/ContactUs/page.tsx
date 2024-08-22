@@ -1,10 +1,11 @@
 import React from "react";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import Head from "next/head";
+import CTA from "@/src/components/CTA/Index";
 
 export default function page() {
   return (
-    <div className="bg-sky-900">
+    <div className="bg-blue-950">
       <head>
         <title>Contact Us|KhmerCodeAcademy</title>
       </head>
@@ -64,6 +65,7 @@ export default function page() {
           </div>
         </div>
       </div>
+      <CTA />
     </div>
   );
 }

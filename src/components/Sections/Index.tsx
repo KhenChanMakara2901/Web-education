@@ -9,7 +9,7 @@ import Education from "@/public/Sections/Education.png";
 
 export default function Index() {
   return (
-    <div className="bg-sky-900">
+    <div className="bg-blue-950">
       <div className="mx-auto w-full max-w-7xl px-5 py-16 md:px-10 md:py-20">
         <div className="flex flex-col items-center text-center">
           <h2 className="text-3xl font-bold text-white md:text-5xl">

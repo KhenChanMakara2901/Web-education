@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Index() {
   return (
-    <section className="bg-sky-900 py-32 sm:py-36 lg:py-40 overflow-hidden h-[100dvh] min-h-max flex items-center relative">
+    <section className="bg-blue-950 py-32 sm:py-36 lg:py-40 overflow-hidden h-[100dvh] min-h-max flex items-center relative">
       <div
         className="absolute top-0 left-0 -translate-x-[54%] -translate-y-[70%] w-2/5 rounded-full aspect-square bg-sky-900
  backdrop-filter blur-3xl opacity-50 animate-scaleUp"
@@ -30,7 +30,7 @@ export default function Index() {
       </div>
       <div className="mx-auto lg:max-w-7xl w-full px-5 sm:px-10 md:px-12 lg:px-5">
         <div className="text-center flex flex-col items-center space-y-10">
-          <span className="border text-6xl font-serif border-white px-3 py-0.5 rounded-2xl bg-gray-50 dark:bg-blue-950 bg-opacity-50  text-gray-700 dark:text-white animate-scaleUp">
+          <span className="border text-6xl font-serif border-white px-3 py-0.5 rounded-2xl bg-gray-50 dark:bg-gray-900 bg-opacity-50  text-gray-700 dark:text-white animate-scaleUp">
             KHMER <span className="text-yellow-400">CODE</span> ACADEMY
           </span>
           <h1 className="text-4xl md:text-5xl lg:text-6xl/tight xl:text-7xl/tight text-gray-900 dark:text-white font-bold max-w-4xl capitalize animate-fadeIn">

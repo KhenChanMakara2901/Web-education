@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import Rupp from "@/public/Image/Logo/Rupp.png";
 import { IoHome } from "react-icons/io5";
@@ -12,11 +12,20 @@ import { usePathname } from "next/navigation";
 const Index = () => {
   const pathname = usePathname();
   const [openNavbar, setOpenNavbar] = useState(false);
+  const [theme, setTheme] = useState("dark");
   const toggleNavbar = () => {
     setOpenNavbar((openNavbar) => !openNavbar);
   };
+  const toggleTheme = () => {
+    const newTheme = theme === "light" ? "dark" : "light";
+    setTheme(newTheme);
+  };
+
+  useEffect(() => {
+    document.documentElement.classList.toggle("dark", theme === "dark");
+  }, [theme]);
   return (
-    <header className="bg-sky-900 sticky top-0 inset-x-0 z-50 h-24 flex items-center">
+    <header className="bg-blue-950 sticky top-0 inset-x-0 z-50 h-24 flex items-center">
       <div className="mx-auto lg:max-w-7xl w-full px-5 sm:px-10 md:px-12 lg:px-5 h-full items-center">
         <nav className="flex justify-between items-center h-full">
           <div className="flex min-w-max items-center">
@@ -33,7 +42,7 @@ const Index = () => {
           </div>
           <div
             className={`
-            flex flex-col space-y-10 inset-0 fixed top-0  h-[100dvh] bg-white dark:bg-sky-900 lg:!bg-transparent py-20 px-5 sm:px-10 md:px-14
+            flex flex-col space-y-10 inset-0 fixed top-0  h-[100dvh] shadow-lg bg-blue-950 lg:!bg-transparent py-20 px-5 sm:px-10 md:px-14
             transition-all ease-linear duration-300 lg:flex-row lg:flex-1 lg:py-0 lg:px-0 lg:space-y-0 lg:gap-x-10 lg:relative lg:top-0 lg:h-full lg:items-center lg:justify-between lg:w-max
             ${
               openNavbar
@@ -120,6 +129,12 @@ const Index = () => {
                 </span>
               </Link>
             </div>
+            <button
+              onClick={toggleTheme}
+              className="ml-2 text-gray-700 dark:text-gray-300 bg-transparent p-2 rounded-full border border-gray-400 dark:border-gray-600 hover:bg-gray-200 dark:hover:bg-gray-700"
+            >
+              {theme === "dark" ? "🌙" : "🔆"}
+            </button>
           </div>
           <div className="relative flex items-center justify-end z-60 lg:hidden">
             <button

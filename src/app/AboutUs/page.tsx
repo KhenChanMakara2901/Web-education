@@ -1,23 +1,21 @@
 import React from "react";
 import Image from "next/image";
 import KCA2 from "@/public/Image/Logo/KCA2.png";
-import { FaCode } from "react-icons/fa";
 import Head from "next/head";
+import Sections from "@/src/components/Sections/Index";
 
 export default function page() {
   return (
-    <div className="bg-sky-900">
+    <div className="bg-blue-950">
       <head>
         <title>About Us|KhmerCodeAcademy</title>
       </head>
-      <div className="mx-auto flex w-full max-w-7xl px-5 py-5 md:px-10 md:py-20 animate-fadeIn">
-        <FaCode size={50} className="mr-1 text-white" />
-        <h2 className="mb-3 underline text-white text-3xl font-bold md:text-5xl lg:mb-14">
-          ខ្មែរកូដអាខាដឺមី
+      <div className="mx-auto flex w-full max-w-7xl px-5 py-5 md:px-10 md:py-10 animate-fadeIn">
+        <h2 className="mb-3 underline underline-offset-8 text-white text-3xl font-bold md:text-5xl lg:mb-14">
+          ហេតុអ្វីបានជាអ្នកគួរជ្រើសរើសពួកយើង
         </h2>
-        <FaCode size={50} className="mr-1 text-white" />
       </div>
-      <div className="mx-auto w-full max-w-7xl px-5 py-16 md:px-10 md:py-20">
+      <div className="mx-auto w-full max-w-7xl px-5 py-10 md:px-10 md:py-16">
         <div className="grid gap-10 lg:grid-cols-2 lg:gap-12 animate-slideIn">
           <Image
             src={KCA2}
@@ -42,6 +40,7 @@ export default function page() {
           </div>
         </div>
       </div>
+      <Sections />
     </div>
   );
 }

@@ -11,7 +11,7 @@ import Head from "next/head";
 
 export default function page() {
   return (
-    <div className=" py-10 bg-sky-900">
+    <div className="py-10 bg-blue-950">
       <head>
         <title>Course|KhmerCodeAcademy</title>
       </head>
@@ -25,7 +25,7 @@ export default function page() {
           </p>
         </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-10 animate-scaleUp">
-          <div className="relative p-5 sm:p-6 md:p-8 rounded-lg bg-sky-950 border border-white space-y-6">
+          <div className="relative p-5 sm:p-6 md:p-8 rounded-lg bg-gray-900 border border-white space-y-6">
             <Image
               src={Course3}
               alt="project cover"
@@ -63,7 +63,7 @@ export default function page() {
               </div>
             </div>
           </div>
-          <div className="relative p-5 sm:p-6 md:p-8 rounded-lg bg-sky-950 border border-white space-y-6">
+          <div className="relative p-5 sm:p-6 md:p-8 rounded-lg bg-gray-900 border border-white space-y-6">
             <Image
               src={Course1}
               alt="project cover"
@@ -91,7 +91,7 @@ export default function page() {
               </div>
             </div>
           </div>
-          <div className="relative p-5 sm:p-6 md:p-8 rounded-lg bg-sky-950 border border-white space-y-6">
+          <div className="relative p-5 sm:p-6 md:p-8 rounded-lg bg-gray-900 border border-white space-y-6">
             <Image
               src={Course2}
               alt="project cover"
@@ -119,7 +119,7 @@ export default function page() {
               </div>
             </div>
           </div>
-          <div className="relative p-5 sm:p-6 md:p-8 rounded-lg bg-sky-950 border border-white space-y-6">
+          <div className="relative p-5 sm:p-6 md:p-8 rounded-lg bg-gray-900 border border-white space-y-6">
             <Image
               src={Course4}
               alt="project cover"
@@ -149,7 +149,7 @@ export default function page() {
               </div>
             </div>
           </div>
-          <div className="relative p-5 sm:p-6 md:p-8 rounded-lg bg-sky-950 border border-white space-y-6">
+          <div className="relative p-5 sm:p-6 md:p-8 rounded-lg bg-gray-900 border border-white space-y-6">
             <Image
               src={Course5}
               alt="project cover"
@@ -179,7 +179,7 @@ export default function page() {
               </div>
             </div>
           </div>
-          <div className="relative p-5 sm:p-6 md:p-8 rounded-lg bg-sky-950 border border-gray-200 space-y-6">
+          <div className="relative p-5 sm:p-6 md:p-8 rounded-lg bg-gray-900 border border-gray-200 space-y-6">
             <Image
               src={Course}
               alt="project cover"
