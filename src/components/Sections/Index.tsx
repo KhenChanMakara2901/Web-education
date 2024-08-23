@@ -1,3 +1,7 @@
+"use client";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import React from "react";
 import Image from "next/image";
 import Course from "@/public/Sections/Course.png";
@@ -7,25 +11,43 @@ import Video from "@/public/Sections/Video.png";
 import Service from "@/public/Sections/Service.png";
 import Education from "@/public/Sections/Education.png";
 
-export default function Index() {
+const Index = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      easing: "ease-in-out",
+      once: true,
+    });
+  }, []);
   return (
     <div className="bg-blue-950">
       <div className="mx-auto w-full max-w-7xl px-5 py-16 md:px-10 md:py-20">
         <div className="flex flex-col items-center text-center">
-          <h2 className="text-3xl font-bold text-white md:text-5xl">
+          <h2
+            className="text-3xl font-bold text-white md:text-5xl"
+            data-aos="fade-up"
+          >
             ខ្មែរកូដ អាខាដឺមី
           </h2>
-          <p className="mb-8 mt-4 max-w-xl text-base text-white md:mb-12 md:text-lg lg:mb-16">
+          <p
+            className="mb-8 mt-4 max-w-xl text-base text-white md:mb-12 md:text-lg lg:mb-16"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
             ស្គាល់ពីស្ថាប័ន ស្គាល់ពីយើង និងចាប់ផ្តើមជាមួយគ្នា
           </p>
         </div>
         <div className="grid gap-5 sm:grid-cols-2 md:grid-cols-3 md:gap-4 lg:gap-6">
-          <div className="grid gap-6 rounded-md  p-8 md:p-10 border border-white shadow-sm shadow-gray-500">
+          <div
+            className="grid gap-6 rounded-md p-8 md:p-10 border border-white shadow-sm shadow-gray-500"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
             <Image
               src={Code}
               alt="Image"
               width={50}
-              className="inline-block h-16 w-16 object-cover rounded-full "
+              className="inline-block h-16 w-16 object-cover rounded-full"
             />
             <h3 className="text-white text-xl font-semibold">
               អនុវត្តការសរសេរកូដ:
@@ -34,24 +56,32 @@ export default function Index() {
               យេីងផ្ដេាតទៅលេីការសសេរកូដអនុវត្តទៅលេីគម្រោងជាក់ស្ដែង។
             </p>
           </div>
-          <div className="grid gap-6 rounded-md  p-8 md:p-10 border border-white shadow-sm shadow-gray-500">
+          <div
+            className="grid gap-6 rounded-md p-8 md:p-10 border border-white shadow-sm shadow-gray-500"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
             <Image
               src={Course}
               alt="Image"
               width={50}
-              className="inline-block h-16 w-16 object-cover rounded-full "
+              className="inline-block h-16 w-16 object-cover rounded-full"
             />
             <h3 className="text-xl font-semibold text-white">វគ្គសិក្សា:</h3>
             <p className="text-lg text-gray-100">
               ពួកយេីងបានបង្កេីតជាវគ្គសិក្សាដែលសិស្សអាចជ្រេីសរេីស។
             </p>
           </div>
-          <div className="grid gap-6 rounded-md  p-8 md:p-10 border border-white shadow-sm shadow-gray-500">
+          <div
+            className="grid gap-6 rounded-md p-8 md:p-10 border border-white shadow-sm shadow-gray-500"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
             <Image
               src={Student}
               alt="Image"
               width={50}
-              className="inline-block h-16 w-16 object-cover rounded-full "
+              className="inline-block h-16 w-16 object-cover rounded-full"
             />
             <h3 className="text-white text-xl font-semibold">
               និស្សិតក្នុងការអប់រំ:
@@ -61,12 +91,16 @@ export default function Index() {
               បុគ្គលិកមកពីស្ថាប័នឯកជន និងរដ្ឋជាដើម។
             </p>
           </div>
-          <div className="grid gap-6 rounded-md  p-8 md:p-10 border border-white shadow-sm shadow-gray-500">
+          <div
+            className="grid gap-6 rounded-md p-8 md:p-10 border border-white shadow-sm shadow-gray-500"
+            data-aos="fade-up"
+            data-aos-delay="500"
+          >
             <Image
               src={Video}
               alt="Image"
               width={50}
-              className="inline-block h-16 w-16 object-cover rounded-full "
+              className="inline-block h-16 w-16 object-cover rounded-full"
             />
             <h3 className="text-white text-xl font-semibold">
               បង្កើតជាវីដេអូ:
@@ -77,12 +111,16 @@ export default function Index() {
               អាចជាវបានជាមួយនឹងគុណភាព និងតម្លៃសមរម្យ។
             </p>
           </div>
-          <div className="grid gap-6 rounded-md  p-8 md:p-10 border border-white shadow-sm shadow-gray-500">
+          <div
+            className="grid gap-6 rounded-md p-8 md:p-10 border border-white shadow-sm shadow-gray-500"
+            data-aos="fade-up"
+            data-aos-delay="600"
+          >
             <Image
               src={Service}
               alt="Image"
               width={50}
-              className="inline-block h-16 w-16 object-cover rounded-full "
+              className="inline-block h-16 w-16 object-cover rounded-full"
             />
             <h3 className="text-white text-xl font-semibold">មានជាសេវាកម្ម:</h3>
             <p className="text-lg text-white">
@@ -90,11 +128,16 @@ export default function Index() {
               សម្អាត និងវិភាគទិន្នន័យទៅលើផ្នែកដែលពាក់ព័ន្ធ។
             </p>
           </div>
-          <div className="grid gap-6 rounded-md  p-8 md:p-10 border border-white shadow-sm shadow-gray-500">
+          <div
+            className="grid gap-6 rounded-md p-8 md:p-10 border border-white shadow-sm shadow-gray-500"
+            data-aos="fade-up"
+            data-aos-delay="700"
+          >
             <Image
               src={Education}
               alt="Image"
-              className="inline-block h-16 w-16 object-cover rounded-full "
+              width={50}
+              className="inline-block h-16 w-16 object-cover rounded-full"
             />
             <h3 className="text-white text-xl font-semibold">
               ការផ្ដល់ជាអាហារូបករណ៍:
@@ -108,4 +151,6 @@ export default function Index() {
       </div>
     </div>
   );
-}
+};
+
+export default Index;

@@ -1,3 +1,7 @@
+"use client";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -10,6 +14,14 @@ import Course5 from "@/public/Course/Course5.png";
 import Head from "next/head";
 
 export default function page() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      easing: "ease-in-out",
+      once: true,
+    });
+  }, []);
+
   return (
     <div className="py-10 bg-blue-950">
       <Head>
@@ -24,8 +36,11 @@ export default function page() {
             ដែលនិស្សិតអាចជ្រេីសរេីស៖
           </p>
         </div>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-10 animate-scaleUp">
-          <div className="relative p-5 sm:p-6 md:p-8 rounded-lg bg-gray-900 border border-white space-y-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-10">
+          <div
+            data-aos="fade-up"
+            className="relative p-5 sm:p-6 md:p-8 rounded-lg bg-gray-900 border border-white space-y-6"
+          >
             <Image
               src={Course3}
               alt="project cover"
@@ -63,7 +78,11 @@ export default function page() {
               </div>
             </div>
           </div>
-          <div className="relative p-5 sm:p-6 md:p-8 rounded-lg bg-gray-900 border border-white space-y-6">
+          <div
+            data-aos="fade-up"
+            data-aos-delay="100"
+            className="relative p-5 sm:p-6 md:p-8 rounded-lg bg-gray-900 border border-white space-y-6"
+          >
             <Image
               src={Course1}
               alt="project cover"
@@ -91,7 +110,11 @@ export default function page() {
               </div>
             </div>
           </div>
-          <div className="relative p-5 sm:p-6 md:p-8 rounded-lg bg-gray-900 border border-white space-y-6">
+          <div
+            data-aos="fade-up"
+            data-aos-delay="200"
+            className="relative p-5 sm:p-6 md:p-8 rounded-lg bg-gray-900 border border-white space-y-6"
+          >
             <Image
               src={Course2}
               alt="project cover"
@@ -119,7 +142,11 @@ export default function page() {
               </div>
             </div>
           </div>
-          <div className="relative p-5 sm:p-6 md:p-8 rounded-lg bg-gray-900 border border-white space-y-6">
+          <div
+            data-aos="fade-up"
+            data-aos-delay="300"
+            className="relative p-5 sm:p-6 md:p-8 rounded-lg bg-gray-900 border border-white space-y-6"
+          >
             <Image
               src={Course4}
               alt="project cover"
@@ -149,7 +176,11 @@ export default function page() {
               </div>
             </div>
           </div>
-          <div className="relative p-5 sm:p-6 md:p-8 rounded-lg bg-gray-900 border border-white space-y-6">
+          <div
+            data-aos="fade-up"
+            data-aos-delay="400"
+            className="relative p-5 sm:p-6 md:p-8 rounded-lg bg-gray-900 border border-white space-y-6"
+          >
             <Image
               src={Course5}
               alt="project cover"
@@ -179,7 +210,11 @@ export default function page() {
               </div>
             </div>
           </div>
-          <div className="relative p-5 sm:p-6 md:p-8 rounded-lg bg-gray-900 border border-gray-200 space-y-6">
+          <div
+            data-aos="fade-up"
+            data-aos-delay="500"
+            className="relative p-5 sm:p-6 md:p-8 rounded-lg bg-gray-900 border border-gray-200 space-y-6"
+          >
             <Image
               src={Course}
               alt="project cover"

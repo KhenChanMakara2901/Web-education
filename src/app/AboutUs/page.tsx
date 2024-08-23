@@ -1,3 +1,7 @@
+"use client";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import React from "react";
 import Image from "next/image";
 import KCA2 from "@/public/Image/Logo/KCA2.png";
@@ -5,6 +9,14 @@ import Head from "next/head";
 import Sections from "@/src/components/Sections/Index";
 
 export default function page() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      easing: "ease-in-out",
+      once: true,
+    });
+  }, []);
+
   return (
     <div className="bg-blue-950">
       <Head>
@@ -16,13 +28,18 @@ export default function page() {
         </h2>
       </div>
       <div className="mx-auto w-full max-w-7xl px-5 py-10 md:px-10 md:py-16">
-        <div className="grid gap-10 lg:grid-cols-2 lg:gap-12 animate-slideIn">
-          <Image
-            src={KCA2}
-            alt="Image"
-            className="inline-block border border-white h-full w-full rounded-2xl object-cover"
-          />
-          <div className="flex flex-col gap-5 rounded-2xl border border-solid border-white p-10 sm:p-20 animate-scaleUp">
+        <div className="grid gap-10 lg:grid-cols-2 lg:gap-12">
+          <div data-aos="fade-up">
+            <Image
+              src={KCA2}
+              alt="Image"
+              className="inline-block border border-white h-full w-full rounded-2xl object-cover"
+            />
+          </div>
+          <div
+            data-aos="fade-left"
+            className="flex flex-col gap-5 rounded-2xl border border-solid border-white p-10 sm:p-20"
+          >
             <h2 className="text-3xl underline text-white font-bold md:text-5xl mt-5">
               បេសកកម្មរបស់យើង:
             </h2>
