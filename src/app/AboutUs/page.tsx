@@ -19,9 +19,11 @@ export default function page() {
 
   return (
     <div className="bg-blue-950">
-      <Head>
-        <title>About Us|KhmerCodeAcademy</title>
-      </Head>
+      <head>
+        <title className="text-white font-extrabold">
+          About Us|KhmerCodeAcademy
+        </title>
+      </head>
       <div className="mx-auto flex w-full max-w-7xl px-5 py-5 md:px-10 md:py-10 animate-fadeIn">
         <h2 className="mb-3 underline underline-offset-8 text-white text-3xl font-bold md:text-5xl lg:mb-14">
           ហេតុអ្វីបានជាអ្នកគួរជ្រើសរើសពួកយើង

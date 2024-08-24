@@ -141,24 +141,24 @@ const Index = () => {
               onClick={() => {
                 toggleNavbar();
               }}
-              className="p-3 rounded-full bg-emerald-600 dark:bg-emerald-500 outline-none w-12 aspect-square flex flex-col relative justify-center items-center"
+              className="p-3 rounded-full bg-blue-900 dark:bg-blue-900 outline-none w-12 aspect-square flex flex-col relative justify-center items-center"
             >
               <span className="sr-only">toggle navbar</span>
               <span
                 className={`
-                w-6 h-0.5 rounded-full bg-gray-300 transition-transform duration-300 ease-linear
+                w-6 h-0.5 rounded-full bg-white transition-transform duration-300 ease-linear
                 ${openNavbar ? "translate-y-1.5 rotate-[40deg]" : ""}
               `}
               />
               <span
                 className={`
-                w-6 origin-center  mt-1 h-0.5 rounded-full bg-gray-300 transition-all duration-300 ease-linear
+                w-6 origin-center  mt-1 h-0.5 rounded-full bg-white transition-all duration-300 ease-linear
                 ${openNavbar ? "scale-x-0 opacity-0" : ""}
               `}
               />
               <span
                 className={`
-                w-6 mt-1 h-0.5 rounded-full bg-gray-300 transition-all duration-300 ease-linear
+                w-6 mt-1 h-0.5 rounded-full bg-white transition-all duration-300 ease-linear
                 ${openNavbar ? "-translate-y-1.5 -rotate-[40deg]" : ""}
               `}
               />
