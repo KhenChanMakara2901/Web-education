@@ -7,8 +7,14 @@ module.exports = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
     "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
   ],
+  darkMode: "class",
   theme: {
     extend: {
+      colors: {
+        dark: {
+          DEFAULT: "#082f49", // Replace with your preferred dark color
+        },
+      },
       keyframes: {
         fadeIn: {
           "0%": { opacity: "0" },

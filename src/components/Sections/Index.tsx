@@ -20,17 +20,14 @@ const Index = () => {
     });
   }, []);
   return (
-    <div className="bg-blue-950">
+    <div className="bg-white dark:bg-dark scroll-smooth">
       <div className="mx-auto w-full max-w-7xl px-5 py-16 md:px-10 md:py-20">
         <div className="flex flex-col items-center text-center">
-          <h2
-            className="text-3xl font-bold text-white md:text-5xl"
-            data-aos="fade-up"
-          >
+          <h2 className="text-3xl font-bold md:text-5xl" data-aos="fade-up">
             ខ្មែរកូដ អាខាដឺមី
           </h2>
           <p
-            className="mb-8 mt-4 max-w-xl text-base text-white md:mb-12 md:text-lg lg:mb-16"
+            className="mb-8 mt-4 max-w-xl text-base md:mb-12 md:text-lg lg:mb-16"
             data-aos="fade-up"
             data-aos-delay="100"
           >
@@ -49,10 +46,8 @@ const Index = () => {
               width={50}
               className="inline-block h-16 w-16 object-cover rounded-full"
             />
-            <h3 className="text-white text-xl font-semibold">
-              អនុវត្តការសរសេរកូដ:
-            </h3>
-            <p className="text-lg text-gray-100">
+            <h3 className="text-xl font-semibold">អនុវត្តការសរសេរកូដ:</h3>
+            <p className="text-lg">
               យេីងផ្ដេាតទៅលេីការសសេរកូដអនុវត្តទៅលេីគម្រោងជាក់ស្ដែង។
             </p>
           </div>
@@ -67,8 +62,8 @@ const Index = () => {
               width={50}
               className="inline-block h-16 w-16 object-cover rounded-full"
             />
-            <h3 className="text-xl font-semibold text-white">វគ្គសិក្សា:</h3>
-            <p className="text-lg text-gray-100">
+            <h3 className="text-xl font-semibold">វគ្គសិក្សា:</h3>
+            <p className="text-lg">
               ពួកយេីងបានបង្កេីតជាវគ្គសិក្សាដែលសិស្សអាចជ្រេីសរេីស។
             </p>
           </div>
@@ -83,10 +78,8 @@ const Index = () => {
               width={50}
               className="inline-block h-16 w-16 object-cover rounded-full"
             />
-            <h3 className="text-white text-xl font-semibold">
-              និស្សិតក្នុងការអប់រំ:
-            </h3>
-            <p className="text-lg text-gray-100">
+            <h3 className="text-xl font-semibold">និស្សិតក្នុងការអប់រំ:</h3>
+            <p className="text-lg">
               រហូតមកដល់ពេលនេះ យើងបានបង្រៀនសិស្សជាច្រើននាក់រួចមកហើយ រួមមាននិស្សិត
               បុគ្គលិកមកពីស្ថាប័នឯកជន និងរដ្ឋជាដើម។
             </p>
@@ -102,10 +95,8 @@ const Index = () => {
               width={50}
               className="inline-block h-16 w-16 object-cover rounded-full"
             />
-            <h3 className="text-white text-xl font-semibold">
-              បង្កើតជាវីដេអូ:
-            </h3>
-            <p className="text-lg text-white">
+            <h3 className="text-xl font-semibold">បង្កើតជាវីដេអូ:</h3>
+            <p className="text-lg">
               យើងផលិតវីដេអូ ទាំងកំឡុងពេលបង្រៀន
               និងសម្រាប់អ្នកដែលមិនអាចមករៀននៅក្នុងថ្នាក់ផ្ទាល់បាន
               អាចជាវបានជាមួយនឹងគុណភាព និងតម្លៃសមរម្យ។
@@ -122,8 +113,8 @@ const Index = () => {
               width={50}
               className="inline-block h-16 w-16 object-cover rounded-full"
             />
-            <h3 className="text-white text-xl font-semibold">មានជាសេវាកម្ម:</h3>
-            <p className="text-lg text-white">
+            <h3 className="text-xl font-semibold">មានជាសេវាកម្ម:</h3>
+            <p className="text-lg">
               ក្រៅអំពីការបង្រៀន យើងក៏មានផ្តល់ជាសេវាកម្មប្រឹក្សា ប្រមូល រៀបចំ
               សម្អាត និងវិភាគទិន្នន័យទៅលើផ្នែកដែលពាក់ព័ន្ធ។
             </p>
@@ -139,10 +130,8 @@ const Index = () => {
               width={50}
               className="inline-block h-16 w-16 object-cover rounded-full"
             />
-            <h3 className="text-white text-xl font-semibold">
-              ការផ្ដល់ជាអាហារូបករណ៍:
-            </h3>
-            <p className="text-lg text-white">
+            <h3 className="text-xl font-semibold">ការផ្ដល់ជាអាហារូបករណ៍:</h3>
+            <p className="text-lg">
               យើងតែងតែផ្តល់ជាអាហារូបករណ៍ដល់សិស្សានុសិស្សដែលចង់ចាប់យក
               និងផ្តោតលើជំនាញផែនទី។ ព័ត៌មានបន្ថែមសូមទំនាក់ទំនងមកកាន់យើងខ្ញុំ។
             </p>

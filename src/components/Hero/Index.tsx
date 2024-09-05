@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Index() {
   return (
-    <section className="bg-blue-950 py-32 sm:py-36 lg:py-40 overflow-hidden h-[100dvh] min-h-max flex items-center relative">
+    <section className="py-32 scroll-smooth sm:py-36 lg:py-40 overflow-hidden h-[100dvh] min-h-max flex items-center relative bg-white dark:bg-dark">
       <div
         className="absolute top-0 left-0 -translate-x-[54%] -translate-y-[70%] w-2/5 rounded-full aspect-square bg-sky-900
  backdrop-filter blur-3xl opacity-50 animate-scaleUp"
@@ -30,14 +30,14 @@ export default function Index() {
       </div>
       <div className="mx-auto lg:max-w-7xl w-full px-5 sm:px-10 md:px-12 lg:px-5">
         <div className="text-center flex flex-col items-center space-y-10">
-          <span className="border text-6xl font-serif border-white px-3 py-0.5 rounded-2xl bg-gray-50 dark:bg-gray-900 bg-opacity-50  text-gray-700 dark:text-white animate-scaleUp">
+          <span className="border text-5xl font-serif px-3 py-0.5 rounded-2xl bg-opacity-50 animate-scaleUp">
             KHMER <span className="text-yellow-400">CODE</span> ACADEMY
           </span>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl/tight xl:text-7xl/tight text-gray-900 dark:text-white font-bold max-w-4xl capitalize animate-fadeIn">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl/tight xl:text-6xl/tight  font-bold max-w-4xl capitalize animate-fadeIn">
             សិក្សាជំនាញគ្រប់គ្រងទិន្នន័យ
             និងការអភិវឌ្ឍន៍កម្មវិធីដែលសង្គមត្រូវការនៅពេលបច្ចុប្បន្ន
           </h1>
-          <p className="text-base text-gray-700 dark:text-gray-300 text-center max-w-xl animate-fadeIn">
+          <p className="text-base text-center max-w-xl animate-fadeIn">
             យើងផ្តល់ឲ្យនូវការបង្រៀនដែលយកចិត្តទុកដាក់ ប្រកបដោយគុណភាព
             និងទំនួលខុសត្រូវ។ ការពេញចិត្តរបស់អ្នក គឺជាតម្លៃរបស់យើង។
           </p>

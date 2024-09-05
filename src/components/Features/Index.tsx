@@ -18,7 +18,7 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="bg-blue-950 py-24">
+    <div className="py-24 scroll-smooth bg-white dark:bg-dark">
       <div className="max-w-7xl mx-auto px-5 sm:px-10 md:px-12 lg:px-5 flex flex-col md:flex-row gap-16">
         <div
           className="flex md:flex-1 border border-white rounded-xl"
@@ -32,9 +32,9 @@ const Index = () => {
             className="w-full md:h-full object-cover rounded-lg"
           />
         </div>
-        <div className="md:w-1/2 space-y-12 text-gray-700 dark:text-gray-300 md:py-8">
+        <div className="md:w-1/2 space-y-12 md:py-8">
           <h1
-            className="text-white dark:text-white font-semibold text-2xl sm:text-3xl md:text-4xl"
+            className="font-semibold text-xl sm:text-2xl md:text-3xl"
             data-aos="fade-up"
           >
             មិនគ្រាន់តែបង្រៀន យើងតែងតែឈឺឆ្អាល
@@ -56,14 +56,12 @@ const Index = () => {
               data-aos="fade-up"
               data-aos-delay="200"
             >
-              <span className="p-3 md:p-3.5 bg-white rounded-full text-gray-200 flex w-max">
+              <span className="p-3 md:p-3.5 bg-white rounded-full flex w-max">
                 <Image src={Phone} alt="Phone" width={50} />
               </span>
               <div className="space-y-0.5 flex flex-col flex-1">
-                <p className="text-white">លេខទូរស័ព្ទ:</p>
-                <p className="font-semibold text-white text-lg">
-                  (+855) 70 256 959
-                </p>
+                <p>លេខទូរស័ព្ទ:</p>
+                <p className="font-semibold text-lg">(+855) 70 256 959</p>
               </div>
             </a>
             <a
@@ -73,21 +71,19 @@ const Index = () => {
               data-aos="fade-up"
               data-aos-delay="300"
             >
-              <span className="p-3 md:p-3.5 rounded-full bg-gray-100 text-gray-200 flex w-max">
+              <span className="p-3 md:p-3.5 rounded-full bg-white flex w-max">
                 <Image src={Mail} alt="Mail" width={50} />
               </span>
               <div className="space-y-0.5 flex flex-col flex-1">
-                <p className="text-white">អ៊ីមែល:</p>
-                <p className="font-semibold text-white text-lg">
-                  Academy@gmail.com
-                </p>
+                <p>អ៊ីមែល:</p>
+                <p className="font-semibold text-lg">Academy@gmail.com</p>
               </div>
             </a>
           </div>
           <div className="flex">
             <Link
               href="https://t.me/Kongsun"
-              className="px-5 border border-white hover:bg-gray-500 h-11 flex items-center bg-gray-900 dark:bg-green-700 rounded-lg text-gray-900 dark:text-white"
+              className="px-5 border h-11 flex items-center"
               data-aos="fade-up"
               data-aos-delay="400"
             >

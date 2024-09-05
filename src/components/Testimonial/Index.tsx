@@ -15,14 +15,11 @@ export default function Index() {
     });
   }, []);
   return (
-    <div id="Testimonial" className="bg-blue-950 py-20">
-      <div className="min-h-px w-full border-t border-white pt-8"></div>
+    <div id="Testimonial" className="py-20 bg-white dark:bg-dark scroll-smooth">
+      <div className="min-h-px w-full border-t pt-8"></div>
       <div className="max-w-7xl mx-auto px-5 sm:px-10 md:px-12 lg:px-5 space-y-16">
         <div className="max-w-2xl">
-          <h1
-            className="font-bold text-gray-800 dark:text-white text-3xl"
-            data-aos="fade-up"
-          >
+          <h1 className="font-bold text-3xl" data-aos="fade-up">
             មតិរបស់និស្សិត:
           </h1>
         </div>
@@ -34,7 +31,7 @@ export default function Index() {
               data-aos="fade-up"
               data-aos-delay={index * 100} // Delay for each item
             >
-              <p className="font-medium text-gray-700 dark:text-gray-300">
+              <p className="font-medium">
                 ក្នុងនាមជានិស្សិតដែលបានសិក្សានៅ Khmer Code Academy
                 ខ្ញុំមានសេចក្តីសោមនស្សរីករាយជាខ្លាំងដែលអាចផ្តល់ឱ្យនិស្សិតនូវឱកាសដើម្បីរៀន
                 Front end Development
@@ -48,12 +45,10 @@ export default function Index() {
                   className="w-12 h-12 rounded-full flex object-cover"
                 />
                 <div className="space-y-1 flex-1">
-                  <h2 className="text-lg font-semibold leading-none text-gray-800 dark:text-gray-200">
+                  <h2 className="text-lg font-semibold leading-none">
                     ខេន ចាន់មករា
                   </h2>
-                  <p className="text-gray-600 dark:text-gray-400">
-                    និស្សិត / RUPP
-                  </p>
+                  <p>និស្សិត / RUPP</p>
                 </div>
               </div>
             </div>

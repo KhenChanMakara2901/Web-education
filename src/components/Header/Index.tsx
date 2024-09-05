@@ -25,14 +25,14 @@ const Index = () => {
     document.documentElement.classList.toggle("dark", theme === "dark");
   }, [theme]);
   return (
-    <header className="bg-blue-950 sticky top-0 inset-x-0 z-50 h-24 flex items-center">
+    <header className="sticky scroll-smooth top-0 inset-x-0 z-50 h-24 flex items-center bg-white dark:bg-dark">
       <div className="mx-auto lg:max-w-7xl w-full px-5 sm:px-10 md:px-12 lg:px-5 h-full items-center">
         <nav className="flex justify-between items-center h-full">
           <div className="flex min-w-max items-center">
-            <div className="flex items-center gap-x-4 text-2xl font-semibold text-gray-700 dark:text-gray-300">
+            <div className="flex items-center gap-x-4 text-2xl font-semibold">
               <div className="flex items-center -space-x-3 font-semibold">
                 <Image
-                  className="rounded-xl border border-white"
+                  className="rounded-xl border"
                   src={Rupp}
                   alt="Logo"
                   width={80}
@@ -42,7 +42,7 @@ const Index = () => {
           </div>
           <div
             className={`
-            flex flex-col space-y-10 inset-0 fixed top-0  h-[100dvh] shadow-lg bg-blue-950 lg:!bg-transparent py-20 px-5 sm:px-10 md:px-14
+            flex flex-col space-y-10 inset-0 fixed top-0  h-[60dvh] shadow-lg bg-white dark:bg-dark lg:!bg-transparent py-20 px-5 sm:px-10 md:px-14
             transition-all ease-linear duration-300 lg:flex-row lg:flex-1 lg:py-0 lg:px-0 lg:space-y-0 lg:gap-x-10 lg:relative lg:top-0 lg:h-full lg:items-center lg:justify-between lg:w-max
             ${
               openNavbar
@@ -51,13 +51,13 @@ const Index = () => {
             }
           `}
           >
-            <ul className="flex text-xl flex-col gap-y-5 text-gray-700 dark:text-gray-300 lg:items-center lg:flex-row lg:gap-x-5 lg:h-full lg:justify-center lg:flex-1">
+            <ul className="flex text-xl flex-col gap-y-5 lg:items-center lg:flex-row lg:gap-x-5 lg:h-full lg:justify-center lg:flex-1">
               <li className="text-xl py-4 flex hover:underline underline-offset-4">
                 <IoHome size={25} className="mr-1" />
                 <Link
                   className={`link ${
                     pathname === "/"
-                      ? "active underline decoration-4 decoration-white text-gray-400"
+                      ? "active underline decoration-4 decoration-current"
                       : ""
                   }`}
                   href="/"
@@ -70,7 +70,7 @@ const Index = () => {
                 <Link
                   className={`link ${
                     pathname === "/AboutUs"
-                      ? "active underline decoration-4 decoration-white text-gray-400"
+                      ? "active underline decoration-4 decoration-current"
                       : ""
                   }`}
                   href="/AboutUs"
@@ -83,7 +83,7 @@ const Index = () => {
                 <Link
                   className={`link ${
                     pathname === "/Course"
-                      ? "active underline decoration-4 decoration-white text-gray-400"
+                      ? "active underline decoration-4 decoration-current"
                       : ""
                   }`}
                   href="/Course"
@@ -96,7 +96,7 @@ const Index = () => {
                 <Link
                   className={`link ${
                     pathname === "/ContactUs"
-                      ? "active underline decoration-4 decoration-white text-gray-400"
+                      ? "active underline decoration-4 decoration-current"
                       : ""
                   }`}
                   href="/ContactUs"
@@ -106,10 +106,10 @@ const Index = () => {
               </li>
             </ul>
             <div className="w-full flex sm:w-max lg:min-w-max lg:items-center hover:underline hover:decoration-4 rounded-2xl">
-              <BiSolidContact size={25} className="mr-1 text-white" />
+              <BiSolidContact size={25} className="mr-1" />
               <Link
                 href="https://t.me/Kongsun"
-                className="flex text-xl justify-center gap-x-3 items-center text-gray-300 hover:text-gray-400
+                className="flex text-xl justify-center gap-x-3 items-center
                  bg-transparent"
               >
                 ទំនាក់ទំនង
@@ -131,9 +131,9 @@ const Index = () => {
             </div>
             <button
               onClick={toggleTheme}
-              className="ml-2 text-gray-700 dark:text-gray-300 bg-transparent p-2 rounded-full border border-gray-400 dark:border-gray-600 hover:bg-gray-200 dark:hover:bg-gray-700"
+              className="ml-2 bg-transparent border p-2 rounded-full"
             >
-              {theme === "dark" ? "🌙" : "🔆"}
+              {theme === "dark" ? "☾" : "𖤓"}
             </button>
           </div>
           <div className="relative flex items-center justify-end z-60 lg:hidden">
@@ -141,25 +141,31 @@ const Index = () => {
               onClick={() => {
                 toggleNavbar();
               }}
-              className="p-3 rounded-full bg-blue-900 dark:bg-blue-900 outline-none w-12 aspect-square flex flex-col relative justify-center items-center"
+              className="p-3 border rounded-full outline-none w-12 aspect-square flex flex-col relative justify-center items-center"
             >
               <span className="sr-only">toggle navbar</span>
               <span
                 className={`
-                w-6 h-0.5 rounded-full bg-white transition-transform duration-300 ease-linear
+                w-6 h-0.5 rounded-full bg-gray-950 transition-transform duration-300 ease-linear
                 ${openNavbar ? "translate-y-1.5 rotate-[40deg]" : ""}
               `}
               />
               <span
                 className={`
-                w-6 origin-center  mt-1 h-0.5 rounded-full bg-white transition-all duration-300 ease-linear
+                w-6 origin-center  mt-1 h-0.5 rounded-full bg-gray-950 transition-all duration-300 ease-linear
                 ${openNavbar ? "scale-x-0 opacity-0" : ""}
               `}
               />
               <span
                 className={`
-                w-6 mt-1 h-0.5 rounded-full bg-white transition-all duration-300 ease-linear
+                w-6 mt-1 h-0.5 rounded-full transition-all bg-gray-950 duration-300 ease-linear
                 ${openNavbar ? "-translate-y-1.5 -rotate-[40deg]" : ""}
+              `}
+              />
+              <span
+                className={`
+                w-6 origin-center  mt-1 h-0.5 rounded-full bg-gray-950 transition-all duration-300 ease-linear
+                ${openNavbar ? "scale-x-0 opacity-0" : ""}
               `}
               />
             </button>

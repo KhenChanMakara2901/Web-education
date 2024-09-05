@@ -3,9 +3,10 @@ import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import React from "react";
-import { FaMapMarkerAlt } from "react-icons/fa";
 import Head from "next/head";
 import CTA from "@/src/components/CTA/Index";
+import { MdEmail } from "react-icons/md";
+import { FaPhoneVolume, FaLocationDot } from "react-icons/fa6";
 
 export default function page() {
   useEffect(() => {
@@ -17,74 +18,66 @@ export default function page() {
   }, []);
 
   return (
-    <div className="bg-blue-950">
-      <head>
-        <title className="text-white font-extrabold">
-          Contact Us|KhmerCodeAcademy
-        </title>
-      </head>
-      <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:py-20 lg:px-8">
-        <div className="max-w-2xl flex lg:max-w-4xl mx-auto" data-aos="fade-up">
-          <FaMapMarkerAlt size={50} className="text-white mr-1" />
-          <h2 className="text-5xl font-extrabold underline text-white">
-            ទីតាំងរបស់យើង៖
-          </h2>
-        </div>
-        <div className="mt-20 lg:mt-20" data-aos="fade-up" data-aos-delay="100">
-          <div className="grid grid-cols-1 md:grid-cols-2 w-full gap-8">
-            <div className="rounded-xl border border-white overflow-hidden">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d73824.51612940856!2d104.8416573804732!3d11.539825730124445!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x310951006513b911%3A0xfb4a1347dd91260e!2sKhmer%20Code%20Academy!5e0!3m2!1sen!2skh!4v1723657662983!5m2!1sen!2skh"
-                width="100%"
-                height="800"
-                loading="lazy"
-                className="w-full h-full"
-              ></iframe>
-            </div>
-            <div>
-              <div
-                className="max-w-full mx-auto rounded-lg overflow-hidden"
-                data-aos="fade-up"
-                data-aos-delay="200"
-              >
-                <div className="px-6 py-4">
-                  <h3 className="text-2xl underline font-medium text-white">
-                    ⟟ អាស័យដ្ឋានរបស់យើង:
-                  </h3>
-                  <p className="mt-5 text-xl text-white">
-                    ⚲ អាគារលេខ៤៨ ផ្លូវ២៨៩ សង្កាត់បឹងកក់២ ខណ្ឌទួលគោក
-                    រាជធានីភ្នំពេញ។
-                  </p>
-                </div>
-                <div className="border-t border-gray-200 px-6 py-4">
-                  <h3 className="text-2xl underline font-medium text-white">
-                    🧭 ម៉ោងធ្វើការ:
-                  </h3>
-                  <p className="mt-5 text-xl text-white">
-                    ច័ន្ទ - សុក្រៈ ៩ ព្រឹក - 8 ល្ងាច
-                  </p>
-                  <p className="mt-5 text-xl text-white">
-                    ថ្ងៃសៅរ៍: 10 ព្រឹក - 8:30 យប់
-                  </p>
-                  <p className="mt-5 text-xl text-white">ថ្ងៃអាទិត្យ៖ បិទ</p>
-                </div>
-                <div className="border-t border-gray-200 px-6 py-4">
-                  <h3 className="text-2xl underline font-medium text-white">
-                    @ ប្រព័ន្ធទំនាក់ទំនង:
-                  </h3>
-                  <p className="mt-5 text-xl text-white">
-                    ✉️ -អ៊ីមែល: khmercodeacademy@gmail.com
-                  </p>
-                  <p className="mt-5 text-xl text-white">
-                    ☎ -លេខទូរស័ព្ទ: 070 256 959
-                  </p>
-                </div>
-              </div>
-            </div>
+    <section className="bg-white dark:bg-dark">
+      <div className="px-6 py-12 mx-auto">
+        <iframe
+          data-aos="fade-up-right"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3908.673270226169!2d104.89705297572912!3d11.575263988626252!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x310951006513b911%3A0xfb4a1347dd91260e!2sKhmer%20Code%20Academy!5e0!3m2!1sen!2skh!4v1725539834009!5m2!1sen!2skh"
+          width="100%"
+          height="550"
+          loading="lazy"
+        ></iframe>
+        <div className="grid grid-cols-1 gap-12 mt-10 lg:grid-cols-3 sm:grid-cols-2 ">
+          <div
+            className="p-4 rounded-lg bg-blue-50 md:p-6 dark:bg-gray-800"
+            data-aos="fade-up-right"
+          >
+            <span className="inline-block p-3 text-blue-500 rounded-lg bg-blue-100/80 dark:bg-gray-700">
+              <MdEmail size={27} />
+            </span>
+
+            <h2 className="mt-4 text-base font-medium text-gray-800 dark:text-white">
+              អ៊ីមែល:
+            </h2>
+            <p className="mt-2 text-sm text-blue-500 dark:text-blue-400">
+              khmercodeacademy@gmail.com
+            </p>
+          </div>
+
+          <div
+            className="p-4 rounded-lg bg-blue-50 md:p-6 dark:bg-gray-800"
+            data-aos="fade-up-right"
+          >
+            <span className="inline-block p-3 text-blue-500 rounded-lg bg-blue-100/80 dark:bg-gray-700">
+              <FaPhoneVolume size={25} />
+            </span>
+
+            <h2 className="mt-4 text-base font-medium text-gray-800 dark:text-white">
+              លេខទំនាក់ទំនង:
+            </h2>
+            <p className="mt-2 text-sm text-blue-500 dark:text-blue-400">
+              +855 70 256 959
+            </p>
+          </div>
+
+          <div
+            className="p-4 rounded-lg bg-blue-50 md:p-6 dark:bg-gray-800"
+            data-aos="fade-up-right"
+          >
+            <span className="inline-block p-3 text-blue-500 rounded-lg bg-blue-100/80 dark:bg-gray-700">
+              <FaLocationDot size={25} />
+            </span>
+
+            <h2 className="mt-4 text-base font-medium text-gray-800 dark:text-white">
+              អាស័យដ្ឋាន:
+            </h2>
+            <p className="mt-2 text-sm text-blue-500 dark:text-blue-400">
+              អាគារលេខ៤៨ ផ្លូវ២៨៩ សង្កាត់បឹងកក់២ ខណ្ឌទួលគោក រាជធានីភ្នំពេញ។
+            </p>
           </div>
         </div>
       </div>
       <CTA />
-    </div>
+    </section>
   );
 }
