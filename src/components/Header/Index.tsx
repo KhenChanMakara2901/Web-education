@@ -42,7 +42,7 @@ const Index = () => {
           </div>
           <div
             className={`
-            flex flex-col space-y-10 inset-0 fixed top-0  h-[60dvh] shadow-lg bg-white dark:bg-dark lg:!bg-transparent py-20 px-5 sm:px-10 md:px-14
+            flex flex-col space-y-10 inset-0 fixed top-0  h-[75dvh]  bg-white dark:bg-dark lg:!bg-transparent py-20 px-5 sm:px-10 md:px-14
             transition-all ease-linear duration-300 lg:flex-row lg:flex-1 lg:py-0 lg:px-0 lg:space-y-0 lg:gap-x-10 lg:relative lg:top-0 lg:h-full lg:items-center lg:justify-between lg:w-max
             ${
               openNavbar
