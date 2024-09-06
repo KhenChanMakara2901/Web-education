@@ -19,6 +19,11 @@ export default function page() {
 
   return (
     <section className="bg-white dark:bg-dark">
+      <head>
+        <title className="text-white font-extrabold">
+          ទីតាំងរបស់យេីង | ខ្មែរកូដអាខាដឺមី
+        </title>
+      </head>
       <div className="px-6 py-12 mx-auto">
         <iframe
           data-aos="fade-up-right"

@@ -21,7 +21,7 @@ export default function page() {
     <section className="bg-white dark:bg-dark">
       <head>
         <title className="text-white font-extrabold">
-          About Us | KhmerCodeAcademy
+          អំពីពួកយើង | ខ្មែរកូដអាខាដឺមី
         </title>
       </head>
       <div className="mx-auto w-full max-w-7xl px-5 py-12 md:px-10 md:py-16 lg:py-20">
