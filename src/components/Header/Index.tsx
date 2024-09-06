@@ -17,7 +17,7 @@ const Index = () => {
     setOpenNavbar((openNavbar) => !openNavbar);
   };
   const toggleTheme = () => {
-    const newTheme = theme === "light" ? "dark" : "light";
+    const newTheme = theme === "dark" ? "light" : "dark";
     setTheme(newTheme);
   };
 
