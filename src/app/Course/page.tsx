@@ -90,10 +90,14 @@ const courses = [
 
 export default function CoursePage() {
   const [showPopup, setShowPopup] = useState(false);
+  const [showQR, setShowQR] = useState(false);
   const [showSuccess, setShowSuccess] = useState(false);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+  const [university, setUniversity] = useState("");
   const [coursePrice] = useState("150 USD");
+  const [courseName, setCourseName] = useState("");
+
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -101,19 +105,26 @@ export default function CoursePage() {
       once: true,
     });
   }, []);
+
   const handleRegister = () => {
-    if (name && email) {
-      setTimeout(() => {
-        setShowPopup(false);
-        setShowSuccess(true);
-      }, 3000);
-      setTimeout(() => {
-        setShowSuccess(false);
-      }, 6000);
+    if (name && email && university) {
+      setShowQR(true);
+      setShowPopup(false);
     } else {
       alert("Please fill in all fields.");
     }
   };
+
+  const handlePayment = () => {
+    setTimeout(() => {
+      setShowQR(false);
+      setShowSuccess(true);
+    }, 3000);
+    setTimeout(() => {
+      setShowSuccess(false);
+    }, 6000);
+  };
+
   return (
     <div className="py-10 bg-white dark:bg-dark">
       <head>
@@ -128,6 +139,7 @@ export default function CoursePage() {
             ដែលនិស្សិតអាចជ្រេីសរេីស៖
           </p>
         </div>
+
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-10">
           {courses.map((course, index) => (
             <div
@@ -162,6 +174,8 @@ export default function CoursePage() {
             </div>
           ))}
         </div>
+
+        {/* Step 1: Popup Form */}
         {showPopup && (
           <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
             <div className="bg-white p-8 rounded-lg w-96 relative">
@@ -174,7 +188,6 @@ export default function CoursePage() {
               <h2 className="text-xl text-gray-900 font-bold mb-4">
                 សូមបំពេញព័ត៌មាន
               </h2>
-
               <div className="mb-4">
                 <label className="block text-sm font-medium text-gray-900">
                   ឈ្មោះកាតរបស់អ្នក
@@ -184,7 +197,7 @@ export default function CoursePage() {
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                   className="mt-1 block w-full px-3 py-2 border rounded-md shadow-sm focus:ring-emerald-500 focus:border-emerald-500"
-                  placeholder="Enter card name"
+                  placeholder="បញ្ចូលឈ្មោះធនាគាររបស់អ្នក"
                 />
               </div>
 
@@ -197,7 +210,32 @@ export default function CoursePage() {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   className="mt-1 block w-full px-3 py-2 border rounded-md shadow-sm focus:ring-emerald-500 focus:border-emerald-500"
-                  placeholder="Enter your email"
+                  placeholder="បញ្ចូលអ៊ីមែលរបស់អ្នក"
+                />
+              </div>
+
+              <div className="mb-4">
+                <label className="block text-sm font-medium text-gray-900">
+                  សាលា
+                </label>
+                <input
+                  type="text"
+                  value={university}
+                  onChange={(e) => setUniversity(e.target.value)}
+                  className="mt-1 block w-full px-3 py-2 border rounded-md shadow-sm focus:ring-emerald-500 focus:border-emerald-500"
+                  placeholder="ឈ្មោះសាកលវិទ្យាល័យរបស់អ្នក"
+                />
+              </div>
+              <div className="mb-4">
+                <label className="block text-sm font-medium text-gray-900">
+                  ឈ្មោះវគ្គសិក្សា
+                </label>
+                <input
+                  type="text"
+                  value={courseName}
+                  onChange={(e) => setCourseName(e.target.value)}
+                  className="mt-1 block w-full px-3 py-2 border rounded-md shadow-sm focus:ring-emerald-500 focus:border-emerald-500"
+                  placeholder="បញ្ចូលឈ្មោះវគ្គសិក្សា"
                 />
               </div>
 
@@ -209,22 +247,45 @@ export default function CoursePage() {
                   {coursePrice}
                 </p>
               </div>
-
-              <Image
-                src={QrCodeImage}
-                alt="Scan QR for payment"
-                width={500}
-                className="mx-auto"
-              />
-              <p className="mt-4 text-gray-900 text-center">
-                Scan QR code to complete payment
-              </p>
               <div className="flex justify-center mt-6">
                 <button
                   onClick={handleRegister}
                   className="bg-emerald-700 text-white px-6 py-2 rounded-lg hover:bg-opacity-80"
                 >
-                  ចុះឈ្មោះ
+                  បញ្ជូន
+                </button>
+              </div>
+            </div>
+          </div>
+        )}
+        {showQR && (
+          <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+            <div className="bg-white p-8 rounded-lg w-96 relative">
+              <button
+                className="absolute top-2 right-2 text-gray-500"
+                onClick={() => setShowQR(false)}
+              >
+                &times;
+              </button>
+              <h2 className="text-xl text-gray-900 font-bold mb-4">
+                សូមស្គេន QR Code
+              </h2>
+              <Image
+                src={QrCodeImage}
+                alt="Scan QR for payment"
+                width={500}
+                height={500}
+                className="mx-auto"
+              />
+              <p className="mt-4 text-gray-900 text-center">
+                សូមស្កេនដេីម្បីបង់ថ្លៃមុនពេលចុចទូទាត់
+              </p>
+              <div className="flex justify-center mt-6">
+                <button
+                  onClick={handlePayment}
+                  className="bg-emerald-700 text-white px-6 py-2 rounded-lg hover:bg-opacity-80"
+                >
+                  បញ្ចប់ការទូទាត់
                 </button>
               </div>
             </div>

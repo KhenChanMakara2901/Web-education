@@ -1,11 +1,14 @@
 "use client";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import React from "react";
-import Link from "next/link";
 
 export default function Index() {
+  const [step, setStep] = useState(0);
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -13,6 +16,24 @@ export default function Index() {
       once: true,
     });
   }, []);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (name && email && message) {
+      setStep(2);
+      setTimeout(() => {
+        setStep(3);
+        setTimeout(() => {
+          setStep(0);
+          setName("");
+          setEmail("");
+          setMessage("");
+        }, 5000);
+      }, 3000);
+    } else {
+      alert("Please fill in all fields.");
+    }
+  };
 
   return (
     <section className="py-24 scroll-smooth bg-white dark:bg-dark">
@@ -38,22 +59,105 @@ export default function Index() {
               រៀននៅថ្ងៃនេះ ជាស្ពានចម្លងទៅអនាគត និងអ្នកជំនាន់ក្រោយ។
               មើលពីភាពរីកចម្រើនពីក្នុងខ្លួន
               និងប្រជែងជាមួយខ្លួនឯងពីមួយថ្ងៃទៅមួយថ្ងៃ។ រៀនជាមួយ​ KCA
-              រៀនដោយទំនុកចិត្ត និងរៀនដោយភាពច្បាសល់លាស់។
+              រៀនដោយទំនុកចិត្ត និងរៀនដោយភាពច្បាស់លាស់។
             </p>
             <div
               className="mx-auto max-w-md sm:max-w-xl flex justify-center"
               data-aos="fade-up"
               data-aos-delay="400"
             >
-              <Link href="https://t.me/Kongsun">
-                <button className="outline-none border border-white h-12 px-5 rounded-xl bg-green-700 text-white flex items-center hover:bg-gray-400">
-                  ទំនាក់ទំនងមកកាន់យេីងឥឡូវនេះ
-                </button>
-              </Link>
+              <button
+                onClick={() => setStep(1)}
+                className="outline-none border border-white h-12 px-5 rounded-xl bg-green-700 text-white flex items-center hover:bg-gray-400"
+              >
+                ទំនាក់ទំនងមកកាន់យើងឥឡូវនេះ
+              </button>
             </div>
           </div>
         </div>
       </div>
+      {step === 1 && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+          <div className="bg-white p-8 rounded-lg w-96 relative">
+            <button
+              className="absolute top-2 right-2 text-gray-500"
+              onClick={() => setStep(0)} // Close the pop-up
+            >
+              &times;
+            </button>
+            <h2 className="text-xl text-gray-900 font-bold mb-4">
+              ទំនាក់ទំនងយើង
+            </h2>
+            <form onSubmit={handleSubmit}>
+              <div className="mb-4">
+                <label className="block text-sm font-medium text-gray-900">
+                  ឈ្មោះ
+                </label>
+                <input
+                  type="text"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  className="mt-1 block w-full px-3 py-2 border rounded-md shadow-sm focus:ring-emerald-500 focus:border-emerald-500"
+                  placeholder="Enter your name"
+                />
+              </div>
+              <div className="mb-4">
+                <label className="block text-sm font-medium text-gray-900">
+                  អ៊ីម៉ែល
+                </label>
+                <input
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  className="mt-1 block w-full px-3 py-2 border rounded-md shadow-sm focus:ring-emerald-500 focus:border-emerald-500"
+                  placeholder="Enter your email"
+                />
+              </div>
+              <div className="mb-6">
+                <label className="block text-sm font-medium text-gray-900">
+                  សាររបស់អ្នក
+                </label>
+                <textarea
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
+                  className="mt-1 block w-full px-3 py-2 border rounded-md shadow-sm focus:ring-emerald-500 focus:border-emerald-500"
+                  placeholder="Enter your message"
+                />
+              </div>
+              <div className="flex justify-center">
+                <button
+                  type="submit"
+                  className="bg-emerald-700 text-white px-6 py-2 rounded-lg hover:bg-opacity-80"
+                >
+                  បញ្ជូន
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      )}
+      {step === 2 && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+          <div className="bg-white p-8 rounded-lg w-96 text-center">
+            <h2 className="text-xl text-gray-900 font-bold mb-4">
+              កំពុងផ្ញើសាររបស់អ្នក...
+            </h2>
+            <div className="loader mx-auto"></div>
+          </div>
+        </div>
+      )}
+      {step === 3 && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+          <div className="bg-white p-8 rounded-lg w-96 text-center">
+            <h2 className="text-xl text-gray-900 font-bold mb-4">
+              សាររបស់អ្នកបានផ្ញើជោគជ័យ!
+            </h2>
+            <p className="text-green-600 font-semibold">
+              សូមអរគុណចំពោះការទំនាក់ទំនងយើង។
+            </p>
+          </div>
+        </div>
+      )}
     </section>
   );
 }
