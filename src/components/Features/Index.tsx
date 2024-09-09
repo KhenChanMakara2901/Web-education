@@ -27,8 +27,8 @@ const Index = () => {
           <Image
             src={IMage1}
             alt="creative agency"
-            width={1300}
-            height={900}
+            width={500}
+            height={500}
             className="w-full md:h-full object-cover rounded-lg"
           />
         </div>

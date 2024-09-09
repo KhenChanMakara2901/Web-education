@@ -30,10 +30,10 @@ export default function Index() {
       </div>
       <div className="mx-auto lg:max-w-7xl w-full px-5 sm:px-10 md:px-12 lg:px-5">
         <div className="text-center flex flex-col items-center space-y-10">
-          <span className="border text-5xl font-serif px-3 py-0.5 rounded-2xl bg-opacity-50 animate-scaleUp">
+          <span className="border text-4xl font-serif px-3 py-0.5 rounded-2xl bg-opacity-50 animate-scaleUp">
             KHMER <span className="text-yellow-400">CODE</span> ACADEMY
           </span>
-          <h1 className="text-3xl md:text-4xl lg:text-5xl/tight xl:text-6xl/tight  font-bold max-w-4xl capitalize animate-fadeIn">
+          <h1 className="text-2xl md:text-3xl lg:text-4xl/tight xl:text-5xl/tight  font-bold max-w-4xl capitalize animate-fadeIn">
             សិក្សាជំនាញគ្រប់គ្រងទិន្នន័យ
             និងការអភិវឌ្ឍន៍កម្មវិធីដែលសង្គមត្រូវការនៅពេលបច្ចុប្បន្ន
           </h1>

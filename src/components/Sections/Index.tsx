@@ -21,7 +21,7 @@ const Index = () => {
   }, []);
   return (
     <div className="bg-white dark:bg-dark scroll-smooth">
-      <div className="mx-auto w-full max-w-7xl px-5 py-16 md:px-10 md:py-20">
+      <div className="mx-auto w-full max-w-5xl px-5 py-16 md:px-10 md:py-20">
         <div className="flex flex-col items-center text-center">
           <h2 className="text-3xl font-bold md:text-5xl" data-aos="fade-up">
             ខ្មែរកូដ អាខាដឺមី

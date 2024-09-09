@@ -24,7 +24,7 @@ export default function page() {
           អំពីពួកយើង | ខ្មែរកូដអាខាដឺមី
         </title>
       </head>
-      <div className="mx-auto w-full max-w-7xl px-5 py-12 md:px-10 md:py-16 lg:py-20">
+      <div className="mx-auto w-full max-w-5xl px-5 py-12 md:px-10 md:py-16 lg:py-20">
         <div className="flex flex-col gap-14 lg:gap-20">
           <Image
             src={KCA2}

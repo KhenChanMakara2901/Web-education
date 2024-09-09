@@ -24,7 +24,7 @@ export default function page() {
           ទីតាំងរបស់យេីង | ខ្មែរកូដអាខាដឺមី
         </title>
       </head>
-      <div className="px-6 py-12 mx-auto">
+      <div className="px-6 py-12 max-w-full">
         <iframe
           data-aos="fade-up-right"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3908.673270226169!2d104.89705297572912!3d11.575263988626252!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x310951006513b911%3A0xfb4a1347dd91260e!2sKhmer%20Code%20Academy!5e0!3m2!1sen!2skh!4v1725539834009!5m2!1sen!2skh"

@@ -130,7 +130,7 @@ export default function CoursePage() {
       <head>
         <title className="font-extrabold">វគ្គសិក្សា | ខ្មែរកូដអាខាដឺមី</title>
       </head>
-      <div className="max-w-7xl mx-auto px-5 sm:px-10 md:px-12 lg:px-5 space-y-16">
+      <div className="max-w-5xl mx-auto px-5 sm:px-10 md:px-12 lg:px-5 space-y-16">
         <div className="max-w-2xl space-y-3 animate-fadeIn">
           <h1 className="text-4xl/tight sm:text-4xl/tight underline underline-offset-4 font-bold">
             វគ្គសិក្សាដែលយេីងមានបង្រៀន៖
@@ -151,8 +151,8 @@ export default function CoursePage() {
               <Image
                 src={course.imageSrc}
                 alt={`Cover for ${course.title}`}
-                width={1500}
-                height={900}
+                width={500}
+                height={500}
                 className="w-full aspect-[4/3.3] rounded object-cover"
               />
               <div className="flex flex-col justify-end space-y-5">
@@ -174,8 +174,6 @@ export default function CoursePage() {
             </div>
           ))}
         </div>
-
-        {/* Step 1: Popup Form */}
         {showPopup && (
           <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
             <div className="bg-white p-8 rounded-lg w-96 relative">
