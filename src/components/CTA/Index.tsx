@@ -36,7 +36,7 @@ export default function Index() {
   };
 
   return (
-    <section className="py-24 scroll-smooth bg-white dark:bg-dark">
+    <div className="py-24 scroll-smooth bg-white dark:bg-dark">
       <div className="max-w-7xl mx-auto px-5 sm:px-10 md:px-12 lg:px-5">
         <div
           className="w-full border border-white relative py-8 md:py-10 px-6 md:px-8 rounded-2xl bg-gradient-to-tr from-gray-100 to-gray-200 dark:from-gray-900"
@@ -158,6 +158,6 @@ export default function Index() {
           </div>
         </div>
       )}
-    </section>
+    </div>
   );
 }

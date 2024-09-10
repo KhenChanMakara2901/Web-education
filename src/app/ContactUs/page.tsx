@@ -18,7 +18,7 @@ export default function page() {
   }, []);
 
   return (
-    <section className="bg-white dark:bg-dark">
+    <div className="bg-white dark:bg-dark">
       <head>
         <title className="text-white font-extrabold">
           ទីតាំងរបស់យេីង | ខ្មែរកូដអាខាដឺមី
@@ -83,6 +83,6 @@ export default function page() {
         </div>
       </div>
       <CTA />
-    </section>
+    </div>
   );
 }

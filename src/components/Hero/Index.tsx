@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Index() {
   return (
-    <section className="py-32 scroll-smooth sm:py-36 lg:py-40 overflow-hidden h-[100dvh] min-h-max flex items-center relative bg-white dark:bg-dark">
+    <div className="py-32 scroll-smooth sm:py-36 lg:py-40 overflow-hidden h-[100dvh] min-h-max flex items-center relative bg-white dark:bg-dark">
       <div
         className="absolute top-0 left-0 -translate-x-[54%] -translate-y-[70%] w-2/5 rounded-full aspect-square bg-sky-900
  backdrop-filter blur-3xl opacity-50 animate-scaleUp"
@@ -65,6 +65,6 @@ export default function Index() {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 }

@@ -131,9 +131,9 @@ const Index = () => {
             </div>
             <button
               onClick={toggleTheme}
-              className="ml-2 bg-transparent border p-2 rounded-full"
+              className="ml-2 bg-transparent border p-2 rounded-large"
             >
-              {theme === "dark" ? "☾" : "𖤓"}
+              {theme === "dark" ? "☾" : "☀"}
             </button>
           </div>
           <div className="relative flex items-center justify-end z-60 lg:hidden">

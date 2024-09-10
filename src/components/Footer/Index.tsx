@@ -8,7 +8,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <section className="py-12 scroll-smooth bg-white dark:bg-dark">
+    <div className="py-12 scroll-smooth bg-white dark:bg-dark">
       <div className="min-h-px w-full border-t pt-5"></div>
       <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
         <div className="text-center xl:flex xl:items-center xl:justify-between xl:text-left">
@@ -97,6 +97,6 @@ export default function Footer() {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 }
