@@ -17,12 +17,16 @@ export default function Index() {
       once: true,
     });
   }, []);
+
   return (
     <div className="bg-white dark:bg-dark scroll-smooth">
       <div className="min-h-px w-full border-t"></div>
       <div className="mx-auto w-full max-w-7xl px-5 py-16 md:px-10 md:py-20">
         <div className="flex flex-col items-center gap-8 sm:grid sm:grid-cols-3 sm:gap-12 md:grid-cols-5 md:gap-6">
-          <div className="flex justify-center group" data-aos="fade-up">
+          <div
+            className="flex justify-center group p-6 bg-white dark:bg-dark dark:shadow-darkModeShadow shadow-lightModeShadow rounded-lg"
+            data-aos="fade-up"
+          >
             <Image
               src={LogoWeb}
               alt="Logo"
@@ -31,7 +35,7 @@ export default function Index() {
             />
           </div>
           <div
-            className="flex justify-center group"
+            className="flex justify-center group p-6 bg-white dark:bg-dark dark:shadow-darkModeShadow shadow-lightModeShadow rounded-lg"
             data-aos="fade-up"
             data-aos-delay="100"
           >
@@ -43,7 +47,7 @@ export default function Index() {
             />
           </div>
           <div
-            className="flex justify-center group"
+            className="flex justify-center group p-6 bg-white dark:bg-dark dark:shadow-darkModeShadow shadow-lightModeShadow rounded-lg"
             data-aos="fade-up"
             data-aos-delay="200"
           >
@@ -55,7 +59,7 @@ export default function Index() {
             />
           </div>
           <div
-            className="flex justify-center group"
+            className="flex justify-center group p-6 bg-white dark:bg-dark dark:shadow-darkModeShadow shadow-lightModeShadow rounded-lg"
             data-aos="fade-up"
             data-aos-delay="300"
           >
@@ -67,7 +71,7 @@ export default function Index() {
             />
           </div>
           <div
-            className="flex justify-center group"
+            className="flex justify-center group p-6 bg-white dark:bg-dark dark:shadow-darkModeShadow shadow-lightModeShadow rounded-lg"
             data-aos="fade-up"
             data-aos-delay="400"
           >

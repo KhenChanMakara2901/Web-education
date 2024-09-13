@@ -10,6 +10,10 @@ module.exports = {
   darkMode: "class",
   theme: {
     extend: {
+      boxShadow: {
+        lightModeShadow: "0 4px 6px rgba(0, 0, 0, 0.1)", // Light mode shadow
+        darkModeShadow: "0 4px 6px rgba(255, 255, 255, 0.1)", // Dark mode shadow
+      },
       colors: {
         dark: {
           DEFAULT: "#15202b", // Replace with your preferred dark color
