@@ -113,6 +113,7 @@ export default function CoursePage() {
       setShowQR(true);
       setShowPopup(false);
       console.log("Image File:", imageFile);
+      clearForm();
     } else {
       alert("Please fill in all fields, including uploading an image.");
     }
@@ -123,6 +124,14 @@ export default function CoursePage() {
       setImageFile(file);
       setImagePreview(URL.createObjectURL(file));
     }
+  };
+  const clearForm = () => {
+    setName("");
+    setEmail("");
+    setUniversity("");
+    setCourseName("");
+    setImageFile(null);
+    setImagePreview(null);
   };
 
   const handlePayment = () => {
