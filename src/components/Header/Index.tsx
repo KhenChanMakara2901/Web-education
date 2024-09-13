@@ -31,12 +31,14 @@ const Index = () => {
           <div className="flex min-w-max items-center">
             <div className="flex items-center gap-x-4 text-2xl font-semibold">
               <div className="flex items-center -space-x-3 font-semibold">
-                <Image
-                  className="rounded-xl border"
-                  src={Rupp}
-                  alt="Logo"
-                  width={80}
-                />
+                <Link href="/">
+                  <Image
+                    className="rounded-xl border"
+                    src={Rupp}
+                    alt="Logo"
+                    width={80}
+                  />
+                </Link>
               </div>
             </div>
           </div>

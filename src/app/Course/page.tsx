@@ -97,6 +97,8 @@ export default function CoursePage() {
   const [university, setUniversity] = useState("");
   const [coursePrice] = useState("150 USD");
   const [courseName, setCourseName] = useState("");
+  const [imageFile, setImageFile] = useState<File | null>(null);
+  const [imagePreview, setImagePreview] = useState<string | null>(null);
 
   useEffect(() => {
     AOS.init({
@@ -107,11 +109,19 @@ export default function CoursePage() {
   }, []);
 
   const handleRegister = () => {
-    if (name && email && university) {
+    if (name && email && university && imageFile) {
       setShowQR(true);
       setShowPopup(false);
+      console.log("Image File:", imageFile);
     } else {
-      alert("Please fill in all fields.");
+      alert("Please fill in all fields, including uploading an image.");
+    }
+  };
+  const handleImageChange = (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      setImageFile(file);
+      setImagePreview(URL.createObjectURL(file));
     }
   };
 
@@ -188,14 +198,14 @@ export default function CoursePage() {
               </h2>
               <div className="mb-4">
                 <label className="block text-sm font-medium text-gray-900">
-                  ឈ្មោះកាតរបស់អ្នក
+                  ឈ្មោះរបស់អ្នក
                 </label>
                 <input
                   type="text"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                   className="mt-1 block w-full px-3 py-2 border rounded-md shadow-sm focus:ring-emerald-500 focus:border-emerald-500"
-                  placeholder="បញ្ចូលឈ្មោះធនាគាររបស់អ្នក"
+                  placeholder="បញ្ចូលឈ្មោះរបស់អ្នក"
                 />
               </div>
 
@@ -235,6 +245,28 @@ export default function CoursePage() {
                   className="mt-1 block w-full px-3 py-2 border rounded-md shadow-sm focus:ring-emerald-500 focus:border-emerald-500"
                   placeholder="បញ្ចូលឈ្មោះវគ្គសិក្សា"
                 />
+              </div>
+              <div className="mb-4">
+                <label className="block text-sm font-medium text-gray-900">
+                  បង្ហោះរូបភាពរបស់អ្នក
+                </label>
+                <input
+                  type="file"
+                  onChange={handleImageChange}
+                  className="mt-1 block w-full px-3 py-2 border rounded-md shadow-sm focus:ring-emerald-500 focus:border-emerald-500"
+                  accept="image/*"
+                />
+                {imagePreview && (
+                  <div className="mt-4">
+                    <img
+                      src={imagePreview}
+                      alt="Uploaded Preview"
+                      className="rounded-lg shadow-lg"
+                      width={100}
+                      height={100}
+                    />
+                  </div>
+                )}
               </div>
 
               <div className="mb-6">
