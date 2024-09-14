@@ -99,6 +99,7 @@ export default function CoursePage() {
   const [courseName, setCourseName] = useState("");
   const [imageFile, setImageFile] = useState<File | null>(null);
   const [imagePreview, setImagePreview] = useState<string | null>(null);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     AOS.init({
@@ -110,10 +111,14 @@ export default function CoursePage() {
 
   const handleRegister = () => {
     if (name && email && university && imageFile) {
-      setShowQR(true);
-      setShowPopup(false);
-      console.log("Image File:", imageFile);
-      clearForm();
+      setLoading(true);
+      setTimeout(() => {
+        setShowQR(true);
+        setShowPopup(false);
+        setLoading(false);
+        console.log("Image File:", imageFile);
+        clearForm();
+      }, 5000);
     } else {
       alert("Please fill in all fields, including uploading an image.");
     }
@@ -289,9 +294,14 @@ export default function CoursePage() {
               <div className="flex justify-center mt-6">
                 <button
                   onClick={handleRegister}
-                  className="bg-emerald-700 text-white px-6 py-2 rounded-lg hover:bg-opacity-80"
+                  disabled={loading}
+                  className={`bg-emerald-700 text-white px-6 py-2 rounded-lg ${
+                    loading
+                      ? "opacity-50 cursor-not-allowed"
+                      : "hover:bg-opacity-80"
+                  }`}
                 >
-                  បញ្ជូន
+                  {loading ? "កំពុងដំណើរការ..." : "បញ្ជូន"}
                 </button>
               </div>
             </div>
