@@ -31,13 +31,15 @@ export default function page() {
             alt="About-Image"
             className="w-full border rounded-xl"
             data-aos="fade-up"
+            data-aos-duration="1500" // Customize animation duration
+            data-aos-delay="200" // Optional: Add delay to start animation
           />
           <div className="flex flex-col gap-14 lg:gap-20">
             <div className="flex flex-col md:flex-row gap-5" data-aos="fade-up">
               <h2 className="text-2xl md:text-3xl font-bold flex-1 underline underline-offset-8">
                 រឿងរបស់យើង:
               </h2>
-              <p className="flex-1 text-xl">
+              <p className="flex-1 text-xl  border border-gray-300 p-4 rounded-lg">
                 ដំណើររបស់យើងត្រូវបានជំរុញដោយចំណង់ចំណូលចិត្តក្នុងការបំប្លែងគំនិតទៅជា
                 បទពិសោធន៍ដែលមើលឃើញយ៉ាងស៊ីជម្រៅ។ បង្កើតឡើងដោយមានចក្ខុវិស័យទៅ
                 ធ្វើបដិវត្តពិភពនៃមាតិកាវីដេអូ យើងបានវិវត្តទៅជាមួយ។
@@ -48,7 +50,7 @@ export default function page() {
               <h2 className="text-2xl md:text-3xl font-semibold flex-1 underline underline-offset-8">
                 បេសកកម្មរបស់យើង:
               </h2>
-              <p className="flex-1 text-xl">
+              <p className="flex-1 text-xl border border-gray-300 p-4 rounded-lg">
                 បេសកកម្មរបស់យើងគឺច្បាស់លាស់៖
                 ដើម្បីផ្តល់អំណាចដល់ម៉ាកយីហោតាមរយៈអ្វីដែលមិនអាចប្រៀបផ្ទឹមបាន។
                 អំណាចនៃការនិទានរឿង។ យើងជឿថាគ្រប់ម៉ាកទាំងអស់សុទ្ធតែមានលក្ខណៈពិសេស
@@ -61,7 +63,7 @@ export default function page() {
               <h2 className="text-2xl md:text-3xl font-bold flex-1 underline underline-offset-8">
                 វិធីសាស្រ្តរបស់យេីង:
               </h2>
-              <p className="flex-1 text-xl">
+              <p className="flex-1 text-xl border border-gray-300 p-4 rounded-lg">
                 អ្វី​ដែល​ធ្វើ​ឲ្យ​យើង​ដាច់​ពី​គ្នា​គឺ​វិធីសាស្ត្រ​រួម​របស់​យើង​ក្នុង​ការ​ផលិត​វីដេអូ។
                 ពីគំនិតរហូតដល់ការបង្កើត និងការផ្សព្វផ្សាយ
                 យើងណែនាំអតិថិជនរបស់យើង។ ឆ្លងកាត់គ្រប់ជំហាន

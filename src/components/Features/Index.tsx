@@ -19,9 +19,9 @@ const Index = () => {
 
   return (
     <div className="py-24 scroll-smooth bg-white dark:bg-dark">
-      <div className="max-w-7xl mx-auto px-5 sm:px-10 md:px-12 lg:px-5 flex flex-col md:flex-row gap-16">
+      <div className="max-w-6xl mx-auto px-5 sm:px-10 md:px-12 lg:px-5 flex flex-col md:flex-row gap-16">
         <div
-          className="flex md:flex-1 border border-white rounded-xl"
+          className="flex md:flex-1 border border-white rounded-md"
           data-aos="fade-right"
         >
           <Image

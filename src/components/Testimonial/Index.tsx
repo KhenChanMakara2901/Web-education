@@ -27,7 +27,7 @@ export default function Index() {
           {[...Array(9)].map((_, index) => (
             <div
               key={index}
-              className="p-5 md:p-6 space-y-6 rounded-lg border border-white shadow-2xl shadow-gray-900/70"
+              className="p-5 md:p-6 space-y-6 dark:shadow-darkModeShadow shadow-lightModeShadow rounded-lg"
               data-aos="fade-up"
               data-aos-delay={index * 100} // Delay for each item
             >

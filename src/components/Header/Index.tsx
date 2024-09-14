@@ -53,9 +53,9 @@ const Index = () => {
             }
           `}
           >
-            <ul className="flex text-xl flex-col gap-y-5 lg:items-center lg:flex-row lg:gap-x-5 lg:h-full lg:justify-center lg:flex-1">
-              <li className="text-xl py-4 flex hover:underline underline-offset-4">
-                <IoHome size={25} className="mr-1" />
+            <ul className="flex text-lg flex-col gap-y-5 lg:items-center lg:flex-row lg:gap-x-5 lg:h-full lg:justify-center lg:flex-1">
+              <li className="text-lg py-4 flex hover:underline underline-offset-4">
+                <IoHome size={23} className="mr-2" />
                 <Link
                   className={`link ${
                     pathname === "/"
@@ -67,8 +67,8 @@ const Index = () => {
                   ទំព័រដើម
                 </Link>
               </li>
-              <li className="text-xl py-4 flex hover:underline underline-offset-4">
-                <FaUserGraduate size={25} className="mr-1" />
+              <li className="text-lg py-4 flex hover:underline underline-offset-4">
+                <FaUserGraduate size={22} className="mr-2" />
                 <Link
                   className={`link ${
                     pathname === "/AboutUs"
@@ -80,8 +80,8 @@ const Index = () => {
                   អំពីពួកយើង
                 </Link>
               </li>
-              <li className="text-xl py-4 flex hover:underline underline-offset-4">
-                <FaBookBookmark size={25} className="mr-1" />
+              <li className="text-lg py-4 flex hover:underline underline-offset-4">
+                <FaBookBookmark size={23} className="mr-2" />
                 <Link
                   className={`link ${
                     pathname === "/Course"
@@ -93,8 +93,8 @@ const Index = () => {
                   វគ្គសិក្សា
                 </Link>
               </li>
-              <li className="text-xl py-4 flex hover:underline underline-offset-4">
-                <FaMapMarkedAlt size={25} className="mr-1" />
+              <li className="text-lg py-4 flex hover:underline underline-offset-4">
+                <FaMapMarkedAlt size={22} className="mr-2" />
                 <Link
                   className={`link ${
                     pathname === "/ContactUs"
@@ -111,7 +111,7 @@ const Index = () => {
               <BiSolidContact size={25} className="mr-1" />
               <Link
                 href="https://t.me/Kongsun"
-                className="flex text-xl justify-center gap-x-3 items-center
+                className="flex text-lg justify-center gap-x-3 items-center
                  bg-transparent"
               >
                 ទំនាក់ទំនង

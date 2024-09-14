@@ -33,7 +33,7 @@ const Index = () => {
           {courseData.map((item) => (
             <div
               key={item.id}
-              className="grid gap-6 rounded-md p-8 md:p-10 border border-white shadow-sm shadow-gray-500"
+              className="grid gap-6 p-8 md:p-10 dark:shadow-darkModeShadow shadow-lightModeShadow rounded-lg"
               data-aos="fade-up"
               data-aos-delay={item.delay}
             >

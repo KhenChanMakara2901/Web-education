@@ -149,8 +149,8 @@ export default function CoursePage() {
       <head>
         <title className="font-extrabold">វគ្គសិក្សា | ខ្មែរកូដអាខាដឺមី</title>
       </head>
-      <div className="max-w-5xl mx-auto px-5 sm:px-10 md:px-12 lg:px-5 space-y-16">
-        <div className="max-w-2xl space-y-3 animate-fadeIn">
+      <div className="max-w-4xl mx-auto px-5 sm:px-10 md:px-12 lg:px-5 space-y-16">
+        <div className="max-w-3xl space-y-3 animate-fadeIn">
           <h1 className="text-4xl/tight sm:text-4xl/tight underline underline-offset-4 font-bold">
             វគ្គសិក្សាដែលយេីងមានបង្រៀន៖
           </h1>
