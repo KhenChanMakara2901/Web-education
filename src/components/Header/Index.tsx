@@ -8,11 +8,20 @@ import { FaUserGraduate, FaBookBookmark } from "react-icons/fa6";
 import { FaMapMarkedAlt } from "react-icons/fa";
 import { BiSolidContact } from "react-icons/bi";
 import { usePathname } from "next/navigation";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Index = () => {
   const pathname = usePathname();
   const [openNavbar, setOpenNavbar] = useState(false);
   const [theme, setTheme] = useState("dark");
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      easing: "ease-in-out",
+      once: false,
+    });
+  }, []);
   const toggleNavbar = () => {
     setOpenNavbar((openNavbar) => !openNavbar);
   };
@@ -25,7 +34,10 @@ const Index = () => {
     document.documentElement.classList.toggle("dark", theme === "dark");
   }, [theme]);
   return (
-    <header className="sticky scroll-smooth top-0 inset-x-0 z-50 h-24 flex items-center bg-white shadow-md dark:bg-dark dark:shadow-xl transition-shadow">
+    <header
+      className="sticky scroll-smooth top-0 inset-x-0 z-50 h-24 flex items-center bg-white shadow-md dark:bg-dark dark:shadow-xl transition-shadow"
+      data-aos="fade-down"
+    >
       <div className="mx-auto lg:max-w-7xl w-full px-5 sm:px-10 md:px-12 lg:px-5 h-full items-center">
         <nav className="flex justify-between items-center h-full">
           <div className="flex min-w-max items-center">
@@ -63,6 +75,7 @@ const Index = () => {
                       : ""
                   }`}
                   href="/"
+                  passHref
                 >
                   ទំព័រដើម
                 </Link>
@@ -76,6 +89,7 @@ const Index = () => {
                       : ""
                   }`}
                   href="/AboutUs"
+                  passHref
                 >
                   អំពីពួកយើង
                 </Link>
@@ -89,6 +103,7 @@ const Index = () => {
                       : ""
                   }`}
                   href="/Course"
+                  passHref
                 >
                   វគ្គសិក្សា
                 </Link>
@@ -102,6 +117,7 @@ const Index = () => {
                       : ""
                   }`}
                   href="/ContactUs"
+                  passHref
                 >
                   ទីតាំងរបស់យេីង
                 </Link>
@@ -113,6 +129,7 @@ const Index = () => {
                 href="https://t.me/Kongsun"
                 className="flex text-lg justify-center gap-x-3 items-center
                  bg-transparent"
+                passHref
               >
                 ទំនាក់ទំនង
                 <span>

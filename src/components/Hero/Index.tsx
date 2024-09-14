@@ -41,6 +41,7 @@ export default function Index() {
             យើងផ្តល់ឲ្យនូវការបង្រៀនដែលយកចិត្តទុកដាក់ ប្រកបដោយគុណភាព
             និងទំនួលខុសត្រូវ។ ការពេញចិត្តរបស់អ្នក គឺជាតម្លៃរបស់យើង។
           </p>
+
           <div className="flex justify-center animate-scaleUp">
             <Link
               href="https://t.me/Kongsun"

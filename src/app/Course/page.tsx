@@ -177,6 +177,8 @@ export default function CoursePage() {
                 alt={`Cover for ${course.title}`}
                 width={500}
                 height={500}
+                quality={75}
+                priority
                 className="w-full aspect-[4/3.3] rounded object-cover"
               />
               <div className="flex flex-col justify-end space-y-5">
