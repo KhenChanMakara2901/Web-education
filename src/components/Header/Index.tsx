@@ -10,11 +10,15 @@ import { BiSolidContact } from "react-icons/bi";
 import { usePathname } from "next/navigation";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import khmerlang from "@/src/locales/Header/khmer.json";
+import englishlang from "@/src/locales/Header/english.json";
 
 const Index = () => {
   const pathname = usePathname();
   const [openNavbar, setOpenNavbar] = useState(false);
   const [theme, setTheme] = useState("dark");
+  const [language, setLanguage] = useState("khmer"); // Add language state
+
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -22,9 +26,11 @@ const Index = () => {
       once: false,
     });
   }, []);
+
   const toggleNavbar = () => {
     setOpenNavbar((openNavbar) => !openNavbar);
   };
+
   const toggleTheme = () => {
     const newTheme = theme === "dark" ? "light" : "dark";
     setTheme(newTheme);
@@ -33,6 +39,13 @@ const Index = () => {
   useEffect(() => {
     document.documentElement.classList.toggle("dark", theme === "dark");
   }, [theme]);
+
+  const toggleLanguage = () => {
+    const newLanguage = language === "khmer" ? "english" : "khmer";
+    setLanguage(newLanguage);
+  };
+  const t = language === "khmer" ? khmerlang : englishlang;
+
   return (
     <header
       className="sticky scroll-smooth top-0 inset-x-0 z-50 h-24 flex items-center bg-white shadow-md dark:bg-dark dark:shadow-xl transition-shadow"
@@ -77,7 +90,7 @@ const Index = () => {
                   href="/"
                   passHref
                 >
-                  ទំព័រដើម
+                  {t.home}
                 </Link>
               </li>
               <li className="text-lg py-4 flex hover:underline underline-offset-4">
@@ -91,7 +104,7 @@ const Index = () => {
                   href="/AboutUs"
                   passHref
                 >
-                  អំពីពួកយើង
+                  {t.aboutUs}
                 </Link>
               </li>
               <li className="text-lg py-4 flex hover:underline underline-offset-4">
@@ -105,7 +118,7 @@ const Index = () => {
                   href="/Course"
                   passHref
                 >
-                  វគ្គសិក្សា
+                  {t.courses}
                 </Link>
               </li>
               <li className="text-lg py-4 flex hover:underline underline-offset-4">
@@ -119,7 +132,7 @@ const Index = () => {
                   href="/ContactUs"
                   passHref
                 >
-                  ទីតាំងរបស់យេីង
+                  {t.contactUs}
                 </Link>
               </li>
             </ul>
@@ -131,7 +144,7 @@ const Index = () => {
                  bg-transparent"
                 passHref
               >
-                ទំនាក់ទំនង
+                {t.contact}
                 <span>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -148,12 +161,20 @@ const Index = () => {
                 </span>
               </Link>
             </div>
-            <button
-              onClick={toggleTheme}
-              className="ml-2 bg-transparent border p-2 rounded-large"
-            >
-              {theme === "dark" ? "☾" : "☀"}
-            </button>
+            <div className="flex items-center gap-4">
+              <button
+                onClick={toggleLanguage}
+                className="ml-2 bg-transparent border p-2 rounded-lg"
+              >
+                {language === "khmer" ? "EN" : "ខ្មែរ"}
+              </button>
+              <button
+                onClick={toggleTheme}
+                className="bg-transparent border p-2 rounded-lg"
+              >
+                {theme === "dark" ? "☾" : "☀"}
+              </button>
+            </div>
           </div>
           <div className="relative flex items-center justify-end z-60 lg:hidden">
             <button
@@ -171,20 +192,14 @@ const Index = () => {
               />
               <span
                 className={`
-                w-6 origin-center  mt-1 h-0.5 rounded-full bg-gray-950 transition-all duration-300 ease-linear
-                ${openNavbar ? "scale-x-0 opacity-0" : ""}
+                w-6 h-0.5 rounded-full bg-gray-950 transition-transform duration-300 ease-linear my-1
+                ${openNavbar ? "-rotate-[40deg]" : ""}
               `}
               />
               <span
                 className={`
-                w-6 mt-1 h-0.5 rounded-full transition-all bg-gray-950 duration-300 ease-linear
-                ${openNavbar ? "-translate-y-1.5 -rotate-[40deg]" : ""}
-              `}
-              />
-              <span
-                className={`
-                w-6 origin-center  mt-1 h-0.5 rounded-full bg-gray-950 transition-all duration-300 ease-linear
-                ${openNavbar ? "scale-x-0 opacity-0" : ""}
+                w-6 h-0.5 rounded-full bg-gray-950 transition-transform duration-300 ease-linear
+                ${openNavbar ? "-translate-y-2 opacity-0" : ""}
               `}
               />
             </button>
@@ -194,4 +209,5 @@ const Index = () => {
     </header>
   );
 };
+
 export default Index;
