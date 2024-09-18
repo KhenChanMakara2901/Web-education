@@ -79,56 +79,56 @@ const Index = () => {
           `}
           >
             <ul className="flex text-lg flex-col gap-y-5 lg:items-center lg:flex-row lg:gap-x-5 lg:h-full lg:justify-center lg:flex-1">
-              <li className="text-lg py-4 flex hover:underline underline-offset-4">
-                <IoHome size={23} className="mr-2" />
+              <li className="text-lg py-2 px-4 flex items-center hover:bg-gray-200 dark:hover:bg-gray-700 rounded-md transition duration-300">
+                <IoHome size={23} className="mr-1" />
                 <Link
                   className={`link ${
                     pathname === "/"
-                      ? "active underline decoration-4 decoration-current"
+                      ? "bg-gray-200 dark:bg-gray-700 rounded-md"
                       : ""
-                  }`}
+                  } px-2 py-1`}
                   href="/"
                   passHref
                 >
                   {t.home}
                 </Link>
               </li>
-              <li className="text-lg py-4 flex hover:underline underline-offset-4">
-                <FaUserGraduate size={22} className="mr-2" />
+              <li className="text-lg py-2 px-4 flex items-center hover:bg-gray-200 dark:hover:bg-gray-700 rounded-md transition duration-300">
+                <FaUserGraduate size={22} className="mr-1" />
                 <Link
                   className={`link ${
                     pathname === "/AboutUs"
-                      ? "active underline decoration-4 decoration-current"
+                      ? "bg-gray-200 dark:bg-gray-700 rounded-md"
                       : ""
-                  }`}
+                  } px-2 py-1`}
                   href="/AboutUs"
                   passHref
                 >
                   {t.aboutUs}
                 </Link>
               </li>
-              <li className="text-lg py-4 flex hover:underline underline-offset-4">
-                <FaBookBookmark size={23} className="mr-2" />
+              <li className="text-lg py-2 px-4 flex items-center hover:bg-gray-200 dark:hover:bg-gray-700 rounded-md transition duration-300">
+                <FaBookBookmark size={23} className="mr-1" />
                 <Link
                   className={`link ${
                     pathname === "/Course"
-                      ? "active underline decoration-4 decoration-current"
+                      ? "bg-gray-200 dark:bg-gray-700 rounded-md"
                       : ""
-                  }`}
+                  } px-2 py-1`}
                   href="/Course"
                   passHref
                 >
                   {t.courses}
                 </Link>
               </li>
-              <li className="text-lg py-4 flex hover:underline underline-offset-4">
-                <FaMapMarkedAlt size={22} className="mr-2" />
+              <li className="text-lg py-2 px-4 flex items-center hover:bg-gray-200 dark:hover:bg-gray-700 rounded-md transition duration-300">
+                <FaMapMarkedAlt size={22} className="mr-1" />
                 <Link
                   className={`link ${
                     pathname === "/ContactUs"
-                      ? "active underline decoration-4 decoration-current"
+                      ? "bg-gray-200 dark:bg-gray-700 rounded-md"
                       : ""
-                  }`}
+                  } px-2 py-1`}
                   href="/ContactUs"
                   passHref
                 >

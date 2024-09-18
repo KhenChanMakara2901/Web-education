@@ -6,6 +6,30 @@ import React from "react";
 import Image from "next/image";
 import Avarta from "@/public/Testimonial/Avarta.png";
 
+const testimonials = [
+  {
+    name: "ខេន ចាន់មករា",
+    title: "និស្សិត / RUPP",
+    feedback:
+      "ក្នុងនាមជានិស្សិតដែលបានសិក្សានៅ Khmer Code Academy ខ្ញុំមានសេចក្តីសោមនស្សរីករាយជាខ្លាំងដែលអាចផ្តល់ឱ្យនិស្សិតនូវឱកាសដើម្បីរៀន Front end Development ដែលជាជំនាញដ៏ពេញនិយមបំផុតមួយនៅក្នុងវិស័យឌីជីថល។",
+    avatar: Avarta,
+  },
+  {
+    name: "សុវណ្ណ ស្រីម៉ៅ",
+    title: "និស្សិត / ITC",
+    feedback:
+      "ក្នុងនាមជានិស្សិតដែលបានសិក្សានៅ Khmer Code Academy ខ្ញុំមានសេចក្តីសោមនស្សរីករាយជាខ្លាំងដែលអាចផ្តល់ឱ្យនិស្សិតនូវឱកាសដើម្បីរៀន Front end Development ដែលជាជំនាញដ៏ពេញនិយមបំផុតមួយនៅក្នុងវិស័យឌីជីថល។",
+    avatar: Avarta,
+  },
+  {
+    name: "គីម សាវី",
+    title: "និស្សិត / Norton University",
+    feedback:
+      "ក្នុងនាមជានិស្សិតដែលបានសិក្សានៅ Khmer Code Academy ខ្ញុំមានសេចក្តីសោមនស្សរីករាយជាខ្លាំងដែលអាចផ្តល់ឱ្យនិស្សិតនូវឱកាសដើម្បីរៀន Front end Development ដែលជាជំនាញដ៏ពេញនិយមបំផុតមួយនៅក្នុងវិស័យឌីជីថល។",
+    avatar: Avarta,
+  },
+];
+
 export default function Index() {
   useEffect(() => {
     AOS.init({
@@ -14,6 +38,7 @@ export default function Index() {
       once: true,
     });
   }, []);
+
   return (
     <div id="Testimonial" className="py-20 bg-white dark:bg-dark scroll-smooth">
       <div className="min-h-px w-full border-t pt-8"></div>
@@ -24,31 +49,26 @@ export default function Index() {
           </h1>
         </div>
         <div className="relative grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {[...Array(9)].map((_, index) => (
+          {testimonials.map((testimonial, index) => (
             <div
               key={index}
               className="p-5 md:p-6 space-y-6 dark:shadow-darkModeShadow shadow-lightModeShadow rounded-lg"
               data-aos="fade-up"
               data-aos-delay={index * 100} // Delay for each item
             >
-              <p className="font-medium">
-                ក្នុងនាមជានិស្សិតដែលបានសិក្សានៅ Khmer Code Academy
-                ខ្ញុំមានសេចក្តីសោមនស្សរីករាយជាខ្លាំងដែលអាចផ្តល់ឱ្យនិស្សិតនូវឱកាសដើម្បីរៀន
-                Front end Development
-                ដែលជាជំនាញដ៏ពេញនិយមបំផុតមួយនៅក្នុងវិស័យឌីជីថល។
-              </p>
+              <p className="font-medium">{testimonial.feedback}</p>
               <div className="flex items-start gap-4">
                 <Image
-                  src={Avarta}
+                  src={testimonial.avatar}
                   width={100}
-                  alt="Author avatar"
+                  alt={`${testimonial.name} avatar`}
                   className="w-12 h-12 rounded-full flex object-cover"
                 />
                 <div className="space-y-1 flex-1">
                   <h2 className="text-lg font-semibold leading-none">
-                    ខេន ចាន់មករា
+                    {testimonial.name}
                   </h2>
-                  <p>និស្សិត / RUPP</p>
+                  <p>{testimonial.title}</p>
                 </div>
               </div>
             </div>

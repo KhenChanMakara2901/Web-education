@@ -8,7 +8,7 @@ import CTA from "@/src/components/CTA/Index";
 import { MdEmail } from "react-icons/md";
 import { FaPhoneVolume, FaLocationDot } from "react-icons/fa6";
 
-export default function page() {
+export default function Page() {
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -19,20 +19,21 @@ export default function page() {
 
   return (
     <div className="bg-white dark:bg-dark">
-      <head>
-        <title className="text-white font-extrabold">
-          ទីតាំងរបស់យេីង | ខ្មែរកូដអាខាដឺមី
-        </title>
-      </head>
+      <Head>
+        <title>ទីតាំងរបស់យេីង | ខ្មែរកូដអាខាដឺមី</title>
+      </Head>
       <div className="px-6 py-12 max-w-full">
-        <iframe
-          data-aos="fade-up-right"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3908.673270226169!2d104.89705297572912!3d11.575263988626252!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x310951006513b911%3A0xfb4a1347dd91260e!2sKhmer%20Code%20Academy!5e0!3m2!1sen!2skh!4v1725539834009!5m2!1sen!2skh"
-          width="100%"
-          height="550"
-          loading="lazy"
-        ></iframe>
-        <div className="grid grid-cols-1 gap-12 mt-10 lg:grid-cols-3 sm:grid-cols-2 ">
+        <div className="relative overflow-hidden rounded-lg shadow-lg border border-gray-200 dark:border-gray-700">
+          <iframe
+            data-aos="fade-up-right"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3908.673270226169!2d104.89705297572912!3d11.575263988626252!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x310951006513b911%3A0xfb4a1347dd91260e!2sKhmer%20Code%20Academy!5e0!3m2!1sen!2skh!4v1725539834009!5m2!1sen!2skh"
+            width="100%"
+            height="600"
+            loading="lazy"
+            className="transition-transform duration-500 ease-in-out transform hover:scale-105"
+          ></iframe>
+        </div>
+        <div className="grid grid-cols-1 gap-12 mt-10 lg:grid-cols-3 sm:grid-cols-2">
           <div
             className="p-4 rounded-lg bg-blue-50 md:p-6 dark:bg-gray-800"
             data-aos="fade-up-right"
