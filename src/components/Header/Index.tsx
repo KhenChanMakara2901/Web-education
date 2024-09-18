@@ -116,7 +116,6 @@ const Index = () => {
                 </Link>
               </li>
               <li className="text-lg py-2 px-4 flex items-center hover:bg-gray-200 dark:hover:bg-gray-700 rounded-md transition duration-300">
-                <BiSolidContact size={25} className="mr-1" />
                 <Link
                   className={`link ${
                     pathname === "/ContactUs"
@@ -131,6 +130,7 @@ const Index = () => {
               </li>
             </ul>
             <div className="w-full flex sm:w-max lg:min-w-max lg:items-center hover:underline hover:decoration-4 rounded-2xl">
+              <BiSolidContact size={25} className="mr-1" />
               <Link
                 href="https://t.me/Kongsun"
                 className="flex text-lg justify-center gap-x-3 items-center
