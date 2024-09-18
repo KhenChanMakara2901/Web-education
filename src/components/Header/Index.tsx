@@ -3,13 +3,10 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import Rupp from "@/public/Image/Logo/Rupp.png";
-import { IoHome } from "react-icons/io5";
-import { FaUserGraduate, FaBookBookmark } from "react-icons/fa6";
-import { FaMapMarkedAlt } from "react-icons/fa";
-import { BiSolidContact } from "react-icons/bi";
 import { usePathname } from "next/navigation";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { BiSolidContact } from "react-icons/bi";
 import khmerlang from "@/src/locales/Header/khmer.json";
 import englishlang from "@/src/locales/Header/english.json";
 
@@ -80,7 +77,6 @@ const Index = () => {
           >
             <ul className="flex text-lg flex-col gap-y-5 lg:items-center lg:flex-row lg:gap-x-5 lg:h-full lg:justify-center lg:flex-1">
               <li className="text-lg py-2 px-4 flex items-center hover:bg-gray-200 dark:hover:bg-gray-700 rounded-md transition duration-300">
-                <IoHome size={23} className="mr-1" />
                 <Link
                   className={`link ${
                     pathname === "/"
@@ -94,7 +90,6 @@ const Index = () => {
                 </Link>
               </li>
               <li className="text-lg py-2 px-4 flex items-center hover:bg-gray-200 dark:hover:bg-gray-700 rounded-md transition duration-300">
-                <FaUserGraduate size={22} className="mr-1" />
                 <Link
                   className={`link ${
                     pathname === "/AboutUs"
@@ -108,7 +103,6 @@ const Index = () => {
                 </Link>
               </li>
               <li className="text-lg py-2 px-4 flex items-center hover:bg-gray-200 dark:hover:bg-gray-700 rounded-md transition duration-300">
-                <FaBookBookmark size={23} className="mr-1" />
                 <Link
                   className={`link ${
                     pathname === "/Course"
@@ -122,7 +116,7 @@ const Index = () => {
                 </Link>
               </li>
               <li className="text-lg py-2 px-4 flex items-center hover:bg-gray-200 dark:hover:bg-gray-700 rounded-md transition duration-300">
-                <FaMapMarkedAlt size={22} className="mr-1" />
+                <BiSolidContact size={25} className="mr-1" />
                 <Link
                   className={`link ${
                     pathname === "/ContactUs"
@@ -137,7 +131,6 @@ const Index = () => {
               </li>
             </ul>
             <div className="w-full flex sm:w-max lg:min-w-max lg:items-center hover:underline hover:decoration-4 rounded-2xl">
-              <BiSolidContact size={25} className="mr-1" />
               <Link
                 href="https://t.me/Kongsun"
                 className="flex text-lg justify-center gap-x-3 items-center
