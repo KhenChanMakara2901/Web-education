@@ -127,7 +127,7 @@ export default function Index() {
               </svg>
             </button>
             <h2 className="text-2xl font-bold mb-4 text-center text-gray-900">
-              Register for a Course
+              ចុះឈ្មោះសម្រាប់វគ្គសិក្សានៅខ្មែរកូដអាខាដឺមី
             </h2>
             <form
               onSubmit={handleSubmit}
@@ -135,7 +135,7 @@ export default function Index() {
             >
               <div className="flex justify-between space-x-4">
                 <div className="w-1/2">
-                  <label className="block text-gray-700">First Name</label>
+                  <label className="block text-gray-700">នាមត្រកូល</label>
                   <input
                     type="text"
                     name="firstName"
@@ -146,7 +146,7 @@ export default function Index() {
                   />
                 </div>
                 <div className="w-1/2">
-                  <label className="block text-gray-700">Last Name</label>
+                  <label className="block text-gray-700">នាមខ្លួន</label>
                   <input
                     type="text"
                     name="lastName"
@@ -158,7 +158,7 @@ export default function Index() {
                 </div>
               </div>
               <div>
-                <label className="block text-gray-700">Email</label>
+                <label className="block text-gray-700">អ៊ីមែល</label>
                 <input
                   type="email"
                   name="email"
@@ -169,7 +169,7 @@ export default function Index() {
                 />
               </div>
               <div>
-                <label className="block text-gray-700">Gender</label>
+                <label className="block text-gray-700">ភេទ</label>
                 <select
                   name="gender"
                   value={formData.gender}
@@ -177,14 +177,14 @@ export default function Index() {
                   required
                   className="w-full px-4 py-2 border rounded-lg"
                 >
-                  <option value="">Select Gender</option>
-                  <option value="male">Male</option>
-                  <option value="female">Female</option>
-                  <option value="other">Other</option>
+                  <option value="">ជ្រើសរើសភេទ</option>
+                  <option value="male">ប្រុស</option>
+                  <option value="female">ស្រី</option>
+                  <option value="other">ផ្សេងៗ</option>
                 </select>
               </div>
               <div>
-                <label className="block text-gray-700">Telegram Number</label>
+                <label className="block text-gray-700">លេខតេឡេក្រាម</label>
                 <input
                   type="text"
                   name="telegram"
@@ -195,7 +195,9 @@ export default function Index() {
                 />
               </div>
               <div>
-                <label className="block text-gray-700">Address</label>
+                <label className="block text-gray-700">
+                  អាស័យដ្ឋានរបស់អ្នក
+                </label>
                 <input
                   type="text"
                   name="address"
@@ -206,7 +208,7 @@ export default function Index() {
                 />
               </div>
               <div>
-                <label className="block text-gray-700">Course</label>
+                <label className="block text-gray-700">វគ្គសិក្សា</label>
                 <input
                   type="text"
                   name="course"
@@ -217,7 +219,9 @@ export default function Index() {
                 />
               </div>
               <div>
-                <label className="block text-gray-700">University</label>
+                <label className="block text-gray-700">
+                  សាកលវិទ្យាល័យរបស់អ្នក
+                </label>
                 <input
                   type="text"
                   name="university"
@@ -228,7 +232,7 @@ export default function Index() {
                 />
               </div>
               <div>
-                <label className="block text-gray-700">Upload Image</label>
+                <label className="block text-gray-700">បង្ហោះរូបភាព</label>
                 <input
                   type="file"
                   onChange={handleImageChange}
@@ -251,7 +255,7 @@ export default function Index() {
                   className="px-6 py-2 bg-emerald-600 text-white rounded-full"
                   disabled={loading}
                 >
-                  {loading ? "Submitting..." : "Submit"}
+                  {loading ? "កំពុងបញ្ជូន....." : "ដាក់ស្នើ"}
                 </button>
               </div>
             </form>
@@ -282,15 +286,19 @@ export default function Index() {
                 d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"
               ></path>
             </svg>
-            <p className="mt-4 text-gray-900">Processing...</p>
+            <p className="mt-4 text-gray-900">កំពុងដំណើរការ.....</p>
           </div>
         </div>
       )}
       {isSuccess && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
           <div className="bg-white text-gray-950 p-8 rounded-lg shadow-lg text-center">
-            <h2 className="text-2xl font-bold mb-4">Success!</h2>
-            <p>Your registration was successful.</p>
+            <h2 className="text-2xl font-bold mb-4">ជោគជ័យ!!!</h2>
+            <p>
+              ការចុះឈ្មោះរបស់អ្នកបានជោគជ័យ។
+              <br />
+              ចំណាំ:ក្រុមការងាររបស់យេីងនឹងទាក់ទងទៅអ្នកឆាប់ៗ
+            </p>
           </div>
         </div>
       )}

@@ -24,6 +24,7 @@ export default function Footer() {
                 <Link
                   href="/"
                   className="text-sm transition-all duration-200 hover:underline text-gray-600 dark:text-gray-400"
+                  passHref
                 >
                   ទំព័រដើម
                 </Link>
@@ -32,6 +33,7 @@ export default function Footer() {
                 <Link
                   href="/AboutUs"
                   className="text-sm transition-all duration-200 hover:underline text-gray-600 dark:text-gray-400"
+                  passHref
                 >
                   អំពីពួកយើង
                 </Link>
@@ -40,6 +42,7 @@ export default function Footer() {
                 <Link
                   href="/Course"
                   className="text-sm transition-all duration-200 hover:underline text-gray-600 dark:text-gray-400"
+                  passHref
                 >
                   វគ្គសិក្សា
                 </Link>
@@ -48,6 +51,7 @@ export default function Footer() {
                 <Link
                   href="#Testimonial"
                   className="text-sm transition-all duration-200 hover:underline text-gray-600 dark:text-gray-400"
+                  passHref
                 >
                   មតិរបស់សិស្ស
                 </Link>
@@ -65,6 +69,8 @@ export default function Footer() {
                     src={facebook}
                     alt="Logo"
                     width={30}
+                    height={30}
+                    quality={75}
                   />
                 </Link>
               </li>
@@ -75,6 +81,8 @@ export default function Footer() {
                     src={telegram}
                     alt="Logo"
                     width={30}
+                    height={30}
+                    quality={75}
                   />
                 </Link>
               </li>
@@ -85,16 +93,20 @@ export default function Footer() {
                     src={tiktok}
                     alt="Logo"
                     width={30}
+                    height={30}
+                    quality={75}
                   />
                 </Link>
               </li>
               <li className="group">
-                <Link href="http://www.youtube.com/@khmercodeacademy">
+                <Link href="http://www.youtube.com/@khmercodeacademy" passHref>
                   <Image
                     className="ease-linear duration-300 grayscale group-hover:!grayscale-0 group-hover:scale-110"
                     src={youtube}
                     alt="Logo"
                     width={30}
+                    height={30}
+                    quality={75}
                   />
                 </Link>
               </li>

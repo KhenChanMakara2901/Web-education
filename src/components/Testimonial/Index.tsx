@@ -54,13 +54,15 @@ export default function Index() {
               key={index}
               className="p-5 md:p-6 space-y-6 dark:shadow-darkModeShadow shadow-lightModeShadow rounded-lg"
               data-aos="fade-up"
-              data-aos-delay={index * 100} // Delay for each item
+              data-aos-delay={index * 100}
             >
               <p className="font-medium">{testimonial.feedback}</p>
               <div className="flex items-start gap-4">
                 <Image
                   src={testimonial.avatar}
                   width={100}
+                  height={100}
+                  quality={75}
                   alt={`${testimonial.name} avatar`}
                   className="w-12 h-12 rounded-full flex object-cover"
                 />

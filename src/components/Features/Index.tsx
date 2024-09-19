@@ -29,6 +29,7 @@ const Index = () => {
             alt="creative agency"
             width={500}
             height={500}
+            quality={75}
             className="w-full md:h-full object-cover rounded-lg"
           />
         </div>
@@ -57,7 +58,13 @@ const Index = () => {
               data-aos-delay="200"
             >
               <span className="p-3 md:p-3.5 bg-white rounded-full flex w-max">
-                <Image src={Phone} alt="Phone" width={30} />
+                <Image
+                  src={Phone}
+                  alt="Phone"
+                  width={30}
+                  height={30}
+                  quality={75}
+                />
               </span>
               <div className="space-y-0.5 flex flex-col flex-1">
                 <p>លេខទូរស័ព្ទ:</p>
@@ -72,7 +79,13 @@ const Index = () => {
               data-aos-delay="300"
             >
               <span className="p-3 md:p-3.5 rounded-full bg-white flex w-max">
-                <Image src={Mail} alt="Mail" width={30} />
+                <Image
+                  src={Mail}
+                  alt="Mail"
+                  width={30}
+                  height={30}
+                  quality={75}
+                />
               </span>
               <div className="space-y-0.5 flex flex-col flex-1">
                 <p>អ៊ីមែល:</p>
@@ -86,6 +99,7 @@ const Index = () => {
               className="px-5 border h-11 flex items-center"
               data-aos="fade-up"
               data-aos-delay="400"
+              passHref
             >
               សាងល្បងឥឡូវនេះ
             </Link>

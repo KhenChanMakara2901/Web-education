@@ -42,6 +42,7 @@ const Index = () => {
                 alt={item.title}
                 width={50}
                 height={50}
+                quality={75}
                 className="inline-block h-16 w-16 object-cover rounded-full"
               />
               <h3 className="text-xl font-semibold">{item.title}:</h3>

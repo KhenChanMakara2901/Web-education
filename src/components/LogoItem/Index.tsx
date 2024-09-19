@@ -31,6 +31,8 @@ export default function Index() {
               src={LogoWeb}
               alt="Logo"
               width={100}
+              height={100}
+              quality={75}
               className="inline-block ease-linear duration-300 grayscale group-hover:!grayscale-0 group-hover:scale-105"
             />
           </div>
@@ -43,7 +45,9 @@ export default function Index() {
               src={LogoWeb2}
               alt="Logo"
               width={100}
+              height={100}
               className="inline-block ease-linear duration-300 grayscale group-hover:!grayscale-0 group-hover:scale-105"
+              quality={75}
             />
           </div>
           <div
@@ -55,7 +59,9 @@ export default function Index() {
               src={LogoWeb3}
               alt="Logo"
               width={100}
+              height={100}
               className="inline-block ease-linear duration-300 grayscale group-hover:!grayscale-0 group-hover:scale-105"
+              quality={75}
             />
           </div>
           <div
@@ -67,7 +73,9 @@ export default function Index() {
               src={LogoWeb4}
               alt="Logo"
               width={100}
+              height={100}
               className="inline-block ease-linear duration-300 grayscale group-hover:!grayscale-0 group-hover:scale-105"
+              quality={75}
             />
           </div>
           <div
@@ -79,7 +87,9 @@ export default function Index() {
               src={LogoWeb5}
               alt="Logo"
               width={150}
+              height={150}
               className="inline-block ease-linear duration-300 grayscale group-hover:!grayscale-0 group-hover:scale-105"
+              quality={75}
             />
           </div>
         </div>
