@@ -57,7 +57,7 @@ const Index = () => {
               data-aos-delay="200"
             >
               <span className="p-3 md:p-3.5 bg-white rounded-full flex w-max">
-                <Image src={Phone} alt="Phone" width={50} />
+                <Image src={Phone} alt="Phone" width={30} />
               </span>
               <div className="space-y-0.5 flex flex-col flex-1">
                 <p>លេខទូរស័ព្ទ:</p>
@@ -72,7 +72,7 @@ const Index = () => {
               data-aos-delay="300"
             >
               <span className="p-3 md:p-3.5 rounded-full bg-white flex w-max">
-                <Image src={Mail} alt="Mail" width={50} />
+                <Image src={Mail} alt="Mail" width={30} />
               </span>
               <div className="space-y-0.5 flex flex-col flex-1">
                 <p>អ៊ីមែល:</p>
