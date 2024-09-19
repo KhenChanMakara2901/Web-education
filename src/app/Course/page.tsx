@@ -8,7 +8,9 @@ import CourseImage2 from "@/public/Course/Course2.png";
 import CourseImage3 from "@/public/Course/Course3.png";
 import CourseImage4 from "@/public/Course/Course4.png";
 import CourseImage5 from "@/public/Course/Course5.png";
-import Course from "@/public/Course/Course.png";
+import Course6 from "@/public/Course/Course6.jpg";
+import Course7 from "@/public/Course/Course7.webp";
+import Course from "@/public/Course/Course.jpg";
 import QrCodeImage from "@/public/Course/QrCodeImage.jpg";
 
 const courses = [
@@ -78,11 +80,43 @@ const courses = [
   },
   {
     id: 6,
-    title: "HTML/CSS/JAVASCRIPT",
+    title: "JAVASCRIPT",
     description: [
-      "HTML defines the structure of your content",
-      "CSS determines the style and layout",
-      "JavaScript makes the content interactive",
+      "Basic Statement",
+      "Operators",
+      "Control Flow",
+      "Function",
+      "Object",
+      "Object Oriented",
+      "Rest Api",
+    ],
+    imageSrc: Course6,
+  },
+  {
+    id: 7,
+    title: "CSS",
+    description: [
+      "Basic Syntax",
+      "Grid",
+      "Flex Box",
+      "Basic Style",
+      "Animation",
+      "Responsive",
+      "Css Advaned",
+    ],
+    imageSrc: Course7,
+  },
+  {
+    id: 8,
+    title: "HTML",
+    description: [
+      "Basic Tag",
+      "Table",
+      "List",
+      "Link",
+      "Form",
+      "Layout",
+      "Html Advaned",
     ],
     imageSrc: Course,
   },
@@ -154,8 +188,8 @@ export default function CoursePage() {
       <head>
         <title className="font-extrabold">វគ្គសិក្សា | ខ្មែរកូដអាខាដឺមី</title>
       </head>
-      <div className="max-w-4xl mx-auto px-5 sm:px-10 md:px-12 lg:px-5 space-y-16">
-        <div className="max-w-3xl space-y-3 animate-fadeIn">
+      <div className="max-w-5xl mx-auto px-5 sm:px-10 md:px-12 lg:px-5 space-y-16">
+        <div className="max-w-4xl space-y-3 animate-fadeIn">
           <h1 className="text-4xl/tight sm:text-4xl/tight underline underline-offset-4 font-bold">
             វគ្គសិក្សាដែលយេីងមានបង្រៀន៖
           </h1>

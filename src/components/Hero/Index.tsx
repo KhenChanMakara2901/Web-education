@@ -1,16 +1,71 @@
-import React from "react";
-import Link from "next/link";
-
+"use client";
+import React, { useState } from "react";
 export default function Index() {
+  const [isOpen, setIsOpen] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    course: "",
+    university: "",
+    email: "",
+    telegram: "",
+    address: "",
+    image: null,
+    gender: "",
+  });
+  const [imagePreview, setImagePreview] = useState<string | null>(null);
+  const handleInputChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+  const handleImageChange = (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      setFormData((prevState) => ({ ...prevState, image: file }));
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        if (typeof reader.result === "string") {
+          setImagePreview(reader.result);
+        }
+      };
+      reader.readAsDataURL(file);
+    }
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+      setIsSuccess(true);
+      setTimeout(() => {
+        setIsOpen(false);
+        setIsSuccess(false);
+        setFormData({
+          firstName: "",
+          lastName: "",
+          course: "",
+          university: "",
+          email: "",
+          telegram: "",
+          address: "",
+          image: null,
+          gender: "",
+        });
+        setImagePreview(null);
+      }, 3000);
+    }, 10000);
+  };
+
   return (
     <div
       className="relative py-32 scroll-smooth sm:py-36 lg:py-40 overflow-hidden h-[100dvh] min-h-max flex items-center bg-fixed bg-cover bg-center bg-white dark:bg-dark"
       style={{
         backgroundImage:
-          "url('https://wallpaper-house.com/data/out/8/wallpaper2you_293598.jpg')", // Replace with your image path
+          "url('https://wallpaper-house.com/data/out/8/wallpaper2you_293598.jpg')",
       }}
     >
-      {/* Background Overlay */}
       <div className="absolute inset-0 dark:bg-black/30"></div>
 
       <div className="relative mx-auto lg:max-w-7xl w-full px-5 sm:px-10 md:px-12 lg:px-5 z-10">
@@ -28,8 +83,8 @@ export default function Index() {
           </p>
 
           <div className="flex justify-center animate-scaleUp">
-            <Link
-              href="https://t.me/Kongsun"
+            <button
+              onClick={() => setIsOpen(true)}
               className="px-8 h-12 rounded-full bg-gradient-to-r from-emerald-600 to-emerald-800 text-white flex items-center justify-center gap-x-3 transition-transform transform hover:scale-105 hover:shadow-xl"
             >
               ចុះឈ្មោះឥឡូវនេះ
@@ -47,10 +102,198 @@ export default function Index() {
                   />
                 </svg>
               </span>
-            </Link>
+            </button>
           </div>
         </div>
       </div>
+      {isOpen && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+          <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md relative">
+            <button
+              onClick={() => setIsOpen(false)}
+              className="absolute top-2 right-2 text-gray-500 hover:text-gray-700"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                className="w-6 h-6"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M10 8.586l-4.95-4.95a.75.75 0 00-1.06 1.06L8.586 10l-4.95 4.95a.75.75 0 101.06 1.06L10 11.414l4.95 4.95a.75.75 0 101.06-1.06L11.414 10l4.95-4.95a.75.75 0 00-1.06-1.06L10 8.586z"
+                  clipRule="evenodd"
+                />
+              </svg>
+            </button>
+            <h2 className="text-2xl font-bold mb-4 text-center text-gray-900">
+              Register for a Course
+            </h2>
+            <form
+              onSubmit={handleSubmit}
+              className="space-y-4 overflow-y-auto max-h-[70vh]" // Added scrolling
+            >
+              <div className="flex justify-between space-x-4">
+                <div className="w-1/2">
+                  <label className="block text-gray-700">First Name</label>
+                  <input
+                    type="text"
+                    name="firstName"
+                    value={formData.firstName}
+                    onChange={handleInputChange}
+                    required
+                    className="w-full px-4 py-2 border rounded-lg"
+                  />
+                </div>
+                <div className="w-1/2">
+                  <label className="block text-gray-700">Last Name</label>
+                  <input
+                    type="text"
+                    name="lastName"
+                    value={formData.lastName}
+                    onChange={handleInputChange}
+                    required
+                    className="w-full px-4 py-2 border rounded-lg"
+                  />
+                </div>
+              </div>
+              <div>
+                <label className="block text-gray-700">Email</label>
+                <input
+                  type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleInputChange}
+                  required
+                  className="w-full px-4 py-2 border rounded-lg"
+                />
+              </div>
+              <div>
+                <label className="block text-gray-700">Gender</label>
+                <select
+                  name="gender"
+                  value={formData.gender}
+                  onChange={handleInputChange}
+                  required
+                  className="w-full px-4 py-2 border rounded-lg"
+                >
+                  <option value="">Select Gender</option>
+                  <option value="male">Male</option>
+                  <option value="female">Female</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+              <div>
+                <label className="block text-gray-700">Telegram Number</label>
+                <input
+                  type="text"
+                  name="telegram"
+                  value={formData.telegram}
+                  onChange={handleInputChange}
+                  required
+                  className="w-full px-4 py-2 border rounded-lg"
+                />
+              </div>
+              <div>
+                <label className="block text-gray-700">Address</label>
+                <input
+                  type="text"
+                  name="address"
+                  value={formData.address}
+                  onChange={handleInputChange}
+                  required
+                  className="w-full px-4 py-2 border rounded-lg"
+                />
+              </div>
+              <div>
+                <label className="block text-gray-700">Course</label>
+                <input
+                  type="text"
+                  name="course"
+                  value={formData.course}
+                  onChange={handleInputChange}
+                  required
+                  className="w-full px-4 py-2 border rounded-lg"
+                />
+              </div>
+              <div>
+                <label className="block text-gray-700">University</label>
+                <input
+                  type="text"
+                  name="university"
+                  value={formData.university}
+                  onChange={handleInputChange}
+                  required
+                  className="w-full px-4 py-2 border rounded-lg"
+                />
+              </div>
+              <div>
+                <label className="block text-gray-700">Upload Image</label>
+                <input
+                  type="file"
+                  onChange={handleImageChange}
+                  className="w-full border rounded-lg py-2 px-4"
+                />
+                {imagePreview && (
+                  <div className="flex justify-center mt-4">
+                    <img
+                      src={imagePreview}
+                      alt="Image Preview"
+                      className="w-32 h-32 object-cover rounded-lg"
+                    />
+                  </div>
+                )}
+              </div>
+
+              <div className="flex justify-center">
+                <button
+                  type="submit"
+                  className="px-6 py-2 bg-emerald-600 text-white rounded-full"
+                  disabled={loading}
+                >
+                  {loading ? "Submitting..." : "Submit"}
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      )}
+      {loading && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+          <div className="bg-white p-8 rounded-lg shadow-lg text-center">
+            <svg
+              className="animate-spin h-10 w-10 text-emerald-600 mx-auto"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <circle
+                className="opacity-25"
+                cx="12"
+                cy="12"
+                r="10"
+                stroke="currentColor"
+                strokeWidth="4"
+              ></circle>
+              <path
+                className="opacity-75"
+                fill="currentColor"
+                d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"
+              ></path>
+            </svg>
+            <p className="mt-4 text-gray-900">Processing...</p>
+          </div>
+        </div>
+      )}
+      {isSuccess && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+          <div className="bg-white text-gray-950 p-8 rounded-lg shadow-lg text-center">
+            <h2 className="text-2xl font-bold mb-4">Success!</h2>
+            <p>Your registration was successful.</p>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

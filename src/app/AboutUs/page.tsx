@@ -48,13 +48,9 @@ export default function Page() {
       easing: "ease-in-out",
       once: true,
     });
-
-    // Function to change image every 5 seconds
     const intervalId = setInterval(() => {
       setCurrentImage((prevImage) => (prevImage + 1) % images.length);
-    }, 8000);
-
-    // Cleanup interval on component unmount
+    }, 6000);
     return () => clearInterval(intervalId);
   }, []);
 
