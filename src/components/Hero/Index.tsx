@@ -1,6 +1,19 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import Image from "next/image";
+import Image1 from "@/public/Hero/Image1.png";
+import Image2 from "@/public/Hero/Image2.png";
+
 export default function Index() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      easing: "ease-in-out",
+      once: true,
+    });
+  }, []);
   const [isOpen, setIsOpen] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -59,25 +72,57 @@ export default function Index() {
   };
 
   return (
-    <div
-      className="relative py-32 scroll-smooth sm:py-36 lg:py-40 overflow-hidden h-[100dvh] min-h-max flex items-center bg-fixed bg-cover bg-center bg-white dark:bg-dark"
-      style={{
-        backgroundImage:
-          "url('https://wallpaper-house.com/data/out/8/wallpaper2you_293598.jpg')",
-      }}
-    >
+    <div className="py-32 scroll-smooth sm:py-36 lg:py-40 overflow-hidden h-[100dvh] min-h-max flex items-center relative bg-white dark:bg-dark">
+      <div className="absolute top-0 left-0 -translate-x-[54%] -translate-y-[70%] w-2/5 rounded-full aspect-square bg-sky-900 backdrop-filter blur-3xl opacity-50 animate-scaleUp" />
+      <div className="absolute bottom-0 right-0 translate-x-[54%] translate-y-[70%] w-2/5 rounded-full aspect-square bg-sky-400/30 backdrop-filter blur-3xl opacity-50 animate-fadeIn" />
+      <div className="absolute min-w-[300px] w-[48%] md:w-2/5 aspect-square rounded-full bg-gradient-to-r from-sky-400/5 right-0 -translate-y-[40%] translate-x-[40%] top-0 animate-scaleUp">
+        <div className="inset-[10%] rounded-full bg-gradient-to-l from-sky-400/20">
+          <div className="absolute inset-[20%] rounded-full bg-gradient-to-l from-sky-400/30" />
+        </div>
+      </div>
+      <div className="absolute min-w-[300px] w-[48%] md:w-2/5 aspect-square rounded-full bg-gradient-to-l from-sky-400/5 left-0 translate-y-[40%] -translate-x-[40%] bottom-0 animate-fadeIn">
+        <div className="inset-[10%] rounded-full bg-gradient-to-r from-sky-400/40">
+          <div className="absolute inset-[20%] rounded-full bg-gradient-to-r from-sky-400/50" />
+        </div>
+      </div>
+      <div
+        className="absolute top-2 left-14 w-full h-full bg-opacity-50"
+        data-aos="zoom-out-left"
+      >
+        <Image
+          src={Image1}
+          width={420}
+          height={420}
+          quality={100}
+          alt="Human Illustration 1"
+          className="object-cover"
+        />
+      </div>
+      <div
+        className="absolute bottom-20 right-0 bg-opacity-50"
+        data-aos="zoom-out-right"
+      >
+        <Image
+          src={Image2}
+          width={500}
+          height={500}
+          quality={100}
+          alt="Human Illustration 2"
+          className="object-cover"
+        />
+      </div>
       <div className="absolute inset-0 dark:bg-black/30"></div>
 
-      <div className="relative mx-auto lg:max-w-7xl w-full px-5 sm:px-10 md:px-12 lg:px-5 z-10">
+      <div className="mx-auto lg:max-w-7xl w-full px-5 sm:px-10 md:px-12 lg:px-5 relative z-10">
         <div className="text-center flex flex-col items-center space-y-10">
-          <span className="border text-4xl font-serif px-3 py-0.5 rounded-2xl bg-opacity-50 bg-white/20 backdrop-blur-lg animate-scaleUp text-white shadow-lg">
+          <span className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-serif px-3 py-0.5 rounded-2xl animate-scaleUp">
             KHMER <span className="text-yellow-400">CODE</span> ACADEMY
           </span>
-          <h1 className="text-2xl md:text-3xl lg:text-4xl/tight xl:text-5xl/tight font-bold max-w-4xl capitalize animate-fadeIn text-white shadow-lg">
+          <h1 className="text-2xl md:text-3xl lg:text-4xl/tight xl:text-5xl/tight font-bold max-w-4xl capitalize animate-fadeIn dark:text-white">
             សិក្សាជំនាញគ្រប់គ្រងទិន្នន័យ
             និងការអភិវឌ្ឍន៍កម្មវិធីដែលសង្គមត្រូវការនៅពេលបច្ចុប្បន្ន
           </h1>
-          <p className="text-base text-center max-w-xl animate-fadeIn text-white shadow-md">
+          <p className="text-base text-center max-w-xl animate-fadeIn dark:text-gray-300">
             យើងផ្តល់ឲ្យនូវការបង្រៀនដែលយកចិត្តទុកដាក់ ប្រកបដោយគុណភាព
             និងទំនួលខុសត្រូវ។ ការពេញចិត្តរបស់អ្នក គឺជាតម្លៃរបស់យើង។
           </p>

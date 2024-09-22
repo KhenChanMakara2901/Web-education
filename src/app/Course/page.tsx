@@ -3,126 +3,18 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
-import CourseImage1 from "@/public/Course/Course1.png";
-import CourseImage2 from "@/public/Course/Course2.png";
-import CourseImage3 from "@/public/Course/Course3.png";
-import CourseImage4 from "@/public/Course/Course4.png";
-import CourseImage5 from "@/public/Course/Course5.png";
-import Course6 from "@/public/Course/Course6.jpg";
-import Course7 from "@/public/Course/Course7.webp";
-import Course from "@/public/Course/Course.jpg";
 import QrCodeImage from "@/public/Course/QrCodeImage.jpg";
 
-const courses = [
-  {
-    id: 1,
-    title: "NODE.JS + MY SQL",
-    description: [
-      "MySQL Create Database",
-      "MySQL Create Table",
-      "MySQL Insert Into",
-      "MySQL Select From",
-      "MySQL Order By",
-      "Other",
-    ],
-    imageSrc: CourseImage3,
-  },
-  {
-    id: 2,
-    title: "NEXT.JS",
-    description: [
-      "Routing",
-      "Data Fetching",
-      "Rendering",
-      "Caching",
-      "Styling",
-      "Other",
-    ],
-    imageSrc: CourseImage1,
-  },
-  {
-    id: 3,
-    title: "REACT.JS",
-    description: [
-      "Components",
-      "Rendering",
-      "Hooks",
-      "Routers",
-      "State Management",
-      "Other",
-    ],
-    imageSrc: CourseImage2,
-  },
-  {
-    id: 4,
-    title: "ANGULAR.JS",
-    description: [
-      "Modules",
-      "Directives",
-      "Data Binding",
-      "Controllers",
-      "Other",
-    ],
-    imageSrc: CourseImage4,
-  },
-  {
-    id: 5,
-    title: "VUE.JS",
-    description: [
-      "Directives",
-      "Methods",
-      "Event Modifiers",
-      "Forms",
-      "CSS Binding",
-      "Other",
-    ],
-    imageSrc: CourseImage5,
-  },
-  {
-    id: 6,
-    title: "JAVASCRIPT",
-    description: [
-      "Basic Statement",
-      "Operators",
-      "Control Flow",
-      "Function",
-      "Object",
-      "Object Oriented",
-      "Rest Api",
-    ],
-    imageSrc: Course6,
-  },
-  {
-    id: 7,
-    title: "CSS",
-    description: [
-      "Basic Syntax",
-      "Grid",
-      "Flex Box",
-      "Basic Style",
-      "Animation",
-      "Responsive",
-      "Css Advaned",
-    ],
-    imageSrc: Course7,
-  },
-  {
-    id: 8,
-    title: "HTML",
-    description: [
-      "Basic Tag",
-      "Table",
-      "List",
-      "Link",
-      "Form",
-      "Layout",
-      "Html Advaned",
-    ],
-    imageSrc: Course,
-  },
-];
+type Course = {
+  id: number;
+  title: string;
+  description: string[];
+  imageSrc: string;
+};
 
 export default function CoursePage() {
+  // Set the type for courses to be an array of Course objects
+  const [courses, setCourses] = useState<Course[]>([]);
   const [showPopup, setShowPopup] = useState(false);
   const [showQR, setShowQR] = useState(false);
   const [showSuccess, setShowSuccess] = useState(false);
@@ -141,6 +33,12 @@ export default function CoursePage() {
       easing: "ease-in-out",
       once: true,
     });
+
+    // Fetching the courses data from the JSON file
+    fetch("/data/courses.json")
+      .then((response) => response.json())
+      .then((data: Course[]) => setCourses(data)) // Ensure the data is typed as Course[]
+      .catch((error) => console.error("Error fetching courses:", error));
   }, []);
 
   const handleRegister = () => {
@@ -157,13 +55,15 @@ export default function CoursePage() {
       alert("Please fill in all fields, including uploading an image.");
     }
   };
-  const handleImageChange = (e) => {
-    const file = e.target.files[0];
+
+  const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
     if (file) {
       setImageFile(file);
       setImagePreview(URL.createObjectURL(file));
     }
   };
+
   const clearForm = () => {
     setName("");
     setEmail("");

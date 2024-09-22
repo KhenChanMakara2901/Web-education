@@ -1,42 +1,30 @@
 "use client";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import React from "react";
 import Image from "next/image";
-import Avarta from "@/public/Testimonial/Avarta.png";
 
-const testimonials = [
-  {
-    name: "ខេន ចាន់មករា",
-    title: "និស្សិត / RUPP",
-    feedback:
-      "ក្នុងនាមជានិស្សិតដែលបានសិក្សានៅ Khmer Code Academy ខ្ញុំមានសេចក្តីសោមនស្សរីករាយជាខ្លាំងដែលអាចផ្តល់ឱ្យនិស្សិតនូវឱកាសដើម្បីរៀន Front end Development ដែលជាជំនាញដ៏ពេញនិយមបំផុតមួយនៅក្នុងវិស័យឌីជីថល។",
-    avatar: Avarta,
-  },
-  {
-    name: "សុវណ្ណ ស្រីម៉ៅ",
-    title: "និស្សិត / ITC",
-    feedback:
-      "ក្នុងនាមជានិស្សិតដែលបានសិក្សានៅ Khmer Code Academy ខ្ញុំមានសេចក្តីសោមនស្សរីករាយជាខ្លាំងដែលអាចផ្តល់ឱ្យនិស្សិតនូវឱកាសដើម្បីរៀន Front end Development ដែលជាជំនាញដ៏ពេញនិយមបំផុតមួយនៅក្នុងវិស័យឌីជីថល។",
-    avatar: Avarta,
-  },
-  {
-    name: "គីម សាវី",
-    title: "និស្សិត / Norton University",
-    feedback:
-      "ក្នុងនាមជានិស្សិតដែលបានសិក្សានៅ Khmer Code Academy ខ្ញុំមានសេចក្តីសោមនស្សរីករាយជាខ្លាំងដែលអាចផ្តល់ឱ្យនិស្សិតនូវឱកាសដើម្បីរៀន Front end Development ដែលជាជំនាញដ៏ពេញនិយមបំផុតមួយនៅក្នុងវិស័យឌីជីថល។",
-    avatar: Avarta,
-  },
-];
+type Testimonial = {
+  name: string;
+  title: string;
+  feedback: string;
+  avatar: string;
+};
 
 export default function Index() {
+  const [testimonials, setTestimonials] = useState<Testimonial[]>([]); // Initialize the state for testimonials
+
   useEffect(() => {
     AOS.init({
       duration: 1000,
       easing: "ease-in-out",
       once: true,
     });
+
+    // Fetch testimonials from the JSON file
+    fetch("/data/testimonials.json")
+      .then((response) => response.json())
+      .then((data: Testimonial[]) => setTestimonials(data)); // Update the state with fetched data
   }, []);
 
   return (

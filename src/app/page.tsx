@@ -8,7 +8,7 @@ import ScrollToTop from "../components/ScrollToTop/Index";
 
 export default function Home() {
   return (
-    <>
+    <div className="scroll-smooth">
       <ScrollToTop />
       <Hero />
       <LogoItem />
@@ -16,6 +16,6 @@ export default function Home() {
       <Sections />
       <Testimonial />
       <CTA />
-    </>
+    </div>
   );
 }

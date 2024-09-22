@@ -1,0 +1,108 @@
+[
+  {
+    "id": 1,
+    "title": "NODE.JS + MY SQL",
+    "description": [
+      "MySQL Create Database",
+      "MySQL Create Table",
+      "MySQL Insert Into",
+      "MySQL Select From",
+      "MySQL Order By",
+      "Other"
+    ],
+    "imageSrc": "/Course/Course3.png"
+  },
+  {
+    "id": 2,
+    "title": "NEXT.JS",
+    "description": [
+      "Routing",
+      "Data Fetching",
+      "Rendering",
+      "Caching",
+      "Styling",
+      "Other"
+    ],
+    "imageSrc": "/Course/Course1.png"
+  },
+  {
+    "id": 3,
+    "title": "REACT.JS",
+    "description": [
+      "Components",
+      "Rendering",
+      "Hooks",
+      "Routers",
+      "State Management",
+      "Other"
+    ],
+    "imageSrc": "/Course/Course2.png"
+  },
+  {
+    "id": 4,
+    "title": "ANGULAR.JS",
+    "description": [
+      "Modules",
+      "Directives",
+      "Data Binding",
+      "Controllers",
+      "Other"
+    ],
+    "imageSrc": "/Course/Course4.png"
+  },
+  {
+    "id": 5,
+    "title": "VUE.JS",
+    "description": [
+      "Directives",
+      "Methods",
+      "Event Modifiers",
+      "Forms",
+      "CSS Binding",
+      "Other"
+    ],
+    "imageSrc": "/Course/Course5.png"
+  },
+  {
+    "id": 6,
+    "title": "JAVASCRIPT",
+    "description": [
+      "Basic Statement",
+      "Operators",
+      "Control Flow",
+      "Function",
+      "Object",
+      "Object Oriented",
+      "Rest Api"
+    ],
+    "imageSrc": "/Course/Course6.jpg"
+  },
+  {
+    "id": 7,
+    "title": "CSS",
+    "description": [
+      "Basic Syntax",
+      "Grid",
+      "Flex Box",
+      "Basic Style",
+      "Animation",
+      "Responsive",
+      "Css Advanced"
+    ],
+    "imageSrc": "/Course/Course7.webp"
+  },
+  {
+    "id": 8,
+    "title": "HTML",
+    "description": [
+      "Basic Tag",
+      "Table",
+      "List",
+      "Link",
+      "Form",
+      "Layout",
+      "Html Advanced"
+    ],
+    "imageSrc": "/Course/Course.jpg"
+  }
+]
