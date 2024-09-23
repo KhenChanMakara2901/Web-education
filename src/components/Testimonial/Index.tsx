@@ -30,7 +30,7 @@ export default function Index() {
   return (
     <div id="Testimonial" className="py-20 bg-white dark:bg-dark scroll-smooth">
       <div className="min-h-px w-full border-t pt-8"></div>
-      <div className="max-w-7xl mx-auto px-5 sm:px-10 md:px-12 lg:px-5 space-y-16">
+      <div className="max-w-screen-2xl mx-auto px-5 sm:px-10 md:px-12 lg:px-5 space-y-16">
         <div className="max-w-2xl">
           <h1 className="font-bold text-3xl" data-aos="fade-up">
             មតិរបស់និស្សិត:

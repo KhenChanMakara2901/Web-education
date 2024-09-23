@@ -86,26 +86,26 @@ export default function Index() {
         </div>
       </div>
       <div
-        className="absolute top-2 left-14 w-full h-full bg-opacity-50"
+        className="absolute top-2 left-14 bg-opacity-80"
         data-aos="zoom-out-left"
       >
         <Image
           src={Image1}
-          width={420}
-          height={420}
+          width={400}
+          height={400}
           quality={100}
           alt="Human Illustration 1"
           className="object-cover"
         />
       </div>
       <div
-        className="absolute bottom-20 right-0 bg-opacity-50"
+        className="absolute bottom-20 right-0 bg-opacity-80"
         data-aos="zoom-out-right"
       >
         <Image
           src={Image2}
-          width={500}
-          height={500}
+          width={400}
+          height={400}
           quality={100}
           alt="Human Illustration 2"
           className="object-cover"

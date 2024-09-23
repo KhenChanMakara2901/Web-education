@@ -46,6 +46,8 @@
       "Directives",
       "Data Binding",
       "Controllers",
+      "Forms",
+      "Routers",
       "Other"
     ],
     "imageSrc": "/Course/Course4.png"
@@ -59,6 +61,7 @@
       "Event Modifiers",
       "Forms",
       "CSS Binding",
+      "Routers",
       "Other"
     ],
     "imageSrc": "/Course/Course5.png"

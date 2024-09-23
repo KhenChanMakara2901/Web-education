@@ -4,7 +4,6 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import React from "react";
 import Image from "next/image";
-import AnotherImage1 from "@/public/Image/Logo/AnotherImage1.png";
 import AnotherImage2 from "@/public/Image/Logo/AnotherImage2.png";
 import AnotherImage3 from "@/public/Image/Logo/AnotherImage3.png";
 import AnotherImage4 from "@/public/Image/Logo/AnotherImage4.png";
@@ -40,7 +39,7 @@ const aboutUsContent = {
 export default function Page() {
   const [currentImage, setCurrentImage] = useState(0);
 
-  const images = [AnotherImage1, AnotherImage2, AnotherImage3, AnotherImage4]; // Array of images
+  const images = [AnotherImage2, AnotherImage3, AnotherImage4]; // Array of images
 
   useEffect(() => {
     AOS.init({
@@ -59,7 +58,7 @@ export default function Page() {
       <Head>
         <title>អំពីពួកយើង | ខ្មែរកូដអាខាដឺមី</title>
       </Head>
-      <div className="mx-auto w-full max-w-6xl px-5 py-12 md:px-10 md:py-16 lg:py-20">
+      <div className="mx-auto w-full max-w-7xl px-5 py-12 md:px-10 md:py-16 lg:py-20">
         <div className="flex flex-col gap-14 lg:gap-20">
           <div
             className="relative border-4 rounded-xl overflow-hidden"

@@ -4,6 +4,7 @@ import "aos/dist/aos.css";
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import QrCodeImage from "@/public/Course/QrCodeImage.jpg";
+import Head from "next/head";
 
 type Course = {
   id: number;
@@ -13,7 +14,6 @@ type Course = {
 };
 
 export default function CoursePage() {
-  // Set the type for courses to be an array of Course objects
   const [courses, setCourses] = useState<Course[]>([]);
   const [showPopup, setShowPopup] = useState(false);
   const [showQR, setShowQR] = useState(false);
@@ -33,9 +33,7 @@ export default function CoursePage() {
       easing: "ease-in-out",
       once: true,
     });
-
-    // Fetching the courses data from the JSON file
-    fetch("/data/courses.json")
+    fetch("/data/coursesmobile.json")
       .then((response) => response.json())
       .then((data: Course[]) => setCourses(data)) // Ensure the data is typed as Course[]
       .catch((error) => console.error("Error fetching courses:", error));
@@ -85,19 +83,10 @@ export default function CoursePage() {
 
   return (
     <div className="py-10 bg-white dark:bg-dark">
-      <head>
+      <Head>
         <title className="font-extrabold">វគ្គសិក្សា | ខ្មែរកូដអាខាដឺមី</title>
-      </head>
-      <div className="max-w-5xl mx-auto px-5 sm:px-10 md:px-12 lg:px-5 space-y-16">
-        <div className="max-w-4xl space-y-3 animate-fadeIn">
-          <h1 className="text-4xl/tight sm:text-4xl/tight underline underline-offset-4 font-bold">
-            វគ្គសិក្សាដែលយេីងមានបង្រៀន៖
-          </h1>
-          <p className="text-xl underline underline-offset-4">
-            ដែលនិស្សិតអាចជ្រេីសរេីស៖
-          </p>
-        </div>
-
+      </Head>
+      <div className="max-w-screen-2xl mx-auto px-5 sm:px-10 md:px-12 lg:px-5 space-y-16">
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-10">
           {courses.map((course, index) => (
             <div

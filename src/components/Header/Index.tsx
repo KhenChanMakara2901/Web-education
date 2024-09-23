@@ -122,7 +122,7 @@ const Index = () => {
                   />
                 </button>
                 <ul
-                  className={`absolute left-0 mt-2 w-48 bg-white dark:bg-gray-800 rounded-md shadow-lg transition-all duration-300 ${
+                  className={`absolute left-10 mt-2 w-48 bg-white dark:bg-gray-800 rounded-md shadow-lg transition-all duration-300 ${
                     isDropdownOpen
                       ? "opacity-100 visible"
                       : "opacity-0 invisible"
