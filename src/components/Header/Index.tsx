@@ -7,6 +7,7 @@ import { usePathname } from "next/navigation";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { BiSolidContact } from "react-icons/bi";
+import { FaChevronDown } from "react-icons/fa";
 import khmerlang from "@/src/locales/Header/khmer.json";
 import englishlang from "@/src/locales/Header/english.json";
 
@@ -14,7 +15,8 @@ const Index = () => {
   const pathname = usePathname();
   const [openNavbar, setOpenNavbar] = useState(false);
   const [theme, setTheme] = useState("dark");
-  const [language, setLanguage] = useState("khmer"); // Add language state
+  const [language, setLanguage] = useState("khmer");
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false); // Add language state
 
   useEffect(() => {
     AOS.init({
@@ -40,6 +42,9 @@ const Index = () => {
   const toggleLanguage = () => {
     const newLanguage = language === "khmer" ? "english" : "khmer";
     setLanguage(newLanguage);
+  };
+  const toggleDropdown = () => {
+    setIsDropdownOpen(!isDropdownOpen);
   };
   const t = language === "khmer" ? khmerlang : englishlang;
 
@@ -104,18 +109,41 @@ const Index = () => {
                   {t.aboutUs}
                 </Link>
               </li>
-              <li className="text-lg py-2 px-4 flex items-center hover:bg-gray-200 dark:hover:bg-gray-700 rounded-md transition duration-300">
-                <Link
-                  className={`link ${
-                    pathname === "/Course"
-                      ? "bg-gray-200 dark:bg-gray-700 rounded-md"
-                      : ""
-                  } px-2 py-1`}
-                  href="/Course"
-                  passHref
+              <li className="relative text-lg py-2 px-4 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-md transition duration-300">
+                <button
+                  className="flex items-center justify-between w-full focus:outline-none"
+                  onClick={toggleDropdown}
                 >
                   {t.courses}
-                </Link>
+                  <FaChevronDown
+                    className={`ml-2 transition-transform ${
+                      isDropdownOpen ? "rotate-180" : ""
+                    }`}
+                  />
+                </button>
+                <ul
+                  className={`absolute left-0 mt-2 w-48 bg-white dark:bg-gray-800 rounded-md shadow-lg transition-all duration-300 ${
+                    isDropdownOpen
+                      ? "opacity-100 visible"
+                      : "opacity-0 invisible"
+                  }`}
+                >
+                  <li className="py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-700">
+                    <Link href="/Course/Web" className="block w-full">
+                      Web Development
+                    </Link>
+                  </li>
+                  <li className="py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-700">
+                    <Link href="/Course/Mobile" className="block w-full">
+                      Mobile Development
+                    </Link>
+                  </li>
+                  <li className="py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-700">
+                    <Link href="/Course/Design" className="block w-full">
+                      Design
+                    </Link>
+                  </li>
+                </ul>
               </li>
               <li className="text-lg py-2 px-4 flex items-center hover:bg-gray-200 dark:hover:bg-gray-700 rounded-md transition duration-300">
                 <Link
