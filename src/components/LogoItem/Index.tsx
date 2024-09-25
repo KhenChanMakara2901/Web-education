@@ -30,9 +30,13 @@ export default function Index() {
   }, []);
 
   return (
-    <div className="bg-white dark:bg-dark scroll-smooth">
+    <div className="relative bg-white dark:bg-dark scroll-smooth">
+      <div
+        className="absolute inset-0 pointer-events-none z-0 bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-800 dark:to-gray-900 opacity-30"
+        aria-hidden="true"
+      ></div>
       <div className="min-h-px w-full border-t"></div>
-      <div className="mx-auto w-full max-w-screen-2xl px-5 py-16 md:px-10 md:py-20">
+      <div className="relative mx-auto w-full max-w-screen-2xl px-5 py-16 md:px-10 md:py-20">
         <div className="flex flex-col items-center gap-8 sm:grid sm:grid-cols-3 sm:gap-12 md:grid-cols-5 md:gap-6">
           {logos.map((logo) => (
             <div

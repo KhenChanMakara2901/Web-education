@@ -109,25 +109,13 @@ const Index = () => {
                   {t.aboutUs}
                 </Link>
               </li>
-              <li className="relative text-lg py-2 px-4 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-md transition duration-300">
-                <button
-                  className="flex items-center justify-between w-full focus:outline-none"
-                  onClick={toggleDropdown}
-                >
+              <li className="relative group text-lg py-2 px-4 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-md transition duration-300">
+                <span className="flex items-center justify-between w-full cursor-pointer">
                   {t.courses}
-                  <FaChevronDown
-                    className={`ml-2 transition-transform ${
-                      isDropdownOpen ? "rotate-180" : ""
-                    }`}
-                  />
-                </button>
-                <ul
-                  className={`absolute left-10 mt-2 w-48 bg-white dark:bg-gray-800 rounded-md shadow-lg transition-all duration-300 ${
-                    isDropdownOpen
-                      ? "opacity-100 visible"
-                      : "opacity-0 invisible"
-                  }`}
-                >
+                  <FaChevronDown className="ml-2 transform transition-transform duration-300 group-hover:rotate-180" />
+                </span>
+                {/* Dropdown Menu */}
+                <ul className="absolute left-0 mt-8 w-48 bg-white dark:bg-gray-800 rounded-none shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-300">
                   <li className="py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-700">
                     <Link href="/Course/Web" className="block w-full">
                       Web Development
