@@ -55,16 +55,16 @@ const Index = () => {
     >
       <div className="mx-auto lg:max-w-7xl w-full px-5 sm:px-10 md:px-12 lg:px-5 h-full items-center">
         <nav className="flex justify-between items-center h-full">
-          <div className="flex min-w-max items-center">
+          <div className="flex min-w-max items-start">
             <div className="flex items-center gap-x-4 text-2xl font-semibold">
               <div className="flex items-center -space-x-3 font-semibold">
                 <Link href="/">
                   <Image
-                    className="rounded-xl border"
+                    className="rounded-2xl border"
                     src={Rupp}
                     alt="Logo"
-                    width={80}
-                    height={80}
+                    width={75}
+                    height={75}
                     quality={75}
                   />
                 </Link>
@@ -82,8 +82,8 @@ const Index = () => {
             }
           `}
           >
-            <ul className="flex text-lg flex-col gap-y-5 lg:items-center lg:flex-row lg:gap-x-5 lg:h-full lg:justify-center lg:flex-1">
-              <li className="text-lg py-2 px-4 flex items-center hover:bg-gray-200 dark:hover:bg-gray-700 rounded-md transition duration-300">
+            <ul className="flex text-base font-KhmerFont flex-col gap-y-5 lg:items-center lg:flex-row lg:gap-x-5 lg:h-full lg:justify-center lg:flex-1">
+              <li className="py-2 px-4 flex items-center hover:bg-gray-200 dark:hover:bg-gray-700 rounded-md transition duration-300">
                 <Link
                   className={`link ${
                     pathname === "/"
@@ -96,7 +96,7 @@ const Index = () => {
                   {t.home}
                 </Link>
               </li>
-              <li className="text-lg py-2 px-4 flex items-center hover:bg-gray-200 dark:hover:bg-gray-700 rounded-md transition duration-300">
+              <li className="py-2 px-4 flex items-center hover:bg-gray-200 dark:hover:bg-gray-700 rounded-md transition duration-300">
                 <Link
                   className={`link ${
                     pathname === "/AboutUs"
@@ -109,31 +109,49 @@ const Index = () => {
                   {t.aboutUs}
                 </Link>
               </li>
-              <li className="relative group text-lg py-2 px-4 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-md transition duration-300">
+              <li className="relative group py-2 px-4 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-md transition duration-300">
                 <span className="flex items-center justify-between w-full cursor-pointer">
                   {t.courses}
                   <FaChevronDown className="ml-2 transform transition-transform duration-300 group-hover:rotate-180" />
                 </span>
                 {/* Dropdown Menu */}
                 <ul className="absolute left-0 mt-8 w-48 bg-white dark:bg-gray-800 rounded-none shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-300">
-                  <li className="py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-700">
+                  <li
+                    className={`py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-700 ${
+                      pathname === "/Course/Web"
+                        ? "bg-gray-200 dark:bg-gray-700 rounded-md"
+                        : ""
+                    }`}
+                  >
                     <Link href="/Course/Web" className="block w-full">
                       Web Development
                     </Link>
                   </li>
-                  <li className="py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-700">
+                  <li
+                    className={`py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-700 ${
+                      pathname === "/Course/Mobile"
+                        ? "bg-gray-200 dark:bg-gray-700 rounded-md"
+                        : ""
+                    }`}
+                  >
                     <Link href="/Course/Mobile" className="block w-full">
                       Mobile Development
                     </Link>
                   </li>
-                  <li className="py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-700">
+                  <li
+                    className={`py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-700 ${
+                      pathname === "/Course/Design"
+                        ? "bg-gray-200 dark:bg-gray-700 rounded-md"
+                        : ""
+                    }`}
+                  >
                     <Link href="/Course/Design" className="block w-full">
                       Design
                     </Link>
                   </li>
                 </ul>
               </li>
-              <li className="text-lg py-2 px-4 flex items-center hover:bg-gray-200 dark:hover:bg-gray-700 rounded-md transition duration-300">
+              <li className="py-2 px-4 flex items-center hover:bg-gray-200 dark:hover:bg-gray-700 rounded-md transition duration-300">
                 <Link
                   className={`link ${
                     pathname === "/ContactUs"
@@ -151,7 +169,7 @@ const Index = () => {
               <BiSolidContact size={25} className="mr-1" />
               <Link
                 href="https://t.me/Kongsun"
-                className="flex text-lg justify-center gap-x-3 items-center
+                className="flex justify-center gap-x-3 items-center
                  bg-transparent"
                 passHref
               >

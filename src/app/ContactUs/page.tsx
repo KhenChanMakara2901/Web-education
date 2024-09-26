@@ -42,7 +42,7 @@ export default function Page() {
               <MdEmail size={27} />
             </span>
 
-            <h2 className="mt-4 text-base font-medium text-gray-800 dark:text-white">
+            <h2 className="mt-4 text-base font-KhmerFont text-gray-800 dark:text-white">
               អ៊ីមែល:
             </h2>
             <p className="mt-2 text-sm text-blue-500 dark:text-blue-400">
@@ -58,7 +58,7 @@ export default function Page() {
               <FaPhoneVolume size={25} />
             </span>
 
-            <h2 className="mt-4 text-base font-medium text-gray-800 dark:text-white">
+            <h2 className="mt-4 text-base font-KhmerFont text-gray-800 dark:text-white">
               លេខទំនាក់ទំនង:
             </h2>
             <p className="mt-2 text-sm text-blue-500 dark:text-blue-400">
@@ -74,7 +74,7 @@ export default function Page() {
               <FaLocationDot size={25} />
             </span>
 
-            <h2 className="mt-4 text-base font-medium text-gray-800 dark:text-white">
+            <h2 className="mt-4 text-base  font-KhmerFont text-gray-800 dark:text-white">
               អាស័យដ្ឋាន:
             </h2>
             <p className="mt-2 text-sm text-blue-500 dark:text-blue-400">

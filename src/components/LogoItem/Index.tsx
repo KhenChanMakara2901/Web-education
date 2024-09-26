@@ -14,7 +14,7 @@ type Logo = {
 };
 
 export default function Index() {
-  const [logos, setLogos] = useState<Logo[]>([]); // Specify the type for the logos array
+  const [logos, setLogos] = useState<Logo[]>([]);
 
   useEffect(() => {
     AOS.init({
@@ -22,11 +22,9 @@ export default function Index() {
       easing: "ease-in-out",
       once: true,
     });
-
-    // Fetch the logos from the JSON file
     fetch("/data/logos.json")
       .then((response) => response.json())
-      .then((data: Logo[]) => setLogos(data)); // Ensure TypeScript knows the shape of the data
+      .then((data: Logo[]) => setLogos(data));
   }, []);
 
   return (

@@ -73,7 +73,7 @@ export default function Page() {
               className="w-full h-full object-cover border rounded-xl transition-transform duration-500 hover:scale-105"
             />
           </div>
-          <div className="flex flex-col gap-14 lg:gap-20">
+          <div className="flex flex-col font-KhmerFont gap-14 lg:gap-20">
             {aboutUsContent.sections.map((section) => (
               <div
                 key={section.id}

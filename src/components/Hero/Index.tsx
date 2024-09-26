@@ -104,8 +104,8 @@ export default function Index() {
       >
         <Image
           src={Image2}
-          width={400}
-          height={400}
+          width={500}
+          height={500}
           quality={100}
           alt="Human Illustration 2"
           className="object-cover"
@@ -115,14 +115,14 @@ export default function Index() {
 
       <div className="mx-auto lg:max-w-7xl w-full px-5 sm:px-10 md:px-12 lg:px-5 relative z-10">
         <div className="text-center flex flex-col items-center space-y-10">
-          <span className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-serif px-3 py-0.5 rounded-2xl animate-scaleUp">
+          <span className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-GoogleFont px-3 py-0.5 rounded-2xl animate-scaleUp">
             KHMER <span className="text-yellow-400">CODE</span> ACADEMY
           </span>
-          <h1 className="text-2xl md:text-3xl lg:text-4xl/tight xl:text-5xl/tight font-bold max-w-4xl capitalize animate-fadeIn dark:text-white">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl/tight xl:text-6xl/tight font-KhmerFont max-w-4xl capitalize animate-fadeIn dark:text-white">
             សិក្សាជំនាញគ្រប់គ្រងទិន្នន័យ
             និងការអភិវឌ្ឍន៍កម្មវិធីដែលសង្គមត្រូវការនៅពេលបច្ចុប្បន្ន
           </h1>
-          <p className="text-base text-center max-w-xl animate-fadeIn dark:text-gray-300">
+          <p className="text-lg text-center font-KhmerFont max-w-xl animate-fadeIn dark:text-gray-300">
             យើងផ្តល់ឲ្យនូវការបង្រៀនដែលយកចិត្តទុកដាក់ ប្រកបដោយគុណភាព
             និងទំនួលខុសត្រូវ។ ការពេញចិត្តរបស់អ្នក គឺជាតម្លៃរបស់យើង។
           </p>
@@ -130,7 +130,7 @@ export default function Index() {
           <div className="flex justify-center animate-scaleUp">
             <button
               onClick={() => setIsOpen(true)}
-              className="px-8 h-12 rounded-full bg-gradient-to-r from-emerald-600 to-emerald-800 text-white flex items-center justify-center gap-x-3 transition-transform transform hover:scale-105 hover:shadow-xl"
+              className="px-8 h-12 font-KhmerFont rounded-full bg-gradient-to-r from-emerald-600 to-emerald-800 text-white flex items-center justify-center gap-x-3 transition-transform transform hover:scale-105 hover:shadow-xl"
             >
               ចុះឈ្មោះឥឡូវនេះ
               <span>
@@ -153,10 +153,10 @@ export default function Index() {
       </div>
       {isOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-          <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md relative">
+          <div className="bg-white dark:bg-dark p-8 rounded-lg shadow-lg w-full max-w-md relative">
             <button
               onClick={() => setIsOpen(false)}
-              className="absolute top-2 right-2 text-gray-500 hover:text-gray-700"
+              className="absolute top-2 right-2 hover"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -171,7 +171,7 @@ export default function Index() {
                 />
               </svg>
             </button>
-            <h2 className="text-2xl font-bold mb-4 text-center text-gray-900">
+            <h2 className="text-2xl font-bold mb-4 text-center">
               ចុះឈ្មោះសម្រាប់វគ្គសិក្សានៅខ្មែរកូដអាខាដឺមី
             </h2>
             <form
@@ -180,7 +180,7 @@ export default function Index() {
             >
               <div className="flex justify-between space-x-4">
                 <div className="w-1/2">
-                  <label className="block text-gray-700">នាមត្រកូល</label>
+                  <label className="block">នាមត្រកូល</label>
                   <input
                     type="text"
                     name="firstName"
@@ -191,7 +191,7 @@ export default function Index() {
                   />
                 </div>
                 <div className="w-1/2">
-                  <label className="block text-gray-700">នាមខ្លួន</label>
+                  <label className="block">នាមខ្លួន</label>
                   <input
                     type="text"
                     name="lastName"
@@ -203,7 +203,7 @@ export default function Index() {
                 </div>
               </div>
               <div>
-                <label className="block text-gray-700">អ៊ីមែល</label>
+                <label className="block">អ៊ីមែល</label>
                 <input
                   type="email"
                   name="email"
@@ -214,7 +214,7 @@ export default function Index() {
                 />
               </div>
               <div>
-                <label className="block text-gray-700">ភេទ</label>
+                <label className="block">ភេទ</label>
                 <select
                   name="gender"
                   value={formData.gender}
@@ -229,7 +229,7 @@ export default function Index() {
                 </select>
               </div>
               <div>
-                <label className="block text-gray-700">លេខតេឡេក្រាម</label>
+                <label className="block">លេខតេឡេក្រាម</label>
                 <input
                   type="text"
                   name="telegram"
@@ -240,9 +240,7 @@ export default function Index() {
                 />
               </div>
               <div>
-                <label className="block text-gray-700">
-                  អាស័យដ្ឋានរបស់អ្នក
-                </label>
+                <label className="block">អាស័យដ្ឋានរបស់អ្នក</label>
                 <input
                   type="text"
                   name="address"
@@ -253,7 +251,7 @@ export default function Index() {
                 />
               </div>
               <div>
-                <label className="block text-gray-700">វគ្គសិក្សា</label>
+                <label className="block">វគ្គសិក្សា</label>
                 <input
                   type="text"
                   name="course"
@@ -264,9 +262,7 @@ export default function Index() {
                 />
               </div>
               <div>
-                <label className="block text-gray-700">
-                  សាកលវិទ្យាល័យរបស់អ្នក
-                </label>
+                <label className="block">សាកលវិទ្យាល័យរបស់អ្នក</label>
                 <input
                   type="text"
                   name="university"
@@ -277,7 +273,7 @@ export default function Index() {
                 />
               </div>
               <div>
-                <label className="block text-gray-700">បង្ហោះរូបភាព</label>
+                <label className="block">បង្ហោះរូបភាព</label>
                 <input
                   type="file"
                   onChange={handleImageChange}

@@ -39,6 +39,10 @@ module.exports = {
         slideIn: "slideIn 1s ease-out forwards",
       },
     },
+    fontFamily: {
+      GoogleFont: ["Luckiest Guy", "cursive"],
+      KhmerFont: ["Koulen", "cursive"],
+    },
   },
   plugins: [nextui()],
 };

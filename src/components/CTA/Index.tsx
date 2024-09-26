@@ -43,12 +43,12 @@ export default function Index() {
           data-aos="fade-up"
         >
           <div
-            className="mx-auto text-center max-w-xl md:max-w-2xl relative space-y-8"
+            className="mx-auto font-KhmerFont text-center max-w-xl md:max-w-2xl relative space-y-8"
             data-aos="fade-up"
             data-aos-delay="100"
           >
             <h1
-              className="text-3xl/tight sm:text-4xl/tight md:text-5xl/tight font-bold"
+              className="text-3xl/tight sm:text-4xl/tight md:text-5xl/tight"
               data-aos="fade-up"
               data-aos-delay="200"
             >
@@ -78,21 +78,17 @@ export default function Index() {
       </div>
       {step === 1 && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-          <div className="bg-white p-8 rounded-lg w-96 relative">
+          <div className="bg-white dark:bg-dark p-8 rounded-lg w-96 relative">
             <button
-              className="absolute top-2 right-2 text-gray-500"
+              className="absolute top-2 right-2 w-10 h-10 text-2xl"
               onClick={() => setStep(0)} // Close the pop-up
             >
               &times;
             </button>
-            <h2 className="text-xl text-gray-900 font-bold mb-4">
-              ទំនាក់ទំនងយើង
-            </h2>
+            <h2 className="text-xl font-bold mb-4">ទំនាក់ទំនងយើង</h2>
             <form onSubmit={handleSubmit}>
               <div className="mb-4">
-                <label className="block text-sm font-medium text-gray-900">
-                  ឈ្មោះ
-                </label>
+                <label className="block text-sm font-medium">ឈ្មោះ</label>
                 <input
                   type="text"
                   value={name}
@@ -102,9 +98,7 @@ export default function Index() {
                 />
               </div>
               <div className="mb-4">
-                <label className="block text-sm font-medium text-gray-900">
-                  អ៊ីម៉ែល
-                </label>
+                <label className="block text-sm font-medium">អ៊ីម៉ែល</label>
                 <input
                   type="email"
                   value={email}
@@ -114,9 +108,7 @@ export default function Index() {
                 />
               </div>
               <div className="mb-6">
-                <label className="block text-sm font-medium text-gray-900">
-                  សាររបស់អ្នក
-                </label>
+                <label className="block text-sm font-medium">សាររបស់អ្នក</label>
                 <textarea
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
@@ -139,9 +131,7 @@ export default function Index() {
       {step === 2 && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
           <div className="bg-white p-8 rounded-lg w-96 text-center">
-            <h2 className="text-xl text-gray-900 font-bold mb-4">
-              កំពុងផ្ញើសាររបស់អ្នក...
-            </h2>
+            <h2 className="text-xl font-bold mb-4">កំពុងផ្ញើសាររបស់អ្នក...</h2>
             <div className="loader mx-auto"></div>
           </div>
         </div>
@@ -149,7 +139,7 @@ export default function Index() {
       {step === 3 && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
           <div className="bg-white p-8 rounded-lg w-96 text-center">
-            <h2 className="text-xl text-gray-900 font-bold mb-4">
+            <h2 className="text-xl font-bold mb-4">
               សាររបស់អ្នកបានផ្ញើជោគជ័យ!
             </h2>
             <p className="text-green-600 font-semibold">
