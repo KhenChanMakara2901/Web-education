@@ -17,9 +17,10 @@ const CourseDetailModal = ({ show, onClose, course }) => {
         <Image
           src={course.image}
           alt={course.title}
-          width={100}
-          height={100}
-          className="mb-4 h-24 w-24 object-cover rounded-full"
+          width={50}
+          height={50}
+          quality={75}
+          className="mb-4 h-32 w-32 object-cover rounded-full"
         />
         <p className="text-2xl font-KhmerFont mb-4">{course.description}</p>
         <button

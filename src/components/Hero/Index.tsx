@@ -115,14 +115,14 @@ export default function Index() {
 
       <div className="mx-auto lg:max-w-7xl w-full px-5 sm:px-10 md:px-12 lg:px-5 relative z-10">
         <div className="text-center flex flex-col items-center space-y-10">
-          <span className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-GoogleFont px-3 py-0.5 rounded-2xl animate-scaleUp">
+          <span className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-GoogleFont px-3 py-0.5 rounded-2xl">
             KHMER <span className="text-yellow-400">CODE</span> ACADEMY
           </span>
-          <h1 className="text-3xl md:text-4xl lg:text-5xl/tight xl:text-6xl/tight font-KhmerFont max-w-4xl capitalize animate-fadeIn dark:text-white">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl/tight xl:text-6xl/tight font-KhmerFont max-w-4xl capitalize dark:text-white">
             សិក្សាជំនាញគ្រប់គ្រងទិន្នន័យ
             និងការអភិវឌ្ឍន៍កម្មវិធីដែលសង្គមត្រូវការនៅពេលបច្ចុប្បន្ន
           </h1>
-          <p className="text-lg text-center font-KhmerFont max-w-xl animate-fadeIn dark:text-gray-300">
+          <p className="text-lg text-center font-KhmerFont max-w-xl  dark:text-gray-300">
             យើងផ្តល់ឲ្យនូវការបង្រៀនដែលយកចិត្តទុកដាក់ ប្រកបដោយគុណភាព
             និងទំនួលខុសត្រូវ។ ការពេញចិត្តរបស់អ្នក គឺជាតម្លៃរបស់យើង។
           </p>

@@ -54,12 +54,12 @@ const Index = () => {
               data-aos="fade-up"
               data-aos-delay="200"
             >
-              <span className="p-3 md:p-3.5 bg-white rounded-full flex w-max">
+              <span className="rounded-full flex w-max">
                 <Image
                   src={Phone}
                   alt="Phone"
-                  width={30}
-                  height={30}
+                  width={100}
+                  height={100}
                   quality={75}
                 />
               </span>
@@ -75,12 +75,12 @@ const Index = () => {
               data-aos="fade-up"
               data-aos-delay="300"
             >
-              <span className="p-3 md:p-3.5 rounded-full bg-white flex w-max">
+              <span className="rounded-full flex w-max">
                 <Image
                   src={Mail}
                   alt="Mail"
-                  width={30}
-                  height={30}
+                  width={50}
+                  height={50}
                   quality={75}
                 />
               </span>
