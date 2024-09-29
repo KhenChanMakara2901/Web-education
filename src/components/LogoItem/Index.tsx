@@ -40,7 +40,6 @@ export default function Index() {
             <div
               key={logo.id}
               className="flex justify-center group p-6 bg-white dark:bg-dark dark:shadow-darkModeShadow shadow-lightModeShadow rounded-lg"
-              data-aos="fade-up"
               data-aos-delay={logo.delay}
             >
               <Image
@@ -50,6 +49,9 @@ export default function Index() {
                 height={logo.height}
                 quality={75}
                 className="inline-block ease-linear duration-300 grayscale group-hover:!grayscale-0 group-hover:scale-105"
+                data-aos="fade-right"
+                data-aos-offset="300"
+                data-aos-easing="ease-in-sine"
               />
             </div>
           ))}

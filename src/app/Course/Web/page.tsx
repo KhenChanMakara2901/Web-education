@@ -127,18 +127,21 @@ export default function CoursePage() {
         </div>
         {showPopup && (
           <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-            <div className="bg-white p-8 rounded-lg w-96 relative">
+            <div
+              className="bg-white dark:bg-dark p-8 rounded-lg w-96 relative"
+              data-aos="fade-right"
+              data-aos-offset="300"
+              data-aos-easing="ease-in-sine"
+            >
               <button
-                className="absolute top-2 right-2 text-gray-500"
+                className="absolute top-2 right-2"
                 onClick={() => setShowPopup(false)}
               >
                 &times;
               </button>
-              <h2 className="text-xl text-gray-900 font-bold mb-4">
-                សូមបំពេញព័ត៌មាន
-              </h2>
+              <h2 className="text-xl font-bold mb-4">សូមបំពេញព័ត៌មាន</h2>
               <div className="mb-4">
-                <label className="block text-sm font-medium text-gray-900">
+                <label className="block text-sm font-medium">
                   ឈ្មោះរបស់អ្នក
                 </label>
                 <input
@@ -151,9 +154,7 @@ export default function CoursePage() {
               </div>
 
               <div className="mb-4">
-                <label className="block text-sm font-medium text-gray-900">
-                  អ៊ីម៉ែល
-                </label>
+                <label className="block text-sm font-medium">អ៊ីម៉ែល</label>
                 <input
                   type="email"
                   value={email}
@@ -164,9 +165,7 @@ export default function CoursePage() {
               </div>
 
               <div className="mb-4">
-                <label className="block text-sm font-medium text-gray-900">
-                  សាលា
-                </label>
+                <label className="block text-sm font-medium">សាលា</label>
                 <input
                   type="text"
                   value={university}
@@ -176,7 +175,7 @@ export default function CoursePage() {
                 />
               </div>
               <div className="mb-4">
-                <label className="block text-sm font-medium text-gray-900">
+                <label className="block text-sm font-medium">
                   ឈ្មោះវគ្គសិក្សា
                 </label>
                 <input
@@ -188,7 +187,7 @@ export default function CoursePage() {
                 />
               </div>
               <div className="mb-4">
-                <label className="block text-sm font-medium text-gray-900">
+                <label className="block text-sm font-medium">
                   បង្ហោះរូបភាពរបស់អ្នក
                 </label>
                 <input
@@ -211,12 +210,10 @@ export default function CoursePage() {
               </div>
 
               <div className="mb-6">
-                <label className="block text-sm font-medium text-gray-900">
+                <label className="block text-sm font-medium">
                   តម្លៃវគ្គសិក្សា
                 </label>
-                <p className="mt-1 text-gray-900 text-lg font-semibold">
-                  {coursePrice}
-                </p>
+                <p className="mt-1 text-lg font-semibold">{coursePrice}</p>
               </div>
               <div className="flex justify-center mt-6">
                 <button
@@ -236,16 +233,19 @@ export default function CoursePage() {
         )}
         {showQR && (
           <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-            <div className="bg-white p-8 rounded-lg w-96 relative">
+            <div
+              className="bg-white p-8 rounded-lg w-96 relative"
+              data-aos="fade-right"
+              data-aos-offset="300"
+              data-aos-easing="ease-in-sine"
+            >
               <button
                 className="absolute top-2 right-2 text-gray-500"
                 onClick={() => setShowQR(false)}
               >
                 &times;
               </button>
-              <h2 className="text-xl text-gray-900 font-bold mb-4">
-                សូមស្គេន QR Code
-              </h2>
+              <h2 className="text-xl font-bold mb-4">សូមស្គេន QR Code</h2>
               <Image
                 src={QrCodeImage}
                 alt="Scan QR for payment"
@@ -253,7 +253,7 @@ export default function CoursePage() {
                 height={500}
                 className="mx-auto"
               />
-              <p className="mt-4 text-gray-900 text-center">
+              <p className="mt-4 text-center">
                 សូមស្កេនដេីម្បីបង់ថ្លៃមុនពេលចុចទូទាត់
               </p>
               <div className="flex justify-center mt-6">
@@ -268,7 +268,10 @@ export default function CoursePage() {
           </div>
         )}
         {showSuccess && (
-          <div className="fixed bottom-5 right-5 bg-green-600 text-white px-6 py-4 rounded-lg shadow-lg z-50 transition-opacity duration-500 ease-in-out transform">
+          <div
+            className="fixed bottom-5 right-5 bg-green-600 text-white px-6 py-4 rounded-lg shadow-lg z-50 transition-opacity duration-500 ease-in-out transform"
+            data-aos="fade-down-left"
+          >
             <div className="flex items-center space-x-3">
               <svg
                 xmlns="http://www.w3.org/2000/svg"

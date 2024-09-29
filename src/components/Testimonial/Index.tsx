@@ -54,12 +54,13 @@ export default function Index() {
             <div
               key={index}
               className="relative font-KhmerFont p-5 md:p-6 space-y-6 dark:shadow-darkModeShadow shadow-lightModeShadow rounded-lg cursor-pointer transition-transform duration-300 transform hover:scale-105"
-              data-aos="fade-up"
               data-aos-delay={index * 100}
               onMouseEnter={() => handleMouseEnter(index)} // Handle mouse enter
               onMouseLeave={handleMouseLeave} // Handle mouse leave
             >
-              <p className="font-medium">{testimonial.feedback}</p>
+              <p className="font-medium" data-aos="zoom-in-down">
+                {testimonial.feedback}
+              </p>
               <div className="flex items-start gap-4">
                 <Image
                   src={testimonial.avatar}
@@ -68,8 +69,9 @@ export default function Index() {
                   quality={75}
                   alt={`${testimonial.name} avatar`}
                   className="w-12 h-12 rounded-full object-cover"
+                  data-aos="zoom-in-down"
                 />
-                <div className="space-y-1 flex-1">
+                <div className="space-y-1 flex-1" data-aos="zoom-in-down">
                   <h2 className="text-lg leading-none">{testimonial.name}</h2>
                   <p>{testimonial.title}</p>
                 </div>
@@ -81,10 +83,15 @@ export default function Index() {
                 <div className="absolute inset-0 flex flex-col justify-center items-center bg-white dark:bg-dark bg-opacity-95 p-5 rounded-lg opacity-0 hover:opacity-100 transition-opacity duration-700">
                   {" "}
                   {/* Slower transition for hover details */}
-                  <h2 className="text-2xl font-bold mb-2">
+                  <h2
+                    className="text-2xl font-bold mb-2"
+                    data-aos="zoom-in-down"
+                  >
                     {testimonial.name}
                   </h2>
-                  <p className="text-center">{testimonial.feedback}</p>
+                  <p className="text-center" data-aos="zoom-in-down">
+                    {testimonial.feedback}
+                  </p>
                   <p className="text-sm italic">{testimonial.title}</p>
                 </div>
               )}

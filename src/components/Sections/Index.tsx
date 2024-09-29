@@ -78,7 +78,6 @@ const Index = () => {
             <div
               key={item.id}
               className="grid gap-6 p-8 md:p-10 dark:shadow-darkModeShadow font-KhmerFont shadow-lightModeShadow rounded-lg cursor-pointer"
-              data-aos="fade-up"
               data-aos-delay={item.delay}
               onClick={() => handleCourseClick(item)} // Handle click event
             >
@@ -89,9 +88,26 @@ const Index = () => {
                 height={50}
                 quality={75}
                 className="inline-block h-16 w-16 object-cover rounded-full"
+                data-aos="fade-right"
+                data-aos-offset="300"
+                data-aos-easing="ease-in-sine"
               />
-              <h3 className="text-2xl">{item.title}:</h3>
-              <p className="text-base">{item.description}</p>
+              <h3
+                className="text-2xl"
+                data-aos="fade-right"
+                data-aos-offset="300"
+                data-aos-easing="ease-in-sine"
+              >
+                {item.title}:
+              </h3>
+              <p
+                className="text-base"
+                data-aos="fade-right"
+                data-aos-offset="300"
+                data-aos-easing="ease-in-sine"
+              >
+                {item.description}
+              </p>
             </div>
           ))}
         </div>

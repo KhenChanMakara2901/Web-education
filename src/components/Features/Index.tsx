@@ -61,6 +61,7 @@ const Index = () => {
                   width={100}
                   height={100}
                   quality={75}
+                  data-aos="zoom-in-right"
                 />
               </span>
               <div className="space-y-0.5 font-KhmerFont flex flex-col flex-1">

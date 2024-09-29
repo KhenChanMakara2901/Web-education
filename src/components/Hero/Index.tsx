@@ -153,7 +153,12 @@ export default function Index() {
       </div>
       {isOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-          <div className="bg-white dark:bg-dark p-8 rounded-lg shadow-lg w-full max-w-md relative">
+          <div
+            className="bg-white dark:bg-dark p-8 rounded-lg shadow-lg w-full max-w-md relative"
+            data-aos="fade-right"
+            data-aos-offset="300"
+            data-aos-easing="ease-in-sine"
+          >
             <button
               onClick={() => setIsOpen(false)}
               className="absolute top-2 right-2 hover"
@@ -333,7 +338,10 @@ export default function Index() {
       )}
       {isSuccess && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-          <div className="bg-white text-gray-950 p-8 rounded-lg shadow-lg text-center">
+          <div
+            className="bg-white text-gray-950 p-8 rounded-lg shadow-lg text-center"
+            data-aos="zoom-in-up"
+          >
             <h2 className="text-2xl font-bold mb-4">ជោគជ័យ!!!</h2>
             <p>
               ការចុះឈ្មោះរបស់អ្នកបានជោគជ័យ។

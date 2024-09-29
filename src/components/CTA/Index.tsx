@@ -1,14 +1,15 @@
 "use client";
-import { useEffect, useState } from "react";
+import { FormEvent, useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import React from "react";
 
 export default function Index() {
   const [step, setStep] = useState(0);
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
+  const [name, setName] = useState<string>("");
+  const [email, setEmail] = useState<string>("");
+  const [message, setMessage] = useState<string>("");
+
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -17,24 +18,46 @@ export default function Index() {
     });
   }, []);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
+
     if (name && email && message) {
       setStep(2);
-      setTimeout(() => {
-        setStep(3);
-        setTimeout(() => {
+
+      try {
+        const res = await fetch("/api/send-email", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ name, email, message }), // Ensure data is passed here
+        });
+
+        const result = await res.json();
+
+        if (result.success) {
+          setTimeout(() => {
+            setStep(3);
+            setTimeout(() => {
+              setStep(0);
+              setName("");
+              setEmail("");
+              setMessage("");
+            }, 5000);
+          }, 3000);
+        } else {
+          alert("Failed to send email");
           setStep(0);
-          setName("");
-          setEmail("");
-          setMessage("");
-        }, 5000);
-      }, 3000);
+        }
+      } catch (error) {
+        console.error("Error:", error);
+        alert("Error occurred while sending email");
+        setStep(0);
+      }
     } else {
       alert("Please fill in all fields.");
     }
   };
-
   return (
     <div className="py-24 scroll-smooth bg-white dark:bg-dark">
       <div className="max-w-7xl mx-auto px-5 sm:px-10 md:px-12 lg:px-5">
@@ -78,7 +101,12 @@ export default function Index() {
       </div>
       {step === 1 && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-          <div className="bg-white dark:bg-dark p-8 rounded-lg w-96 relative">
+          <div
+            className="bg-white dark:bg-dark p-8 rounded-lg w-96 relative"
+            data-aos="fade-right"
+            data-aos-offset="300"
+            data-aos-easing="ease-in-sine"
+          >
             <button
               className="absolute top-2 right-2 w-10 h-10 text-2xl"
               onClick={() => setStep(0)} // Close the pop-up
@@ -130,21 +158,25 @@ export default function Index() {
       )}
       {step === 2 && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-          <div className="bg-white p-8 rounded-lg w-96 text-center">
-            <h2 className="text-xl font-bold mb-4">កំពុងផ្ញើសាររបស់អ្នក...</h2>
-            <div className="loader mx-auto"></div>
+          <div className="bg-white dark:bg-dark p-8 rounded-lg w-96 text-center">
+            <h2 className="text-xl font-KhmerFont mb-4">
+              កំពុងផ្ញើសាររបស់អ្នក...
+            </h2>
+            {/* Loading spinner */}
+            <div className="loader mx-auto h-12 w-12 border-4 border-gray-300 border-t-emerald-600 rounded-full animate-spin"></div>
           </div>
         </div>
       )}
       {step === 3 && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-          <div className="bg-white p-8 rounded-lg w-96 text-center">
-            <h2 className="text-xl font-bold mb-4">
+          <div
+            className="bg-white dark:bg-dark p-8 rounded-lg w-96 text-center"
+            data-aos="zoom-in-up"
+          >
+            <h2 className="text-xl font-KhmerFont mb-4">
               សាររបស់អ្នកបានផ្ញើជោគជ័យ!
             </h2>
-            <p className="text-green-600 font-semibold">
-              សូមអរគុណចំពោះការទំនាក់ទំនងយើង។
-            </p>
+            <p className="font-KhmerFont">សូមអរគុណចំពោះការទំនាក់ទំនងយើង។</p>
           </div>
         </div>
       )}
