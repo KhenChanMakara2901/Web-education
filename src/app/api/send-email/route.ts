@@ -1,46 +1,32 @@
 import nodemailer from "nodemailer";
-import { NextResponse } from "next/server";
+// /pages/api/send-email.ts
+import { NextRequest, NextResponse } from "next/server";
 
-interface EmailData {
-  name: string;
-  email: string;
-  message: string;
-}
-
-export async function POST(req: Request) {
+export async function POST(request: NextRequest) {
   try {
-    const { name, email, message } = await req.json();
+    const { name, email, message } = await request.json();
 
     if (!name || !email || !message) {
       return NextResponse.json(
-        { error: "Missing required fields" },
+        { success: false, message: "All fields are required" },
         { status: 400 }
       );
     }
 
-    const transporter = nodemailer.createTransport({
-      service: "gmail",
-      auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS,
-      },
-    });
+    // Add your email sending logic here, like with Nodemailer or another service
 
-    const mailOptions = {
-      from: email,
-      to: "khenchannmakara@gmail.com", // Your email address
-      subject: `New message from ${name}`,
-      text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
-    };
-    console.log(mailOptions);
-
-    await transporter.sendMail(mailOptions);
-    return NextResponse.json({ success: true });
+    return NextResponse.json({ success: true }, { status: 200 });
   } catch (error) {
-    console.error("Error while sending email:", error);
+    console.error("Error sending email:", error);
     return NextResponse.json(
-      { error: "Failed to send email" },
+      { success: false, message: "Failed to send email" },
       { status: 500 }
     );
   }
+}
+export async function GET() {
+  return NextResponse.json(
+    { success: false, message: "GET method not allowed" },
+    { status: 405 }
+  );
 }

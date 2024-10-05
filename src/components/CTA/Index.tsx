@@ -30,10 +30,11 @@ export default function Index() {
           headers: {
             "Content-Type": "application/json",
           },
-          body: JSON.stringify({ name, email, message }), // Ensure data is passed here
+          body: JSON.stringify({ name, email, message }),
         });
 
         const result = await res.json();
+        console.log(result); // Log result to debug
 
         if (result.success) {
           setTimeout(() => {
@@ -46,7 +47,7 @@ export default function Index() {
             }, 5000);
           }, 3000);
         } else {
-          alert("Failed to send email");
+          alert(result.message || "Failed to send email");
           setStep(0);
         }
       } catch (error) {
