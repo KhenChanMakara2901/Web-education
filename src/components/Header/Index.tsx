@@ -6,17 +6,17 @@ import Rupp from "@/public/Image/Logo/Rupp.png";
 import { usePathname } from "next/navigation";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { BiSolidContact } from "react-icons/bi";
 import { FaChevronDown } from "react-icons/fa";
+import { BsMoon, BsSun } from "react-icons/bs";
 import khmerlang from "@/src/locales/Header/khmer.json";
 import englishlang from "@/src/locales/Header/english.json";
 
 const Index = () => {
   const pathname = usePathname();
   const [openNavbar, setOpenNavbar] = useState(false);
-  const [theme, setTheme] = useState("dark");
+  const [theme, setTheme] = useState<string>("dark");
   const [language, setLanguage] = useState("khmer");
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false); // Add language state
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   useEffect(() => {
     AOS.init({
@@ -24,6 +24,12 @@ const Index = () => {
       easing: "ease-in-out",
       once: false,
     });
+
+    const storedTheme = localStorage.getItem("theme");
+    if (storedTheme) {
+      setTheme(storedTheme);
+      document.documentElement.classList.toggle("dark", storedTheme === "dark");
+    }
   }, []);
 
   const toggleNavbar = () => {
@@ -33,19 +39,19 @@ const Index = () => {
   const toggleTheme = () => {
     const newTheme = theme === "dark" ? "light" : "dark";
     setTheme(newTheme);
+    document.documentElement.classList.toggle("dark", newTheme === "dark");
+    localStorage.setItem("theme", newTheme);
   };
-
-  useEffect(() => {
-    document.documentElement.classList.toggle("dark", theme === "dark");
-  }, [theme]);
 
   const toggleLanguage = () => {
     const newLanguage = language === "khmer" ? "english" : "khmer";
     setLanguage(newLanguage);
   };
+
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
   };
+
   const t = language === "khmer" ? khmerlang : englishlang;
 
   return (
@@ -114,37 +120,18 @@ const Index = () => {
                   {t.courses}
                   <FaChevronDown className="ml-2 transform transition-transform duration-300 group-hover:rotate-180" />
                 </span>
-                {/* Dropdown Menu */}
                 <ul className="absolute left-0 mt-8 w-48 bg-white dark:bg-gray-800 rounded-none shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-300">
-                  <li
-                    className={`py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-700 ${
-                      pathname === "/Course/Web"
-                        ? "bg-gray-200 dark:bg-gray-700 rounded-md"
-                        : ""
-                    }`}
-                  >
+                  <li className="py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-700">
                     <Link href="/Course/Web" className="block w-full">
                       Web Development
                     </Link>
                   </li>
-                  <li
-                    className={`py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-700 ${
-                      pathname === "/Course/Mobile"
-                        ? "bg-gray-200 dark:bg-gray-700 rounded-md"
-                        : ""
-                    }`}
-                  >
+                  <li className="py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-700">
                     <Link href="/Course/Mobile" className="block w-full">
                       Mobile Development
                     </Link>
                   </li>
-                  <li
-                    className={`py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-700 ${
-                      pathname === "/Course/Design"
-                        ? "bg-gray-200 dark:bg-gray-700 rounded-md"
-                        : ""
-                    }`}
-                  >
+                  <li className="py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-700">
                     <Link href="/Course/Design" className="block w-full">
                       Design
                     </Link>
@@ -165,31 +152,6 @@ const Index = () => {
                 </Link>
               </li>
             </ul>
-            <div className="w-full flex sm:w-max lg:min-w-max lg:items-center hover:underline hover:decoration-4 rounded-2xl">
-              <BiSolidContact size={25} className="mr-1" />
-              <Link
-                href="https://t.me/Kongsun"
-                className="flex justify-center gap-x-3 items-center
-                 bg-transparent"
-                passHref
-              >
-                {t.contact}
-                <span>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                    className="w-5 h-5"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M5 10a.75.75 0 01.75-.75h6.638L10.23 7.29a.75.75 0 111.04-1.08l3.5 3.25a.75.75 0 010 1.08l-3.5 3.25a.75.75 0 11-1.04-1.08l2.158-1.96H5.75A.75.75 0 015 10z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                </span>
-              </Link>
-            </div>
             <div className="flex items-center gap-4">
               <button
                 onClick={toggleLanguage}
@@ -199,9 +161,14 @@ const Index = () => {
               </button>
               <button
                 onClick={toggleTheme}
-                className="bg-transparent border p-2 rounded-lg"
+                className="bg-transparent border p-2 rounded-lg flex items-center justify-center"
+                aria-label="Toggle Theme"
               >
-                {theme === "dark" ? "☾" : "☀"}
+                {theme === "dark" ? (
+                  <BsSun size={20} className="text-yellow-500" />
+                ) : (
+                  <BsMoon size={20} className="text-gray-800" />
+                )}
               </button>
             </div>
           </div>
