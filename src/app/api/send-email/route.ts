@@ -1,5 +1,3 @@
-import nodemailer from "nodemailer";
-// /pages/api/send-email.ts
 import { NextRequest, NextResponse } from "next/server";
 
 export async function POST(request: NextRequest) {
@@ -12,9 +10,6 @@ export async function POST(request: NextRequest) {
         { status: 400 }
       );
     }
-
-    // Add your email sending logic here, like with Nodemailer or another service
-
     return NextResponse.json({ success: true }, { status: 200 });
   } catch (error) {
     console.error("Error sending email:", error);
