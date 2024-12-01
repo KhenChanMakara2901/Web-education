@@ -13,7 +13,6 @@ type Course = {
 };
 
 export default function CoursePage() {
-  // Set the type for courses to be an array of Course objects
   const [courses, setCourses] = useState<Course[]>([]);
   const [showPopup, setShowPopup] = useState(false);
   const [showQR, setShowQR] = useState(false);
@@ -33,11 +32,9 @@ export default function CoursePage() {
       easing: "ease-in-out",
       once: true,
     });
-
-    // Fetching the courses data from the JSON file
     fetch("/data/courses.json")
       .then((response) => response.json())
-      .then((data: Course[]) => setCourses(data)) // Ensure the data is typed as Course[]
+      .then((data: Course[]) => setCourses(data))
       .catch((error) => console.error("Error fetching courses:", error));
   }, []);
 
@@ -126,7 +123,7 @@ export default function CoursePage() {
           ))}
         </div>
         {showPopup && (
-          <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+          <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-40">
             <div
               className="bg-white dark:bg-dark p-8 rounded-lg w-96 relative"
               data-aos="fade-right"

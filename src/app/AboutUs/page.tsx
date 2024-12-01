@@ -3,10 +3,6 @@ import { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import React from "react";
-import Image from "next/image";
-import AnotherImage2 from "@/public/Image/Logo/AnotherImage2.png";
-import AnotherImage3 from "@/public/Image/Logo/AnotherImage3.png";
-import AnotherImage4 from "@/public/Image/Logo/AnotherImage4.png";
 import Head from "next/head";
 import Sections from "@/src/components/Sections/Index";
 
@@ -37,20 +33,12 @@ const aboutUsContent = {
 };
 
 export default function Page() {
-  const [currentImage, setCurrentImage] = useState(0);
-
-  const images = [AnotherImage2, AnotherImage3, AnotherImage4]; // Array of images
-
   useEffect(() => {
     AOS.init({
       duration: 1000,
       easing: "ease-in-out",
       once: true,
     });
-    const intervalId = setInterval(() => {
-      setCurrentImage((prevImage) => (prevImage + 1) % images.length);
-    }, 6000);
-    return () => clearInterval(intervalId);
   }, []);
 
   return (
@@ -58,21 +46,8 @@ export default function Page() {
       <Head>
         <title>អំពីពួកយើង | ខ្មែរកូដអាខាដឺមី</title>
       </Head>
-      <div className="mx-auto w-full max-w-7xl px-5 py-10 md:px-10 md:py-16 lg:py-20">
+      <div className="mx-auto w-full max-w-6xl px-5 py-10 md:px-10 md:py-16 lg:py-20">
         <div className="flex flex-col gap-14 lg:gap-20">
-          <div
-            className="relative border-4 rounded-xl overflow-hidden"
-            data-aos="fade-up"
-            data-aos-duration="1500"
-            data-aos-delay="200"
-          >
-            <Image
-              quality={100}
-              src={images[currentImage]}
-              alt="Auto-Changing-Image"
-              className="w-full h-full object-cover border rounded-xl transition-transform duration-500 hover:scale-105"
-            />
-          </div>
           <div className="flex flex-col font-KhmerFont gap-14 lg:gap-20">
             {aboutUsContent.sections.map((section) => (
               <div
@@ -85,7 +60,7 @@ export default function Page() {
                 >
                   {section.title}
                 </h2>
-                <p className="flex-1 text-xl border border-gray-300 p-4 rounded-lg">
+                <p className="flex-1 text-xl border border-gray-300 p-7 rounded-lg">
                   {section.content}
                 </p>
               </div>
