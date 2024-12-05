@@ -56,7 +56,7 @@ const Index = () => {
 
   return (
     <header
-      className="sticky scroll-smooth top-0 inset-x-0 z-50 h-24 flex items-center bg-white shadow-md dark:bg-dark dark:shadow-xl transition-shadow"
+      className="fixed scroll-smooth top-0 inset-x-0 z-50 h-24 flex items-center bg-white shadow-md dark:bg-dark dark:shadow-xl transition-shadow"
       data-aos="fade-down"
     >
       <div className="mx-auto lg:max-w-7xl w-full px-5 sm:px-10 md:px-12 lg:px-5 h-full items-center">

@@ -72,7 +72,7 @@ export default function Index() {
   };
 
   return (
-    <div className="py-32 scroll-smooth sm:py-36 lg:py-40 overflow-hidden h-[100dvh] min-h-max flex items-center relative bg-white dark:bg-dark">
+    <div className="py-32 mt-24 scroll-smooth sm:py-36 lg:py-40 overflow-hidden h-[100dvh] min-h-max flex items-center relative bg-white dark:bg-dark">
       <div className="absolute top-0 left-0 -translate-x-[54%] -translate-y-[70%] w-2/5 rounded-full aspect-square bg-sky-900 backdrop-filter blur-3xl opacity-50 animate-scaleUp" />
       <div className="absolute bottom-0 right-0 translate-x-[54%] translate-y-[70%] w-2/5 rounded-full aspect-square bg-sky-400/30 backdrop-filter blur-3xl opacity-50 animate-fadeIn" />
       <div className="absolute min-w-[300px] w-[48%] md:w-2/5 aspect-square rounded-full bg-gradient-to-r from-sky-400/5 right-0 -translate-y-[40%] translate-x-[40%] top-0 animate-scaleUp">

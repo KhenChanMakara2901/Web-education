@@ -22,7 +22,7 @@ export default function Page() {
       <Head>
         <title>ទីតាំងរបស់យេីង | ខ្មែរកូដអាខាដឺមី</title>
       </Head>
-      <div className="px-6 py-12 max-w-full">
+      <div className="px-6 mt-20 py-12 max-w-full">
         <div className="relative overflow-hidden rounded-lg shadow-lg border border-gray-200 dark:border-gray-700">
           <iframe
             data-aos="fade-up-right"

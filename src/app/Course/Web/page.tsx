@@ -81,7 +81,7 @@ export default function CoursePage() {
   };
 
   return (
-    <div className="py-10 bg-white dark:bg-dark">
+    <div className="py-10 mt-20 bg-white dark:bg-dark">
       <head>
         <title className="font-extrabold">វគ្គសិក្សា | ខ្មែរកូដអាខាដឺមី</title>
       </head>

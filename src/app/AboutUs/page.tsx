@@ -46,7 +46,7 @@ export default function Page() {
       <Head>
         <title>អំពីពួកយើង | ខ្មែរកូដអាខាដឺមី</title>
       </Head>
-      <div className="mx-auto w-full max-w-6xl px-5 py-10 md:px-10 md:py-16 lg:py-20">
+      <div className="mx-auto mt-14 w-full max-w-6xl px-5 py-10 md:px-10 md:py-16 lg:py-20">
         <div className="flex flex-col gap-14 lg:gap-20">
           <div className="flex flex-col font-KhmerFont gap-14 lg:gap-20">
             {aboutUsContent.sections.map((section) => (
